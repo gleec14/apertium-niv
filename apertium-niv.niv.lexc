@@ -4,6 +4,10 @@ Multichar_Symbols
 
 ! Part of speech categories
 %<n%>   ! Noun
+%<v%>   ! Verb
+%<adv%> ! Adverb
+%<prn%> ! Pronoun
+
 
 ! Number morphology
 %<pl%>  ! Plural
@@ -46,4 +50,3 @@ house:house RegNounInfl ; ! A noun
 ! https://github.com/hfst/
 ! http://www.cis.upenn.edu/~cis639/docs/lexc.html
 ! http://wiki.apertium.org/wiki/Hfst
-
