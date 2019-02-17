@@ -88,8 +88,9 @@ Multichar_Symbols
 %<inform%> ! Informal
 
 ! Other symbols
-%<redup>% ! Reduplication
+%<redup%> ! Reduplication
 %>      ! Morpheme boundary
+%{G%}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
@@ -100,10 +101,10 @@ LEXICON Root
 NounRoot ;
 
 
-LEXICON RegNounInfl
+LEXICON NounInfl
 
 %<n%>%<sg%>: # ;
-%<n%>%<pl%>:%>s # ;
+%<n%>%<pl%>:%>%{G%}у # ;
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -112,7 +113,7 @@ LEXICON RegNounInfl
 
 LEXICON NounRoot
 
-house:house RegNounInfl ; ! A noun
+умгу:умгу NounInfl ; ! woman
 
 
 
