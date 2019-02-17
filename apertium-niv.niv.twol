@@ -1,14 +1,14 @@
 Alphabet
- A B Ç D E Ä F G H I J Ž K L M N Ň O Ö P R S Ş T U Ü W Y Ý Z
- a b ç d e ä f g h i j ž k l m n ň o ö p r s ş t u ü w y ý z
+ А Б В Г Ӷ Ғ Ӻ Д Е Ё Ж З И Й К К' Ӄ Ӄ' Л М Н Ӈ О П П' Р Р̌ С Т Т' У Ф Х Ӽ Ӿ Ц Ч Ч' Ш Щ Ъ Ы Ь Э Ю Я
+ а б в г ӷ ғ ӻ д е ё ж з и й к к' ӄ ӄ' л м н ӈ о п п' р р̌ с т т' у ф х ӽ ӿ ц ч ч' ш щ ъ ы ь э ю я
  %{A%}:a %>:0  ;
 
 Sets
 
-Vowel = A E Ä I O Ö U Ü Y Ý 
+Vowel = A E Ä I O Ö U Ü Y Ý
         a e ä i o ö u ü y ý ;
 
-Rules 
+Rules
 
 "Remove suffix vowel with vowel-ending stem"
 i:0 <=> Vow %{VSUF%}:0 _ [ m | n ] ;
@@ -19,4 +19,3 @@ i:0 <=> Vow %{VSUF%}:0 _ [ m | n ] ;
 ! https://github.com/hfst/
 ! http://wiki.apertium.org/wiki/Twol
 ! http://wiki.apertium.org/wiki/Hfst
-

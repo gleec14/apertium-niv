@@ -7,15 +7,89 @@ Multichar_Symbols
 %<v%>   ! Verb
 %<adv%> ! Adverb
 %<prn%> ! Pronoun
+%<num%> ! Numeral
+%<enc%> ! Enclitic
 
+! Case categories
+%<nom%> ! Nominative
+%<age%> ! Agentive
+%<dat%> ! Dative
+%<ins%> ! Instrumental
+%<loc%> ! Locative
+%<abl%> ! Ablative
+%<term%> ! Terminative
+%<comp%> ! Comparative
+%<voc%> ! Vocative
 
-! Number morphology
+! Pronoun categories
+%<pers%> ! Personal
+%<dem%> ! Demonstrative
+%<ind%> ! Indefinite
+%<itg%> ! Interrogative
+%<ref%> ! Reflexive
+
+! Person categories
+%<p1%> ! First person
+%<p2%> ! Second person
+%<p3%> ! Third person
+
+! Number categories
+%<sg%> ! Singular
+%<du%> ! Dual
+%<pl%> ! Plural
+
+! Clusivity categories
+%<incl%> ! Inclusive
+%<excl%> ! Exclusive
+
+! Number categories
 %<pl%>  ! Plural
 %<sg%>  ! Singular
 
-! Other symbols
-%>      ! Morpheme boundary
+! Verb categories
+%<tv%> ! Transitive verb
+%<iv%> ! Intransitive verb
 
+! Verb forms
+%<inf%> ! infinitive
+! %<cvb%> ! converbs and stuff
+%<nmz.pred%> ! Predicate-actant nominalisation
+%<nmz.subj%> ! Subject nominalisation
+%<nmz.loc%> ! Locative nominalisation
+%<nmz.adv%> ! Adverbial nominalisation
+
+! Mood categories (for now)
+%<ind%> ! Indicative
+! %<imp%> ! Imperative
+! %<itg%> ! Interrogative
+
+! Evidentiality / stuff
+! may matter later
+
+! Tense categories
+%<fut%> ! Future
+
+! Noun categories
+%<np%> Proper noun
+
+! Numeral classes
+%<human%>
+%<animal%>
+%<generic%>
+%<pairs%>
+%<boats%>
+%<bunches.of.dried.fish%>
+%<long%>
+%<thin.and.flat%>
+%<small.and.round%>
+
+! Formality categories
+%<form%> ! Formal
+%<inform%> ! Informal
+
+! Other symbols
+%<redup>% ! Reduplication
+%>      ! Morpheme boundary
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
