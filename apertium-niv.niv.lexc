@@ -87,10 +87,22 @@ Multichar_Symbols
 %<form%> ! Formal
 %<inform%> ! Informal
 
+! Noun Attribute
+%<attr%> ! Noun attribute
+
 ! Other symbols
 %<redup%> ! Reduplication
 %>      ! Morpheme boundary
+%{А%}
 %{G%}
+%{D%}
+%{О%}
+%{У%}
+%{Й%}
+%{T%}
+%{X%}
+%{Ы%}
+%{V%}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
@@ -100,11 +112,37 @@ LEXICON Root
 
 NounRoot ;
 
+LEXICON CLITICS
 
-LEXICON NounInfl
+%<itg%>:%>ла # ; ! Y/N questions
 
-%<n%>%<sg%>: # ;
-%<n%>%<pl%>:%>%{G%}у # ;
+LEXICON CASES
+%<nom%>: CLITICS ;
+%<age%>:%>%{А%}ӽ # ;       ! Agentive
+%<dat%>:%>%{D%}%{О%}ӽ # ;  ! Dative
+%<ins%>:%>%{G%}ир # ;      ! Instrumental
+%<loc%>:%>%{У%}%{Й%}н # ;  ! Locative
+%<abl%>:%>%{У%}х # ;       ! Ablative
+%<term%>:%>%{T%}ыкы # ;
+%<term%>:%>%{T%}%{X%}а # ;
+%<term%>:%>%{D%}оӻо # ;    ! Terminative
+%<comp%>:%>%{Ы%}к # ;      ! Comparative
+%<voc%>:%>%{V%} # ;   ! Vocative
+
+LEXICON N-INFL
+
+CASES;
+
+LEXICON SUBST
+
+N-INFL;
+%<pl%>:%>%{G%}у N-INFL ;
+
+LEXICON N1
+
+%<n%>%<attr%>: # ;
+%<n%>: SUBST ;
+%<n%>: # ;
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -113,7 +151,7 @@ LEXICON NounInfl
 
 LEXICON NounRoot
 
-умгу:умгу NounInfl ; ! woman
+умгу:умгу N1 ; ! woman
 
 
 
