@@ -145,6 +145,42 @@ LEXICON N1
 %<n%>: # ;
 
 
+LEXICON PRN1
+
+%<prn%>%<pers%>%<p1%>%<sg%>: # ;
+
+LEXICON PRN2
+
+%<prn%>%<pers%>%<p2%>%<sg%>: # ;
+
+LEXICON PRN3
+
+%<prn%>%<pers%>%<p3%>%<sg%>: # ;
+
+LEXICON PRN4
+
+%<prn%>%<pers%>%<p1%>%<pl%>%<excl%>: # ;
+
+LEXICON PRN5
+
+%<prn%>%<pers%>%<p1%>%<pl%>%<incl%>: # ;
+
+LEXICON PRN6
+
+%<prn%>%<pers%>%<p1%>%<du%>%<incl%>: # ;
+
+LEXICON PRN7
+
+%<prn%>%<pers%>%<p2%>%<pl%>: # ;
+
+LEXICON PRN8
+
+%<prn%>%<pers%>%<p3%>%<pl%>: # ;
+
+LEXICON PRN9
+
+%<prn%>%<ref%>: # ;
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -152,6 +188,19 @@ LEXICON N1
 LEXICON NounRoot
 
 умгу:умгу N1 ; ! woman
+ытык:ытык N1 ; ! father
+
+LEXICON PronounRoot
+
+ньи:ньи PRN1 ; ! I
+тьи:тьи PRN2 ; ! you
+иф:иф PRN3 ; ! he, she, it
+ньыӈ:ньыӈ PRN4 ; ! they and I
+мер:мер PRN5 ; ! y'all and I
+меги:меги PRN6 ; ! you and I
+ть'ыӈ:ть'ыӈ PRN7 ; ! y'all
+имӈ:имӈ PRN8 ; ! they
+п'и:п'и PRN9 ; ! oneself
 
 
 
