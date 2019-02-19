@@ -127,7 +127,7 @@ LEXICON CASES
 %<term%>:%>%{T%}%{X%}а # ;
 %<term%>:%>%{D%}оӻо # ;    ! Terminative
 %<comp%>:%>%{Ы%}к # ;      ! Comparative
-%<voc%>:%>%{V%} # ;   ! Vocative
+%<voc%>:%>%{V%} # ;        ! Vocative
 
 LEXICON N-INFL
 
