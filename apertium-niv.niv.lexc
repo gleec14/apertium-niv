@@ -52,7 +52,8 @@ Multichar_Symbols
 
 ! Verb forms
 %<inf%> ! infinitive
-! %<cvb%> ! converbs and stuff
+%<cvb_nar%> ! narrative converb
+%<cvb_ant%> ! anterior/simultaneous converb
 %<nmz.pred%> ! Predicate-actant nominalisation
 %<nmz.subj%> ! Subject nominalisation
 %<nmz.loc%> ! Locative nominalisation
@@ -84,8 +85,8 @@ Multichar_Symbols
 %<small.and.round%>
 
 ! Formality categories
-%<form%> ! Formal
-%<inform%> ! Informal
+%<frm%> ! Formal
+%<infrm%> ! Informal
 
 ! Noun Attribute
 %<attr%> ! Noun attribute
@@ -93,15 +94,15 @@ Multichar_Symbols
 ! Other symbols
 %<redup%> ! Reduplication
 %>      ! Morpheme boundary
-%{А%}
+%{a%}
 %{G%}
 %{D%}
-%{О%}
-%{У%}
-%{Й%}
+%{o%}
+%{u%}
+%{j%}
 %{T%}
 %{X%}
-%{Ы%}
+%{y%}
 %{V%}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -114,19 +115,21 @@ NounRoot ;
 
 LEXICON CLITICS
 
-%<itg%>:%>ла # ; ! Y/N questions
+%<qst%>:%>ла # ; ! Y/N questions
+%<emph%>:%>%{D%}и # ; ! intensifying particle 'even'
+%<emph%>:%>ӿагин # ; ! intensifying particle 'even'
 
 LEXICON CASES
 %<nom%>: CLITICS ;
-%<age%>:%>%{А%}ӽ # ;       ! Agentive
-%<dat%>:%>%{D%}%{О%}ӽ # ;  ! Dative
+%<age%>:%>%{a%}ӽ # ;       ! Agentive
+%<dat%>:%>%{D%}%{o%}ӽ # ;  ! Dative
 %<ins%>:%>%{G%}ир # ;      ! Instrumental
-%<loc%>:%>%{У%}%{Й%}н # ;  ! Locative
-%<abl%>:%>%{У%}х # ;       ! Ablative
+%<loc%>:%>%{У%}%{j%}н # ;  ! Locative
+%<abl%>:%>%{u%}х # ;       ! Ablative
 %<term%>:%>%{T%}ыкы # ;
 %<term%>:%>%{T%}%{X%}а # ;
 %<term%>:%>%{D%}оӻо # ;    ! Terminative
-%<comp%>:%>%{Ы%}к # ;      ! Comparative
+%<comp%>:%>%{y}%}к # ;      ! Comparative
 %<voc%>:%>%{V%} # ;        ! Vocative
 
 LEXICON N-INFL
