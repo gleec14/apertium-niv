@@ -74,15 +74,15 @@ Multichar_Symbols
 %<np%> Proper noun
 
 ! Numeral classes
-%<human%>
-%<animal%>
-%<generic%>
-%<pairs%>
-%<boats%>
-%<bunches.of.dried.fish%>
-%<long%>
-%<thin.and.flat%>
-%<small.and.round%>
+%<cl1%>
+%<cl2%>
+%<cl3%>
+%<cl4%>
+%<cl5%>
+%<cl6%>
+%<cl7%>
+%<cl8%>
+%<cl9%>
 
 ! Formality categories
 %<frm%> ! Formal
@@ -92,7 +92,7 @@ Multichar_Symbols
 %<attr%> ! Noun attribute
 
 ! Other symbols
-%<redup%> ! Reduplication
+! %<redup%> ! Reduplication
 %>      ! Morpheme boundary
 %{a%}
 %{G%}
@@ -104,6 +104,7 @@ Multichar_Symbols
 %{X%}
 %{y%}
 %{V%}
+%{f%}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
@@ -112,25 +113,28 @@ Multichar_Symbols
 LEXICON Root
 
 NounRoot ;
+PronounRoot ;
+AdvRoot ;
 
 LEXICON CLITICS
 
 %<qst%>:%>ла # ; ! Y/N questions
 %<emph%>:%>%{D%}и # ; ! intensifying particle 'even'
 %<emph%>:%>ӿагин # ; ! intensifying particle 'even'
+0:0 # ;
 
 LEXICON CASES
 %<nom%>: CLITICS ;
-%<age%>:%>%{a%}ӽ # ;       ! Agentive
-%<dat%>:%>%{D%}%{o%}ӽ # ;  ! Dative
-%<ins%>:%>%{G%}ир # ;      ! Instrumental
-%<loc%>:%>%{У%}%{j%}н # ;  ! Locative
-%<abl%>:%>%{u%}х # ;       ! Ablative
-%<term%>:%>%{T%}ыкы # ;
-%<term%>:%>%{T%}%{X%}а # ;
-%<term%>:%>%{D%}оӻо # ;    ! Terminative
-%<comp%>:%>%{y}%}к # ;      ! Comparative
-%<voc%>:%>%{V%} # ;        ! Vocative
+%<age%>:%>%{a%}ӽ CLITICS ;       ! Agentive
+%<dat%>:%>%{D%}%{o%}ӽ CLITICS ;  ! Dative
+%<ins%>:%>%{G%}ир CLITICS ;      ! Instrumental
+%<loc%>:%>%{u%}%{j%}н CLITICS ;  ! Locative
+%<abl%>:%>%{u%}х CLITICS ;       ! Ablative
+%<term%>:%>%{T%}ыкы CLITICS ;
+%<term%>:%>%{T%}%{X%}а CLITICS ;
+%<term%>:%>%{D%}оӻо CLITICS ;    ! Terminative
+%<comp%>:%>%{y%}к CLITICS ;      ! Comparative
+%<voc%>:%>%{V%} # ;              ! Vocative
 
 LEXICON N-INFL
 
@@ -147,42 +151,73 @@ LEXICON N1
 %<n%>: SUBST ;
 %<n%>: # ;
 
+LEXICON POSS
+
+%<pos%>:%>ны # ;
+
 
 LEXICON PRN1
 
+%<prn%>%<pers%>%<p1%>%<sg%>: POSS ;
 %<prn%>%<pers%>%<p1%>%<sg%>: # ;
 
 LEXICON PRN2
 
+%<prn%>%<pers%>%<p2%>%<sg%>: POSS ;
 %<prn%>%<pers%>%<p2%>%<sg%>: # ;
 
 LEXICON PRN3
 
+%<prn%>%<pers%>%<p3%>%<sg%>: POSS ;
 %<prn%>%<pers%>%<p3%>%<sg%>: # ;
 
 LEXICON PRN4
 
+%<prn%>%<pers%>%<p1%>%<pl%>%<excl%>: POSS ;
 %<prn%>%<pers%>%<p1%>%<pl%>%<excl%>: # ;
 
 LEXICON PRN5
 
+%<prn%>%<pers%>%<p1%>%<pl%>%<incl%>: POSS ;
 %<prn%>%<pers%>%<p1%>%<pl%>%<incl%>: # ;
 
 LEXICON PRN6
 
+%<prn%>%<pers%>%<p1%>%<du%>%<incl%>: POSS ;
 %<prn%>%<pers%>%<p1%>%<du%>%<incl%>: # ;
 
 LEXICON PRN7
 
+%<prn%>%<pers%>%<p2%>%<pl%>: POSS ;
 %<prn%>%<pers%>%<p2%>%<pl%>: # ;
 
 LEXICON PRN8
 
+%<prn%>%<pers%>%<p3%>%<pl%>: POSS ;
 %<prn%>%<pers%>%<p3%>%<pl%>: # ;
 
 LEXICON PRN9
 
+%<prn%>%<ref%>: POSS ;
 %<prn%>%<ref%>: # ;
+
+LEXICON SubjAgree
+
+%<p1%>%<sg%>:%>т # ;
+%<p2%>%<sg%>:%>р # ;
+%<p3%>%<sg%>:%>р # ;
+%<p1%>%<pl%>:%>т # ;
+%<p2%>%<pl%>:%>т # ;
+%<p3%>%<pl%>:%>т # ;
+
+LEXICON ADV1
+
+%<adv%>:%>%{G%}у SubjAgree ;
+
+LEXICON COMP
+
+%<comp%>:%>ё ADV1;
+ADV1 ;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
@@ -191,13 +226,13 @@ LEXICON PRN9
 LEXICON NounRoot
 
 умгу:умгу N1 ; ! woman
-ытык:ытык N1 ; ! father
+!ытык:ытык N1 ; ! father
 
 LEXICON PronounRoot
 
 ньи:ньи PRN1 ; ! I
 тьи:тьи PRN2 ; ! you
-иф:иф PRN3 ; ! he, she, it
+иф:и%{f%} PRN3 ; ! he, she, it
 ньыӈ:ньыӈ PRN4 ; ! they and I
 мер:мер PRN5 ; ! y'all and I
 меги:меги PRN6 ; ! you and I
@@ -205,7 +240,9 @@ LEXICON PronounRoot
 имӈ:имӈ PRN8 ; ! they
 п'и:п'и PRN9 ; ! oneself
 
+LEXICON AdvRoot
 
+ур:ур COMP ; ! well
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon
