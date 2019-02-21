@@ -9,20 +9,20 @@ Tests:
   2) Substitutional:
     тьека<v><iv><ind><pl>:
     - тьекадьғу
-    тьека<v><iv><pl><nmz.pred>:
+    тьека<v><iv><pl><nmz_pred>:
     - тьекадьғу
   3) "Full" substantivisation:
-    п'и<prn><ref> + ть'ола<v><iv><nmz.pred>:
+    п'и<prn><ref>+ть'ола<v><iv><nmz_pred>:
     - п'соладь
     ть'ола<v><iv><ind>:
     - ть'оладь
   Adverbial Morphology:
-    еӻ<adv><comp><p3><sg>:
-    - еӻёгур
     еӻ<adv><p3><sg>:
     - еӻгур
-    еӻ<adv><p3><sg> + еӻ<adv><p3><sg>:
+    еӻ<adv><p3><sg><sup>:
     - еӻгуеӻгур
+    еӻ<comp><adv><p3><sg>:
+    - еӻёгур
     ур<adv><p1><sg>:
     - ургут
     ур<adv><p3><sg>:
@@ -30,64 +30,35 @@ Tests:
   Adverbial nominalisation (zero marking):
     п'ры<v><iv><fut><ind>:
     - п'рыныдь
-    п'ры<v><iv><fut><nmz.adv><term>:
+    п'ры<v><iv><fut><nmz_adv><term>:
     - п'рыныт'ыкы
   Alternate forms:
-    иф<prn><p3><sg><nom> + за<v><ind>:
+    за<v><ind>:
+    - задь
+    иф<prn><p3><sg><nom>+аньма<v><cvb_ant>:
+    - яньмаӈан
+    иф<prn><p3><sg><nom>+за<v><ind>:
     - изадь
   Cardinal Numerals:
-    мевор<num><long>:
-    - мевор
-    мевсӄ<num><pairs>:
-    - мевсӄ
-    мен<num><human>:
+    мен<num><cl1>:
     - мен
-    мер<num><bunches.of.dried.fish>:
-    - мер
-    мерах<num><thin.and.flat>:
-    - мерах
-    меӄр<num><generic>:
-    - меӄр
-    мик<num><small.and.round>:
-    - мик
-    мим<num><boats>:
-    - мим
-    мор<num><animal>:
+    мен<num><cl2>:
     - мор
-  Denominal:
-    ваӄа<n> + ми<n><loc>:
-    - ваӄамин
-    тыф<n> + ми<n>:
-    - тывми
-    тыф<n> + ми<n> + ама<v><ind>:
-    - тывмиамадь
-  Deverbal:
-    иф<prn><p3><sg> + ордоӽ<post>:
-    - ёрдоӽ
-    иф<prn><p3><sg> + увудоӽ<post>:
-    - ювудоӽ
-  Direct Object Position:
-    питғы<n>+даю<v><tv><ind>:
-    - питғыдаюдь
-    питғы<n>+даю<v><tv><nmz.pred>:
-    - питғыдаюдь
-  Infinitive:
-    п'ры<v><iv><inf>:
-    - п'рыдоӽ
-  Interrogative:
-    п'ры<v><iv><itg><form>:
-    - п'рыло
-    п'ры<v><iv><itg><inform>:
-    - п'рыл
-  Locative nominalisation (suffix -ф/-в):
-    иф<prn><pers><p3><sg> + у<v><tv><ind>:
-    - юдь
-    иф<prn><pers><p3><sg> + у<v><tv><nmz-loc>:
-    - юф
-    п'ры<v><iv><fut><nmz.loc><term>:
-    - п'рыныфт'ыкы
-  Morphology: {}
-  Nominal Morphology:
+    мен<num><cl3>:
+    - меӄр
+    мен<num><cl4>:
+    - мевсӄ
+    мен<num><cl5>:
+    - мим
+    мен<num><cl6>:
+    - мер
+    мен<num><cl7>:
+    - мевор
+    мен<num><cl8>:
+    - мерах
+    мен<num><cl9>:
+    - мик
+  Cases:
     ӄан<n><abl>:
     - ӄанух
     ӄан<n><dat>:
@@ -106,38 +77,98 @@ Tests:
     - ӈайн
     ӈа<n><nom>:
     - ӈа
+    ӈа<n><voc>:
+    - ӈаа
+  Converbs:
+    п'ры<v><iv><cvb_ant>:
+    - п'рыӈан
+    п'ры<v><iv><cvb_nar><p1><sg>:
+    - п'рыт
+    п'ры<v><iv><cvb_nar><p3><pl>:
+    - п'рыт
+    п'ры<v><iv><cvb_nar><p3><sg>:
+    - п'рыр
+  Denominal:
+    ваӄа<n>+ми<n><loc>:
+    - ваӄамин
+    тыф<n>+ми<n>:
+    - тывми
+    тыф<n>+ми<n>+ама<v><ind>:
+    - тывмиамадь
+  Deverbal:
+    иф<prn><p3><sg>+ордоӽ<post>:
+    - ёрдоӽ
+    иф<prn><p3><sg>+увудоӽ<post>:
+    - ювудоӽ
+  Direct Object Position:
+    питғы<n>+даю<v><tv><ind>:
+    - питғыдаюдь
+    питғы<n>+даю<v><tv><nmz_pred>:
+    - питғыдаюдь
+  Infinitive:
+    му<v><iv><inf>:
+    - мудоӽ
+    п'ры<v><iv><fut><inf>:
+    - п'рыныдоӽ
+    п'ры<v><iv><inf>:
+    - п'рыдоӽ
+  Interrogative:
+    п'ры<v><iv><itg><frm>:
+    - п'рыло
+    п'ры<v><iv><itg><infrm>:
+    - п'рыл
+  Locative nominalisation (suffix -ф/-в):
+    иф<prn><pers><p3><sg>+у<v><tv><ind>:
+    - юдь
+    иф<prn><pers><p3><sg>+у<v><tv><nmz-loc>:
+    - юф
+    п'ры<v><iv><fut><nmz_loc><term>:
+    - п'рыныфт'ыкы
+  Morphology: {}
+  Nominal Morphology: {}
   Nominalisation: {}
   Object-Verb Agreement:
-    имӈ<prn><p3><pl><nom> + за<v><ind>:
-    - имӈдядь
-    иф<prn><p3><sg><nom> + за<v><ind>:
+    за<v><ind>:
     - задь
-    ньи<prn><p1><sg><nom> + за<v><ind>:
+    имӈ<prn><p3><pl><nom>+за<v><ind>:
+    - имӈдядь
+    ньи<prn><p1><sg><nom>+за<v><ind>:
     - ньзадь
-    ньыӈ<prn><p1><pl><excl><nom> + за<v><ind>:
+    ньыӈ<prn><p1><pl><excl><nom>+за<v><ind>:
     - ньыӈдядь
-    п'и<prn><ref>+ за<v><ind>:
+    п'и<prn><ref>+за<v><ind>:
     - п'садь
-    ть'и<prn><p2><sg><nom> + за<v><ind>:
+    ть'и<prn><p2><sg><nom>+за<v><ind>:
     - ть'садь
-    тьыӈ<prn><p2><pl><nom> + за<v><ind>:
+    тьыӈ<prn><p2><pl><nom>+за<v><ind>:
     - тьыӈдядь
   Plurals:
-    пила<v><iv><redup> + эри<n>:
+    ньивх<n><pl>:
+    - ньивғгу
+    п'и<prn><ref>+оола<n><pl><ins>:
+    - п'оолагукир
+    пила<v><iv><redup>+эри<n>:
     - пилапилаэри
     умгу<n><pl>:
     - умгугу
+    ытык<n><pl>:
+    - ытыкху
   Polar Questions:
-    Рум<n><np><itg>:
+    Рум<n><np>+__<cop><pres><p3><sg>+ла<mod>:
     - Румла
+    Рум<n><np>+ла<qst>:
+    - Румла
+  Possesive Pronouns:
+    ньи<prn><pers><p1><sg><pos>:
+    - ньины
   Possession:
-    иф<prn><p3><sg><nom> + заӄо<n>:
+    иф<prn><p3><sg><nom>+заӄо<n>:
     - изаӄо
-    ньи<prn><p1><sg><nom> + заӄо<n>:
+    ньи<prn><p1><sg><nom>+заӄо<n>:
     - ньзаӄо
-    п'и<prn><ref>+ заӄо<n>:
+    п'и<prn><ref>+заӄо<n>:
     - п'саӄо
-    ть'и<prn><p2><sg><nom> + заӄо<n>:
+    ть'и<prn><p2><sg><nom>+заӄо<n>:
     - ть'саӄо
   Predicate-actant nominalisation (suffix -дь/-ть): {}
   Pronouns:
@@ -162,12 +193,12 @@ Tests:
   Subject Position:
     ӿуӈрыдь<prn>+во<v><tv><ind>:
     - ӿуӈрыдьводь
-    ӿуӈрыдь<prn>+во<v><tv><nmz.pred>:
+    ӿуӈрыдь<prn>+во<v><tv><nmz_pred>:
     - ӿуӈрыдьводь
   Subject nominalisation (suffix -к):
-    сета<n> + ғе<v><tv><fut><nmz.subj>:
+    сета<n>+ғе<v><tv><fut><nmz_subj>:
     - сетағенык
-    сета<n> + ғе<v><tv><ind>:
+    сета<n>+ғе<v><tv><ind>:
     - сетағедь
   Syntax: {}
   Verbal Morphology: {}
