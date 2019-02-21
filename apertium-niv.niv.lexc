@@ -8,7 +8,7 @@ Multichar_Symbols
 %<adv%> ! Adverb
 %<prn%> ! Pronoun
 %<num%> ! Numeral
-%<enc%> ! Enclitic
+!%<enc%> ! Enclitic
 
 ! Case categories
 %<nom%> ! Nominative
@@ -41,10 +41,6 @@ Multichar_Symbols
 ! Clusivity categories
 %<incl%> ! Inclusive
 %<excl%> ! Exclusive
-
-! Number categories
-%<pl%>  ! Plural
-%<sg%>  ! Singular
 
 ! Verb categories
 %<tv%> ! Transitive verb
@@ -105,6 +101,9 @@ Multichar_Symbols
 %{y%}
 %{V%}
 %{f%}
+%{I%}
+%{D'%}
+%'
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
@@ -115,6 +114,9 @@ LEXICON Root
 NounRoot ;
 PronounRoot ;
 AdvRoot ;
+NumeralRoot ;
+TVerbRoot ;
+IVerbRoot ;
 
 LEXICON CLITICS
 
@@ -149,12 +151,10 @@ LEXICON N1
 
 %<n%>%<attr%>: # ;
 %<n%>: SUBST ;
-%<n%>: # ;
 
 LEXICON POSS
 
 %<pos%>:%>ны # ;
-
 
 LEXICON PRN1
 
@@ -219,30 +219,107 @@ LEXICON COMP
 %<comp%>:%>ё ADV1;
 ADV1 ;
 
+
+LEXICON NUM1
+
+%<num%>%<cl1%>:%>%{I%}н # ;
+%<num%>%<cl2%>:%>ынь # ;
+%<num%>%<cl3%>:%>аӄр # ;
+
+LEXICON NUM2
+
+%<num%>%<cl1%>:%>ен # ;
+%<num%>%<cl2%>:%>ор # ;
+%<num%>%<cl3%>:%>еӄр # ;
+%<num%>%<cl4%>:%>евсӄ # ;
+%<num%>%<cl5%>:%>им # ;
+%<num%>%<cl6%>:%>ер # ;
+%<num%>%<cl7%>:%>евор # ;
+%<num%>%<cl8%>:%>ерах # ;
+%<num%>%<cl9%>:%>ик # ;
+
+LEXICON FORMALITY
+%<frm%>:%>о # ;
+%<infrm%>:0 # ;
+
+LEXICON MOOD
+
+%<itg%>:%>л FORMALITY ;
+%<ind%>:%>%{D'%} # ;
+! %<imp%>:%>idk # ;
+
+LEXICON NonFinite
+
+%<inf%>:%>%{D%}оӽ # ;
+%<cvb_nar%>: SubjAgree ;
+%<cvb_ant%>:%>ӈан # ;
+MOOD ;
+
+LEXICON TENSE
+
+%<fut%>:%>ны NonFinite ;
+NonFinite ;
+
+LEXICON TV1
+
+%<v%>%<tv%>: TENSE;
+
+LEXICON IV1
+
+%<v%>%<iv%>: TENSE;
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 LEXICON NounRoot
 
-умгу:умгу N1 ; ! woman
-!ытык:ытык N1 ; ! father
+умгу:умгу N1  ; ! woman
+ытык:ытык N1  ; ! father
+ӄан:ӄан N1    ; ! doggo
+ӈа:ӈа N1      ; ! animal
+тыф:тыф N1    ; ! house
+ми:ми N1      ; ! inside
+ньивх:ньивх   ; ! person
+ваӄа:ваӄа     ; ! box
+
+un%<neg%>%+:un Adjectives ;
+
+LEXICON Adjectives
+
+kind%<adj%>:kind # ;
+happy%<adj%>:happy # ;
 
 LEXICON PronounRoot
 
-ньи:ньи PRN1 ; ! I
-тьи:тьи PRN2 ; ! you
-иф:и%{f%} PRN3 ; ! he, she, it
-ньыӈ:ньыӈ PRN4 ; ! they and I
-мер:мер PRN5 ; ! y'all and I
-меги:меги PRN6 ; ! you and I
-ть'ыӈ:ть'ыӈ PRN7 ; ! y'all
-имӈ:имӈ PRN8 ; ! they
-п'и:п'и PRN9 ; ! oneself
+ньи:ньи PRN1       ; ! I
+ть%'и:ть%'и PRN2     ; ! you
+иф:и%{f%} PRN3    ; ! he, she, it
+ньыӈ:ньыӈ PRN4    ; ! they and I
+мер:мер PRN5      ; ! y'all and I
+меги:меги PRN6    ; ! you and I
+ть'ыӈ:ть'ыӈ PRN7  ; ! y'all
+имӈ:имӈ PRN8      ; ! they
+п%'и:п%'и PRN9      ; ! oneself
 
 LEXICON AdvRoot
 
 ур:ур COMP ; ! well
+еӻ:еӻ COMP ; ! quickly
+
+LEXICON NumeralRoot
+
+ньин:нь NUM1 ; ! one
+мен:м NUM2   ; ! two
+
+LEXICON TVerbRoot
+
+за:за TV1 ; ! to beat
+
+LEXICON IVerbRoot
+
+п'ры:п'ры IV1 ; ! to come
+му:му IV1     ; ! to die
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon
