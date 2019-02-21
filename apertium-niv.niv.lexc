@@ -1,5 +1,3 @@
-! Morphological Transducer for niv
-
 Multichar_Symbols
 
 ! Part of speech categories
@@ -280,7 +278,7 @@ LEXICON NounRoot
 ӈа:ӈа N1      ; ! animal
 тыф:тыф N1    ; ! house
 ми:ми N1      ; ! inside
-ньивх:ньивх   ; ! person
+нивх:ньих   ; ! person
 ваӄа:ваӄа     ; ! box
 
 un%<neg%>%+:un Adjectives ;
@@ -292,15 +290,15 @@ happy%<adj%>:happy # ;
 
 LEXICON PronounRoot
 
-ньи:ньи PRN1       ; ! I
-ть%'и:ть%'и PRN2     ; ! you
+ни:ни PRN1       ; ! I
+т'и:т'и PRN2     ; ! you
 иф:и%{f%} PRN3    ; ! he, she, it
 ньыӈ:ньыӈ PRN4    ; ! they and I
 мер:мер PRN5      ; ! y'all and I
 меги:меги PRN6    ; ! you and I
 ть'ыӈ:ть'ыӈ PRN7  ; ! y'all
 имӈ:имӈ PRN8      ; ! they
-п%'и:п%'и PRN9      ; ! oneself
+п'и:п'и PRN9      ; ! oneself
 
 LEXICON AdvRoot
 
