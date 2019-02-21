@@ -245,7 +245,7 @@ LEXICON FORMALITY
 LEXICON MOOD
 
 %<itg%>:%>л FORMALITY ;
-%<ind%>:%>%{D'%} # ;
+%<ind%>:%>%{D'%}ь # ;
 ! %<imp%>:%>idk # ;
 
 LEXICON NonFinite
@@ -280,15 +280,15 @@ LEXICON NounRoot
 ӈа:ӈа N1      ; ! animal
 тыф:тыф N1    ; ! house
 ми:ми N1      ; ! inside
-ньивх:ньивх   ; ! person
-ваӄа:ваӄа     ; ! box
+ньивх:ньивх N1   ; ! person
+ваӄа:ваӄа N1    ; ! box
+сета:сета N1    ; ! sugar
 
-un%<neg%>%+:un Adjectives ;
 
-LEXICON Adjectives
-
-kind%<adj%>:kind # ;
-happy%<adj%>:happy # ;
+!un%<neg%>%+:un Adjectives ;
+!LEXICON Adjectives
+!kind%<adj%>:kind # ;
+!happy%<adj%>:happy # ;
 
 LEXICON PronounRoot
 
@@ -315,11 +315,15 @@ LEXICON NumeralRoot
 LEXICON TVerbRoot
 
 за:за TV1 ; ! to beat
+во:во TV1 ; ! to take
+даю:даю TV1 ; ! to write
+ғе:ғе TV1 ; ! to buy
 
 LEXICON IVerbRoot
 
 п'ры:п'ры IV1 ; ! to come
 му:му IV1     ; ! to die
+тьека:тьека IV1 ; ! to be strong
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon

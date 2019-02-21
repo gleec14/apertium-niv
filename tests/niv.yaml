@@ -33,11 +33,11 @@ Tests:
     п'ры<v><iv><fut><nmz_adv><term>:
     - п'рыныт'ыкы
   Alternate forms:
-    за<v><ind>:
+    за<v><tv><ind>:
     - задь
     иф<prn><p3><sg><nom>+аньма<v><cvb_ant>:
     - яньмаӈан
-    иф<prn><p3><sg><nom>+за<v><ind>:
+    иф<prn><p3><sg><nom>+за<v><tv><ind>:
     - изадь
   Cardinal Numerals:
     мен<num><cl1>:
@@ -128,19 +128,19 @@ Tests:
   Nominal Morphology: {}
   Nominalisation: {}
   Object-Verb Agreement:
-    за<v><ind>:
+    за<v><tv><ind>:
     - задь
-    имӈ<prn><p3><pl><nom>+за<v><ind>:
+    имӈ<prn><p3><pl><nom>+за<v><tv><ind>:
     - имӈдядь
-    ньи<prn><p1><sg><nom>+за<v><ind>:
+    ньи<prn><p1><sg><nom>+за<v><tv><ind>:
     - ньзадь
-    ньыӈ<prn><p1><pl><excl><nom>+за<v><ind>:
+    ньыӈ<prn><p1><pl><excl><nom>+за<v><tv><ind>:
     - ньыӈдядь
-    п'и<prn><ref>+за<v><ind>:
+    п'и<prn><ref>+за<v><tv><ind>:
     - п'садь
-    ть'и<prn><p2><sg><nom>+за<v><ind>:
+    ть'и<prn><p2><sg><nom>+за<v><tv><ind>:
     - ть'садь
-    тьыӈ<prn><p2><pl><nom>+за<v><ind>:
+    тьыӈ<prn><p2><pl><nom>+за<v><tv><ind>:
     - тьыӈдядь
   Plurals:
     ньивх<n><pl>:
