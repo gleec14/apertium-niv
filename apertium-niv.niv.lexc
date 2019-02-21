@@ -278,14 +278,11 @@ LEXICON NounRoot
 ӈа:ӈа N1      ; ! animal
 тыф:тыф N1    ; ! house
 ми:ми N1      ; ! inside
-<<<<<<< HEAD
-нивх:ньих   ; ! person
-ваӄа:ваӄа     ; ! box
-=======
-ньивх:ньивх N1   ; ! person
+нивх:нивх N1  ; ! person
 ваӄа:ваӄа N1    ; ! box
 сета:сета N1    ; ! sugar
->>>>>>> 21b223b594fb591cde5d9757fbf9c5c744924068
+ойдам:ойдам N1  ; ! baby
+курӈ:курӈ N1    ; ! universe
 
 
 !un%<neg%>%+:un Adjectives ;
@@ -296,12 +293,12 @@ LEXICON NounRoot
 LEXICON PronounRoot
 
 ни:ни PRN1       ; ! I
-т'и:т'и PRN2     ; ! you
+чи:чи PRN2     ; ! you
 иф:и%{f%} PRN3    ; ! he, she, it
 ньыӈ:ньыӈ PRN4    ; ! they and I
 мер:мер PRN5      ; ! y'all and I
 меги:меги PRN6    ; ! you and I
-ть'ыӈ:ть'ыӈ PRN7  ; ! y'all
+чиыӈ:чиыӈ PRN7  ; ! y'all
 имӈ:имӈ PRN8      ; ! they
 п'и:п'и PRN9      ; ! oneself
 
@@ -326,7 +323,8 @@ LEXICON IVerbRoot
 
 п'ры:п'ры IV1 ; ! to come
 му:му IV1     ; ! to die
-тьека:тьека IV1 ; ! to be strong
+чека:чека IV1 ; ! to be strong
+чола:чола IV1 ; ! to be poor
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon

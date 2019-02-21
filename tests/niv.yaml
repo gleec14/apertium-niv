@@ -7,15 +7,15 @@ Tests:
   '"Postpositions"': {}
   1) Action Nominal Construction: {}
   2) Substitutional:
-    тьека<v><iv><ind><pl>:
-    - тьекадьғу
-    тьека<v><iv><pl><nmz_pred>:
-    - тьекадьғу
+    чека<v><iv><ind><pl>:
+    - чекадьғу
+    чека<v><iv><pl><nmz_pred>:
+    - чекадьғу
   3) "Full" substantivisation:
-    п'и<prn><ref>+ть'ола<v><iv><nmz_pred>:
+    п'и<prn><ref>+чола<v><iv><nmz_pred>:
     - п'соладь
-    ть'ола<v><iv><ind>:
-    - ть'оладь
+    чола<v><iv><ind>:
+    - чоладь
   Adverbial Morphology:
     еӻ<adv><p3><sg>:
     - еӻгур
@@ -132,19 +132,19 @@ Tests:
     - задь
     имӈ<prn><p3><pl><nom>+за<v><tv><ind>:
     - имӈдядь
-    ньи<prn><p1><sg><nom>+за<v><tv><ind>:
+    ни<prn><p1><sg><nom>+за<v><tv><ind>:
     - ньзадь
     ньыӈ<prn><p1><pl><excl><nom>+за<v><tv><ind>:
     - ньыӈдядь
     п'и<prn><ref>+за<v><tv><ind>:
     - п'садь
-    ть'и<prn><p2><sg><nom>+за<v><tv><ind>:
-    - ть'садь
-    тьыӈ<prn><p2><pl><nom>+за<v><tv><ind>:
-    - тьыӈдядь
+    чи<prn><p2><sg><nom>+за<v><tv><ind>:
+    - ч'садь
+    чыӈ<prn><p2><pl><nom>+за<v><tv><ind>:
+    - чыӈдядь
   Plurals:
-    ньивх<n><pl>:
-    - ньивғгу
+    нивх<n><pl>:
+    - нивғгу
     п'и<prn><ref>+оола<n><pl><ins>:
     - п'оолагукир
     пила<v><iv><redup>+эри<n>:
@@ -159,17 +159,17 @@ Tests:
     Рум<n><np>+ла<qst>:
     - Румла
   Possesive Pronouns:
-    ньи<prn><pers><p1><sg><pos>:
-    - ньины
+    ни<prn><pers><p1><sg><pos>:
+    - нины
   Possession:
     иф<prn><p3><sg><nom>+заӄо<n>:
     - изаӄо
-    ньи<prn><p1><sg><nom>+заӄо<n>:
+    ни<prn><p1><sg><nom>+заӄо<n>:
     - ньзаӄо
     п'и<prn><ref>+заӄо<n>:
     - п'саӄо
-    ть'и<prn><p2><sg><nom>+заӄо<n>:
-    - ть'саӄо
+    чи<prn><p2><sg><nom>+заӄо<n>:
+    - ч'саӄо
   Predicate-actant nominalisation (suffix -дь/-ть): {}
   Pronouns:
     имӈ<prn><pers><p3><pl>:
@@ -180,16 +180,16 @@ Tests:
     - меги
     мер<prn><pers><p1><pl><incl>:
     - мер
-    ньи<prn><pers><p1><sg>:
-    - ньи
+    ни<prn><pers><p1><sg>:
+    - ни
     ньыӈ<prn><pers><p1><pl><excl>:
     - ньыӈ
     п'и<prn><ref>:
     - п'и
-    ть'и<prn><pers><p2><sg>:
-    - ть'и
-    ть'ыӈ<prn><pers><p2><pl>:
-    - ть'ыӈ
+    чи<prn><pers><p2><sg>:
+    - чи
+    чыӈ<prn><pers><p2><pl>:
+    - чыӈ
   Subject Position:
     ӿуӈрыдь<prn>+во<v><tv><ind>:
     - ӿуӈрыдьводь
