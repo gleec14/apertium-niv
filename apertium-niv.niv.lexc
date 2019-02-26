@@ -101,7 +101,7 @@ Multichar_Symbols
 %{f%}
 %{I%}
 %{D'%}
-%'
+%ʼ
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
@@ -130,9 +130,9 @@ LEXICON CASES
 %<ins%>:%>%{G%}ир CLITICS ;      ! Instrumental
 %<loc%>:%>%{u%}%{j%}н CLITICS ;  ! Locative
 %<abl%>:%>%{u%}х CLITICS ;       ! Ablative
-%<term%>:%>%{T%}ыкы CLITICS ;
-%<term%>:%>%{T%}%{X%}а CLITICS ;
-%<term%>:%>%{D%}оӻо CLITICS ;    ! Terminative
+%<term%>:%>%{T%}ыкы CLITICS ;    ! Terminative
+%<term%>:%>%{T%}%{X%}а CLITICS ; ! Dir/LR
+%<term%>:%>%{D%}оӻо CLITICS ;    ! Dir/LR
 %<comp%>:%>%{y%}к CLITICS ;      ! Comparative
 %<voc%>:%>%{V%} # ;              ! Vocative
 
@@ -158,50 +158,53 @@ LEXICON POSS
 LEXICON PRN1
 
 %<prn%>%<pers%>%<p1%>%<sg%>:и POSS ;
-%<prn%>%<pers%>%<p1%>%<sg%>%+:ь TVerbRoot ;
+%<prn%>%<pers%>%<p1%>%<sg%>%+:ь%> TVerbRoot ;
 %<prn%>%<pers%>%<p1%>%<sg%>%+:ь NounRoot ;
 
 LEXICON PRN2
 
 %<prn%>%<pers%>%<p2%>%<sg%>:и POSS ;
-%<prn%>%<pers%>%<p2%>%<sg%>:' TVerbRoot ;
-%<prn%>%<pers%>%<p2%>%<sg%>:' NounRoot ;
+%<prn%>%<pers%>%<p2%>%<sg%>%+:ʼ TVerbRoot ;
+%<prn%>%<pers%>%<p2%>%<sg%>%+:ʼ NounRoot ;
 
 LEXICON PRN3
 
 %<prn%>%<pers%>%<p3%>%<sg%>: POSS ;
-%<prn%>%<pers%>%<p3%>%<sg%>: NounRoot ;
+%<prn%>%<pers%>%<p3%>%<sg%>%+:%> NounRoot ;
 
 LEXICON PRN4
 
 %<prn%>%<pers%>%<p1%>%<pl%>%<excl%>: POSS ;
-%<prn%>%<pers%>%<p1%>%<pl%>%<excl%>: TVerbRoot ;
-%<prn%>%<pers%>%<p1%>%<pl%>%<excl%>: NounRoot ;
+%<prn%>%<pers%>%<p1%>%<pl%>%<excl%>%+: TVerbRoot ;
+%<prn%>%<pers%>%<p1%>%<pl%>%<excl%>%+: NounRoot ;
 
 LEXICON PRN5
 
 %<prn%>%<pers%>%<p1%>%<pl%>%<incl%>: POSS ;
-%<prn%>%<pers%>%<p1%>%<pl%>%<incl%>: # ;
+%<prn%>%<pers%>%<p1%>%<pl%>%<incl%>%+: # ;
 
 LEXICON PRN6
 
 %<prn%>%<pers%>%<p1%>%<du%>%<incl%>: POSS ;
-%<prn%>%<pers%>%<p1%>%<du%>%<incl%>: # ;
+%<prn%>%<pers%>%<p1%>%<du%>%<incl%>%+: # ;
 
 LEXICON PRN7
 
 %<prn%>%<pers%>%<p2%>%<pl%>: POSS ;
-%<prn%>%<pers%>%<p2%>%<pl%>: # ;
+%<prn%>%<pers%>%<p2%>%<pl%>%+: TVerbRoot ;
+%<prn%>%<pers%>%<p2%>%<pl%>%+: NounRoot ;
 
 LEXICON PRN8
 
 %<prn%>%<pers%>%<p3%>%<pl%>: POSS ;
-%<prn%>%<pers%>%<p3%>%<pl%>: # ;
+%<prn%>%<pers%>%<p3%>%<pl%>%+: TVerbRoot ;
+%<prn%>%<pers%>%<p3%>%<pl%>%+: NounRoot ;
 
 LEXICON PRN9
 
 %<prn%>%<ref%>: POSS ;
-%<prn%>%<ref%>: # ;
+%<prn%>%<ref%>%+: TVerbRoot ;
+%<prn%>%<ref%>%+: NounRoot ;
 
 LEXICON SubjAgree
 
@@ -305,7 +308,7 @@ LEXICON PronounRoot
 меги:меги PRN6   ; ! you and I
 чыӈ:чыӈ PRN7     ; ! y'all
 имӈ:имӈ PRN8     ; ! they
-п'и:п' PRN9      ; ! oneself
+пʼи:пʼ PRN9      ; ! oneself
 
 LEXICON NumeralRoot
 
@@ -321,7 +324,7 @@ LEXICON TVerbRoot
 
 LEXICON IVerbRoot
 
-п'ры:п'ры IV1 ; ! to come
+пʼры:пʼры IV1 ; ! to come
 му:му IV1     ; ! to die
 чека:чека IV1 ; ! to be strong
 чола:чола IV1 ; ! to be poor

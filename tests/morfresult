@@ -1,0 +1,24 @@
+Number of tokenised words in the corpus: 896
+Coverage: 7.48%
+Top unknown words in the corpus:
+  12	 ойдам<n><nom>:
+         - ойдам
+  12	 имғу<prn><pers><p3><pl>:
+         - имғу
+  12	 курӈ<n><nom>:
+         -  курӈ
+  11	 Ызык<unk>:
+	 - Ызык
+10       маӈӷла<unk>:
+	 - маӈӷла
+7        Ирод<unk>:
+         - Ирод
+6	 Оӻл:<unk>:
+         - Оӻл
+6	 ӿур<unk>:
+         - ӿур
+6	 ес<unk>:
+         - ес
+5	 сык<unk>:
+         - сык
+Translation time: 0.004088163375854492 seconds

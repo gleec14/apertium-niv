@@ -1,19 +1,20 @@
 Alphabet
  А Б В Г Ӷ Ғ Ӻ Д Е Ё Ж З И Й К Ӄ Л М Н Ӈ О П Р Р̌ С Т У Ф Х Ӽ Ӿ Ц Ч Ш Щ Ъ Ы Ь Э Ю Я
- а б в г ӷ ғ ӻ д е ё ж з и й к ӄ л м н ӈ о п р р̌ с т у ф х ӽ ӿ ц ч ш щ ъ ы ь э ю я '
+ а б в г ӷ ғ ӻ д е ё ж з и й к ӄ л м н ӈ о п р р̌ с т у ф х ӽ ӿ ц ч ш щ ъ ы ь э ю я ʼ
  %{a%}:а %{a%}:0 %>:0
  %{G%}:г %{G%}:к %{G%}:х %{G%}:ғ
  %{D%}:д %{D%}:т %{D%}:р
  %{o%}:о %{o%}:0
  %{u%}:у %{u%}:0
  %{j%}:й %{j%}:0
- %{T%}:т' %{T%}:р̌ %{T%}:р
+ %{T%}:тʼ %{T%}:р̌ %{T%}:р
  %{X%}:ӽ  %{X%}:ӷ
  %{y%}:ы  %{y%}:0
  %{V%}:а %{V%}:э %{V%}:и %{V%}:о %{V%}:у %{V%}:ы
  %{f%}:ф %{f%}:0
  %{I%}:е %{I%}:и
  %{D'%}:д %{D'%}:т
+ %+:0
  ;
 
 Sets
@@ -21,10 +22,25 @@ Sets
 Vowel = А Е Ё И О У Ы Э Ю Я
         а е ё и о у ы э ю я ;
 
+Consonant = Б В Г Ӷ Ғ Ӻ Д Ж З Й К Ӄ Л М Н Ӈ П Р Р̌ С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ Ъ Ь
+            б в г ӷ ғ ӻ д ж з й к ӄ л м н ӈ п р р̌ с т ф х ӽ ӿ ц ч ш щ ъ ь ;
+
 Rules
 
-"Remove suffix vowel with vowel-ending stem"
-i:0 <=> Vow %{VSUF%}:0 _ [ m | n ] ;
+"Remove /a/ after vowel-ending stem"
+%{a%}:0 <=> :Vowel %>:0 _ ;
+
+"Remove /u/ after vowel-ending stem"
+%{u%}:0 <=> :Vowel %>:0 _ ;
+
+"Remove /j/ after /i/"
+%{j%}:0 <=> и %>:0 %{u%}:0 _ ;
+
+"Remove /ɤ/ after vowel-ending stem"
+%{y%}:0 <=> :Vowel %>:0 _ ;
+
+"Remove /f/ before consonant-initial stem"
+%{f%}:0 <=> _ [ %>:0 | %+ ] :Consonant ;
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Enter_twol

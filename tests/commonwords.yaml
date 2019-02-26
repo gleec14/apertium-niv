@@ -1,0 +1,29 @@
+Config:
+  hfst:
+    App: hfst-lookup
+    Gen: ../niv.autogen.hfst
+    Morph: ../niv.automorf.hfst
+Tests:
+   ойдам<n><nom>:
+   - ойдам
+   имғу<prn><pers><p3><pl>:
+   - имғу
+   курӈ<n><nom>:
+   - курӈ
+   Ызык<unk>:
+   - Ызык
+   маӈӷла<unk>:
+   - маӈӷла
+   Ирод<unk>:
+   - Ирод
+   Оӻл:<unk>:
+   - Оӻл
+   ӿур<unk>:
+   - ӿур
+   ес<unk>:
+   - ес
+   сык<unk>:
+   - сык
+   Syntax: {}
+   Verbal Morphology: {}
+   Word CLasses: {}
