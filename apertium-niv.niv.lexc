@@ -111,10 +111,10 @@ LEXICON Root
 
 NounRoot ;
 PronounRoot ;
-AdvRoot ;
 NumeralRoot ;
 TVerbRoot ;
 IVerbRoot ;
+IVerb-AdvRoot ;
 
 LEXICON CLITICS
 
@@ -147,32 +147,36 @@ N-INFL;
 
 LEXICON N1
 
-%<n%>%<attr%>: # ;
+!%<n%>: # ; ! attributive noun
 %<n%>: SUBST ;
 
 LEXICON POSS
 
-%<pos%>:%>ны # ;
+%<pos%>:%>ны CASES ;
+0:0 # ;
 
 LEXICON PRN1
 
-%<prn%>%<pers%>%<p1%>%<sg%>: POSS ;
-%<prn%>%<pers%>%<p1%>%<sg%>: # ;
+%<prn%>%<pers%>%<p1%>%<sg%>:и POSS ;
+%<prn%>%<pers%>%<p1%>%<sg%>%+:ь TVerbRoot ;
+%<prn%>%<pers%>%<p1%>%<sg%>%+:ь NounRoot ;
 
 LEXICON PRN2
 
-%<prn%>%<pers%>%<p2%>%<sg%>: POSS ;
-%<prn%>%<pers%>%<p2%>%<sg%>: # ;
+%<prn%>%<pers%>%<p2%>%<sg%>:и POSS ;
+%<prn%>%<pers%>%<p2%>%<sg%>:' TVerbRoot ;
+%<prn%>%<pers%>%<p2%>%<sg%>:' NounRoot ;
 
 LEXICON PRN3
 
 %<prn%>%<pers%>%<p3%>%<sg%>: POSS ;
-%<prn%>%<pers%>%<p3%>%<sg%>: # ;
+%<prn%>%<pers%>%<p3%>%<sg%>: NounRoot ;
 
 LEXICON PRN4
 
 %<prn%>%<pers%>%<p1%>%<pl%>%<excl%>: POSS ;
-%<prn%>%<pers%>%<p1%>%<pl%>%<excl%>: # ;
+%<prn%>%<pers%>%<p1%>%<pl%>%<excl%>: TVerbRoot ;
+%<prn%>%<pers%>%<p1%>%<pl%>%<excl%>: NounRoot ;
 
 LEXICON PRN5
 
@@ -283,6 +287,7 @@ LEXICON NounRoot
 сета:сета N1    ; ! sugar
 ойдам:ойдам N1  ; ! baby
 курӈ:курӈ N1    ; ! universe
+заӄо:заӄо N1    ; ! knife
 
 
 !un%<neg%>%+:un Adjectives ;
@@ -292,20 +297,15 @@ LEXICON NounRoot
 
 LEXICON PronounRoot
 
-ни:ни PRN1       ; ! I
-чи:чи PRN2     ; ! you
-иф:и%{f%} PRN3    ; ! he, she, it
-ньыӈ:ньыӈ PRN4    ; ! they and I
-мер:мер PRN5      ; ! y'all and I
-меги:меги PRN6    ; ! you and I
-чиыӈ:чиыӈ PRN7  ; ! y'all
-имӈ:имӈ PRN8      ; ! they
-п'и:п'и PRN9      ; ! oneself
-
-LEXICON AdvRoot
-
-ур:ур COMP ; ! well
-еӻ:еӻ COMP ; ! quickly
+ни:н PRN1        ; ! I
+чи:ч PRN2        ; ! you
+иф:и%{f%} PRN3   ; ! he, she, it
+ньыӈ:ньыӈ PRN4   ; ! they and I
+мер:мер PRN5     ; ! y'all and I
+меги:меги PRN6   ; ! you and I
+чыӈ:чыӈ PRN7     ; ! y'all
+имӈ:имӈ PRN8     ; ! they
+п'и:п' PRN9      ; ! oneself
 
 LEXICON NumeralRoot
 
@@ -325,6 +325,10 @@ LEXICON IVerbRoot
 му:му IV1     ; ! to die
 чека:чека IV1 ; ! to be strong
 чола:чола IV1 ; ! to be poor
+
+LEXICON IVerb-AdvRoot
+ур:ур COMP ; ! well
+еӻ:еӻ COMP ; ! quickly
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon
