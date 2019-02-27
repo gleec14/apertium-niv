@@ -90,7 +90,7 @@ Multichar_Symbols
 %>      ! Morpheme boundary
 %{a%}
 %{G%}
-%{D%}
+%{R%}
 %{o%}
 %{u%}
 %{j%}
@@ -100,7 +100,9 @@ Multichar_Symbols
 %{V%}
 %{f%}
 %{I%}
-%{D'%}
+%{Д%}
+%{Z%}
+%{A%}
 %ʼ
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -119,22 +121,23 @@ IVerb-AdvRoot ;
 LEXICON CLITICS
 
 %<qst%>:%>ла # ; ! Y/N questions
-%<emph%>:%>%{D%}и # ; ! intensifying particle 'even'
+%<emph%>:%>%{R%}и # ; ! intensifying particle 'even'
 %<emph%>:%>ӿагин # ; ! intensifying particle 'even'
 0:0 # ;
 
 LEXICON CASES
 %<nom%>: CLITICS ;
 %<age%>:%>%{a%}ӽ CLITICS ;       ! Agentive
-%<dat%>:%>%{D%}%{o%}ӽ CLITICS ;  ! Dative
+%<dat%>:%>%{R%}%{o%}ӽ CLITICS ;  ! Dative
 %<ins%>:%>%{G%}ир CLITICS ;      ! Instrumental
 %<loc%>:%>%{u%}%{j%}н CLITICS ;  ! Locative
 %<abl%>:%>%{u%}х CLITICS ;       ! Ablative
 %<term%>:%>%{T%}ыкы CLITICS ;    ! Terminative
 %<term%>:%>%{T%}%{X%}а CLITICS ; ! Dir/LR
-%<term%>:%>%{D%}оӻо CLITICS ;    ! Dir/LR
+%<term%>:%>%{R%}оӻо CLITICS ;    ! Dir/LR
 %<comp%>:%>%{y%}к CLITICS ;      ! Comparative
 %<voc%>:%>%{V%} # ;              ! Vocative
+CLITICS ;
 
 LEXICON N-INFL
 
@@ -142,6 +145,7 @@ CASES;
 
 LEXICON SUBST
 
+%<np%>: N-INFL ;
 N-INFL;
 %<pl%>:%>%{G%}у N-INFL ;
 
@@ -224,7 +228,6 @@ LEXICON COMP
 %<comp%>:%>ё ADV1;
 ADV1 ;
 
-
 LEXICON NUM1
 
 %<num%>%<cl1%>:%>%{I%}н # ;
@@ -250,12 +253,12 @@ LEXICON FORMALITY
 LEXICON MOOD
 
 %<itg%>:%>л FORMALITY ;
-%<ind%>:%>%{D'%}ь # ;
+%<ind%>:%>%{Д%}ь # ;
 ! %<imp%>:%>idk # ;
 
 LEXICON NonFinite
 
-%<inf%>:%>%{D%}оӽ # ;
+%<inf%>:%>%{R%}оӽ # ;
 %<cvb_nar%>: SubjAgree ;
 %<cvb_ant%>:%>ӈан # ;
 MOOD ;
@@ -290,13 +293,9 @@ LEXICON NounRoot
 сета:сета N1    ; ! sugar
 ойдам:ойдам N1  ; ! baby
 курӈ:курӈ N1    ; ! universe
-заӄо:заӄо N1    ; ! knife
+заӄо:%{Z%}аӄо N1    ; ! knife
+Рум:Рум N1      ; ! dude called Rum
 
-
-!un%<neg%>%+:un Adjectives ;
-!LEXICON Adjectives
-!kind%<adj%>:kind # ;
-!happy%<adj%>:happy # ;
 
 LEXICON PronounRoot
 
@@ -317,7 +316,7 @@ LEXICON NumeralRoot
 
 LEXICON TVerbRoot
 
-за:за TV1 ; ! to beat
+за:%{Z%}%{A%} TV1 ; ! to beat
 во:во TV1 ; ! to take
 даю:даю TV1 ; ! to write
 ғе:ғе TV1 ; ! to buy

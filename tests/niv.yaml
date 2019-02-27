@@ -124,6 +124,7 @@ Tests:
     - юф
     п'ры<v><iv><fut><nmz_loc><term>:
     - п'рыныфт'ыкы
+  Miscellaneous: {}
   Morphology: {}
   Nominal Morphology: {}
   Nominalisation: {}
@@ -154,21 +155,19 @@ Tests:
     ытык<n><pl>:
     - ытыкху
   Polar Questions:
-    Рум<n><np>+__<cop><pres><p3><sg>+ла<mod>:
-    - Румла
-    Рум<n><np>+ла<qst>:
+    Рум<n><np><qst>:
     - Румла
   Possesive Pronouns:
     ни<prn><pers><p1><sg><pos>:
     - нины
   Possession:
-    иф<prn><p3><sg><nom>+заӄо<n>:
-    - изаӄо
-    ни<prn><p1><sg><nom>+заӄо<n>:
+    иф<prn><p3><sg><nom>+тяӄо<n>:
+    - идяӄо
+    ни<prn><p1><sg><nom>+тяӄо<n>:
     - ньзаӄо
-    п'и<prn><ref>+заӄо<n>:
+    п'и<prn><ref>+тяӄо<n>:
     - п'саӄо
-    чи<prn><p2><sg><nom>+заӄо<n>:
+    чи<prn><p2><sg><nom>+тяӄо<n>:
     - ч'саӄо
   Predicate-actant nominalisation (suffix -дь/-ть): {}
   Pronouns:

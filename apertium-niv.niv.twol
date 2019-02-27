@@ -3,18 +3,20 @@ Alphabet
  а б в г ӷ ғ ӻ д е ё ж з и й к ӄ л м н ӈ о п р р̌ с т у ф х ӽ ӿ ц ч ш щ ъ ы ь э ю я ʼ
  %{a%}:а %{a%}:0 %>:0
  %{G%}:г %{G%}:к %{G%}:х %{G%}:ғ
- %{D%}:д %{D%}:т %{D%}:р
  %{o%}:о %{o%}:0
  %{u%}:у %{u%}:0
  %{j%}:й %{j%}:0
- %{T%}:тʼ %{T%}:р̌ %{T%}:р
+ %{T%}:тʼ %{T%}:р̌
  %{X%}:ӽ  %{X%}:ӷ
  %{y%}:ы  %{y%}:0
  %{V%}:а %{V%}:э %{V%}:и %{V%}:о %{V%}:у %{V%}:ы
  %{f%}:ф %{f%}:0
  %{I%}:е %{I%}:и
- %{D'%}:д %{D'%}:т
- %+:0
+ %{Д%}:д %{Д%}:т
+ %{R%}:р %{R%}:д %{R%}:т
+ %{Z%}:з %{Z%}:дь %{Z%}:ть
+ %{Nb%}:нь
+ %{A%}:а %{A%}:я
  ;
 
 Sets
@@ -22,8 +24,15 @@ Sets
 Vowel = А Е Ё И О У Ы Э Ю Я
         а е ё и о у ы э ю я ;
 
-Consonant = Б В Г Ӷ Ғ Ӻ Д Ж З Й К Ӄ Л М Н Ӈ П Р Р̌ С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ Ъ Ь
-            б в г ӷ ғ ӻ д ж з й к ӄ л м н ӈ п р р̌ с т ф х ӽ ӿ ц ч ш щ ъ ь ;
+Consonant = Б В Г Ӷ Ғ Ӻ Д Ж З Й К Ӄ Л М Н Ӈ П Р Р̌ С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ
+            б в г ӷ ғ ӻ д ж з й к ӄ л м н ӈ п р р̌ с т ф х ӽ ӿ ц ч ш щ ;
+
+Sonorant = н %{Nb%} ӈ м л ;
+
+A1 = ф р̌ с х ӽ ;
+
+VoicelessC = К Ӄ П Р̌ С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ
+             к ӄ п р̌ с т ф х ӽ ӿ ц ч ш щ ;
 
 Rules
 
@@ -40,7 +49,44 @@ Rules
 %{y%}:0 <=> :Vowel %>:0 _ ;
 
 "Remove /f/ before consonant-initial stem"
-%{f%}:0 <=> _ [ %>:0 | %+ ] :Consonant ;
+%{f%}:0 <=> _ %+:0 :Consonant ;
+
+"Lengthen preceding vowel"
+%{V%}:Vy <=> :Vx %>:0 _ ;
+  where Vx in (а я э е и ы о ё у ю)
+    Vy in (а а э э и ы о о у у)
+  matched ;
+
+"Add /a/ after consonant at morpheme boundary"
+%{V%}:а <=> :Consonant %>:0 _ ;
+
+"Change /z/ to set B equivalent"
+%{Z%}:ть <=> :A1 (%>:0) _ ;
+
+"Change /z/ to set C equivalent"
+%{Z%}:дь <=> :Sonorant (%>:0) _ ;
+! Sometimes doesn't change in this context
+
+"Change /r/ to set B equivalent"
+%{R%}:т <=> :A1 (%>:0) _ ;
+
+"Change /r/ to set C equivalent"
+%{R%}:д <=> :Sonorant (%>:0) _ ;
+! Sometimes doesn't change in this context
+
+"Change /tʰ/ to set A1 equivalent"
+%{T%}:тʼ <=> :A1 (%>:0) _ ;
+! Sometimes changes after sonorants too.
+
+
+"Devoice /z/ after certain aspirates"
+%{Z%}:с <=> :п  :ʼ (%+:0) _ ;
+
+"Devoice /d/ after voiceless consonants"
+%{Д%}:т <=> :VoicelessC %>:0 _ ;
+
+!"Change /a/ to /ja/ after soft sign"
+!%{A%}:я <=> :ь _ ;
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Enter_twol
