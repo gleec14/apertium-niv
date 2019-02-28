@@ -104,6 +104,7 @@ Multichar_Symbols
 %{Z%}
 %{F%}
 %ʼ
+%{ь%}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
@@ -115,9 +116,7 @@ NounRoot ;
 ProperNounRoot ;
 PronounRoot ;
 NumeralRoot ;
-TVerbRoot ;
-IVerbRoot ;
-IVerb-AdvRoot ;
+VerbRoot ;
 
 LEXICON CLITICS
 
@@ -295,7 +294,7 @@ LEXICON NounRoot
 сета:сета N1     ; ! sugar
 ойдам:ойдам N1   ; ! baby
 курӈ:курӈ N1     ; ! universe
-тяӄо:%{Z%}аӄо N1 ; ! knife
+тяӄо:%{Z%}%{ь%}аӄо N1 ; ! knife
 оола:оола N1     ; ! child
 
 LEXICON ProperNounRoot
@@ -319,10 +318,15 @@ LEXICON NumeralRoot
 ньин:нь NUM1 ; ! one
 мен:м NUM2   ; ! two
 
+LEXICON VerbRoot
+:%{i%}%> TVerbRoot ;
+IVerbRoot ;
+IVerb-AdvRoot ;
+
 LEXICON TVerbRoot
 
 за:%{Z%}а TV1 ; ! to beat
-во:во TV1 ; ! to take
+во:%{i%}%{P%}о TV1 ; ! to take
 даю:даю TV1 ; ! to write
 ғе:ғе TV1 ; ! to buy
 ӄала:ӄала ; ! to hate

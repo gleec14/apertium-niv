@@ -14,8 +14,8 @@ Alphabet
  %{I%}:е %{I%}:и
  %{Д%}:д %{Д%}:т
  %{R%}:р %{R%}:д %{R%}:т
- %{Z%}:з %{Z%}:дь %{Z%}:ть
- %{Nb%}:нь
+ %{Z%}:з %{Z%}:д %{Z%}:т
+ %{ь%}:ь %{ь%}:0
  %{A%}:а %{A%}:я
  %{F%}:ф
  ;
@@ -25,18 +25,35 @@ Sets
 Vowel = А Е Ё И О У Ы Э Ю Я
         а е ё и о у ы э ю я ;
 
+IotatingVowels = А О У Э
+                 а о у э ;
+
+IotatedVowels = Я Ё Ю Е
+                я ё ю е ;
+
 Consonant = Б В Г Ӷ Ғ Ӻ Д Ж З Й К Ӄ Л М Н Ӈ П Р Р̌ С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ
             б в г ӷ ғ ӻ д ж з й к ӄ л м н ӈ п р р̌ с т ф х ӽ ӿ ц ч ш щ ;
 
-Sonorant = н %{Nb%} ӈ м л ;
+Sonorant = н нь ӈ м л ;
 
-A1 = ф р̌ с х ӽ ;
+A1 = Ф Р̌ С Х Ӽ
+     ф р̌ с х ӽ ;
+
+B = П Т Ч К Ӄ
+    п т ч к ӄ ;
+
+B1 = В Р З Ғ Ӻ
+     в р з ғ ӻ ;
+
+C = Б Д Дь Г Ӷ
+    б д дь г ӷ ;
+
+Sibilant = З С
+           з с ;
 
 VoicelessC = К Ӄ П Р̌ С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ
              к ӄ п р̌ с т ф х ӽ ӿ ц ч ш щ ;
 
-VoicelessStop = К Ӄ П Т Ч
-                к ӄ п т ч ;
 
 Rules
 
@@ -58,6 +75,18 @@ Rules
 "Remove /f/ before consonant-initial stem"
 %{f%}:0 <=> _ %+:0 :Consonant ;
 
+"Remove soft sign after /z/"
+%{ь%}:0 <=> [ :з | :З ] _ ;
+            _ :Vowel ;
+            except
+              [ :н | :т | :д ] _ :ы ;
+
+"Iotate vowels after soft sign"
+Vx:Vy <=> \:Sibilant %{ь%}: (%>:0) _ ;
+  where Vx in IotatingVowels
+    Vy in IotatedVowels
+  matched ;
+
 "Voice /f/ before sonorant and vowels"
 %{F%}:в <=> _ %>:0 [:Sonorant | :Vowel] ;
 
@@ -77,13 +106,13 @@ Rules
 %{G%}:г <=> :Sonorant %>:0 _ ;
 
 "Set /G/ to <х> after voiceless stops"
-%{G%}:х <=> :VoicelessStop %>:0 _ ;
+%{G%}:х <=> :B %>:0 _ ;
 
 "Change /z/ to set B equivalent"
-%{Z%}:ть <=> [ .#. | :A1 ] (%>:0) _ ;
+%{Z%}:т <=> [ .#. | :A1 ] (%>:0) _ ;
 
 "Change /z/ to set C equivalent"
-%{Z%}:дь <=> :Sonorant (%>:0) _ ;
+%{Z%}:д <=> :Sonorant (%>:0) _ ;
 ! Sometimes doesn't change in this context
 
 "Change /r/ to set B equivalent"
