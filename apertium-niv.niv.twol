@@ -7,8 +7,8 @@ Alphabet
  %{u%}:у %{u%}:0
  %{j%}:й %{j%}:0
  %{T%}:тʼ %{T%}:р̌
- %{X%}:ӽ  %{X%}:ӷ
- %{y%}:ы  %{y%}:0
+ %{X%}:ӽ %{X%}:ӷ
+ %{y%}:ы %{y%}:0
  %{V%}:а %{V%}:э %{V%}:и %{V%}:о %{V%}:у %{V%}:ы
  %{f%}:ф %{f%}:0
  %{I%}:е %{I%}:и
@@ -17,6 +17,7 @@ Alphabet
  %{Z%}:з %{Z%}:дь %{Z%}:ть
  %{Nb%}:нь
  %{A%}:а %{A%}:я
+ %{F%}:ф
  ;
 
 Sets
@@ -34,6 +35,9 @@ A1 = ф р̌ с х ӽ ;
 VoicelessC = К Ӄ П Р̌ С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ
              к ӄ п р̌ с т ф х ӽ ӿ ц ч ш щ ;
 
+VoicelessStop = К Ӄ П Т Ч
+                к ӄ п т ч ;
+
 Rules
 
 "Remove /a/ after vowel-ending stem"
@@ -48,8 +52,14 @@ Rules
 "Remove /ɤ/ after vowel-ending stem"
 %{y%}:0 <=> :Vowel %>:0 _ ;
 
+"Remove /o/ after vowel-ending stem"
+%{o%}:0 <=> :Vowel %>:0 %{R%}: _ ;
+
 "Remove /f/ before consonant-initial stem"
 %{f%}:0 <=> _ %+:0 :Consonant ;
+
+"Voice /f/ before sonorant and vowels"
+%{F%}:в <=> _ %>:0 [:Sonorant | :Vowel] ;
 
 "Lengthen preceding vowel"
 %{V%}:Vy <=> :Vx %>:0 _ ;
@@ -60,15 +70,24 @@ Rules
 "Add /a/ after consonant at morpheme boundary"
 %{V%}:а <=> :Consonant %>:0 _ ;
 
+"Set /G/ to <ғ> after vowels"
+%{G%}:ғ <=> :Vowel %>:0 _ ;
+
+"Set /G/ to <г> after sonorants"
+%{G%}:г <=> :Sonorant %>:0 _ ;
+
+"Set /G/ to <х> after voiceless stops"
+%{G%}:х <=> :VoicelessStop %>:0 _ ;
+
 "Change /z/ to set B equivalent"
-%{Z%}:ть <=> :A1 (%>:0) _ ;
+%{Z%}:ть <=> [ .#. | :A1 ] (%>:0) _ ;
 
 "Change /z/ to set C equivalent"
 %{Z%}:дь <=> :Sonorant (%>:0) _ ;
 ! Sometimes doesn't change in this context
 
 "Change /r/ to set B equivalent"
-%{R%}:т <=> :A1 (%>:0) _ ;
+%{R%}:р <=> :A1 (%>:0) _ ;
 
 "Change /r/ to set C equivalent"
 %{R%}:д <=> :Sonorant (%>:0) _ ;
@@ -78,15 +97,13 @@ Rules
 %{T%}:тʼ <=> :A1 (%>:0) _ ;
 ! Sometimes changes after sonorants too.
 
-
 "Devoice /z/ after certain aspirates"
 %{Z%}:с <=> :п  :ʼ (%+:0) _ ;
 
 "Devoice /d/ after voiceless consonants"
 %{Д%}:т <=> :VoicelessC %>:0 _ ;
 
-!"Change /a/ to /ja/ after soft sign"
-!%{A%}:я <=> :ь _ ;
+
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Enter_twol

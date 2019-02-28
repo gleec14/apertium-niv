@@ -35,9 +35,9 @@ Tests:
   Alternate forms:
     за<v><tv><ind>:
     - задь
-    иф<prn><p3><sg><nom>+аньма<v><cvb_ant>:
+    иф<prn><p3><sg>+аньма<v><cvb_ant>:
     - яньмаӈан
-    иф<prn><p3><sg><nom>+за<v><tv><ind>:
+    иф<prn><p3><sg>+за<v><tv><ind>:
     - изадь
   Cardinal Numerals:
     мен<num><cl1>:
@@ -59,24 +59,24 @@ Tests:
     мен<num><cl9>:
     - мик
   Cases:
+    ӄан<n>:
+    - ӄан
     ӄан<n><abl>:
     - ӄанух
     ӄан<n><dat>:
     - ӄандоӽ
     ӄан<n><loc>:
     - ӄануйн
-    ӄан<n><nom>:
-    - ӄан
     ӄан<n><voc>:
     - ӄана
+    ӈа<n>:
+    - ӈа
     ӈа<n><abl>:
     - ӈах
     ӈа<n><dat>:
-    - ӈароӽ
+    - ӈарӽ
     ӈа<n><loc>:
     - ӈайн
-    ӈа<n><nom>:
-    - ӈа
     ӈа<n><voc>:
     - ӈаа
   Converbs:
@@ -131,17 +131,17 @@ Tests:
   Object-Verb Agreement:
     за<v><tv><ind>:
     - задь
-    имӈ<prn><p3><pl><nom>+за<v><tv><ind>:
+    имӈ<prn><p3><pl>+за<v><tv><ind>:
     - имӈдядь
-    ни<prn><p1><sg><nom>+за<v><tv><ind>:
+    ни<prn><p1><sg>+за<v><tv><ind>:
     - ньзадь
-    ньыӈ<prn><p1><pl><excl><nom>+за<v><tv><ind>:
+    ньыӈ<prn><p1><pl><excl>+за<v><tv><ind>:
     - ньыӈдядь
     п'и<prn><ref>+за<v><tv><ind>:
     - п'садь
-    чи<prn><p2><sg><nom>+за<v><tv><ind>:
+    чи<prn><p2><sg>+за<v><tv><ind>:
     - ч'садь
-    чыӈ<prn><p2><pl><nom>+за<v><tv><ind>:
+    чыӈ<prn><p2><pl>+за<v><tv><ind>:
     - чыӈдядь
   Plurals:
     нивх<n><pl>:
@@ -158,16 +158,16 @@ Tests:
     Рум<n><np><qst>:
     - Румла
   Possesive Pronouns:
-    ни<prn><pers><p1><sg><pos>:
+    ни<prn><pers><p1><sg>+ны<n>:
     - нины
   Possession:
-    иф<prn><p3><sg><nom>+тяӄо<n>:
+    иф<prn><pers><p3><sg>+тяӄо<n>:
     - идяӄо
-    ни<prn><p1><sg><nom>+тяӄо<n>:
+    ни<prn><pers><p1><sg>+тяӄо<n>:
     - ньзаӄо
-    п'и<prn><ref>+тяӄо<n>:
+    п'и<prn><pers><ref>+тяӄо<n>:
     - п'саӄо
-    чи<prn><p2><sg><nom>+тяӄо<n>:
+    чи<prn><pers><p2><sg>+тяӄо<n>:
     - ч'саӄо
   Predicate-actant nominalisation (suffix -дь/-ть): {}
   Pronouns:

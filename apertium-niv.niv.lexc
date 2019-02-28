@@ -102,7 +102,7 @@ Multichar_Symbols
 %{I%}
 %{Д%}
 %{Z%}
-%{A%}
+%{F%}
 %ʼ
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -112,6 +112,7 @@ Multichar_Symbols
 LEXICON Root
 
 NounRoot ;
+ProperNounRoot ;
 PronounRoot ;
 NumeralRoot ;
 TVerbRoot ;
@@ -126,7 +127,6 @@ LEXICON CLITICS
 0:0 # ;
 
 LEXICON CASES
-%<nom%>: CLITICS ;
 %<age%>:%>%{a%}ӽ CLITICS ;       ! Agentive
 %<dat%>:%>%{R%}%{o%}ӽ CLITICS ;  ! Dative
 %<ins%>:%>%{G%}ир CLITICS ;      ! Instrumental
@@ -137,7 +137,7 @@ LEXICON CASES
 %<term%>:%>%{R%}оӻо CLITICS ;    ! Dir/LR
 %<comp%>:%>%{y%}к CLITICS ;      ! Comparative
 %<voc%>:%>%{V%} # ;              ! Vocative
-CLITICS ;
+CLITICS ;                        ! Nominative
 
 LEXICON N-INFL
 
@@ -145,7 +145,6 @@ CASES;
 
 LEXICON SUBST
 
-%<np%>: N-INFL ;
 N-INFL;
 %<pl%>:%>%{G%}у N-INFL ;
 
@@ -153,6 +152,9 @@ LEXICON N1
 
 !%<n%>: # ; ! attributive noun
 %<n%>: SUBST ;
+
+LEXICON PN1
+%<n%>%<np%>: N-INFL ;
 
 LEXICON POSS
 
@@ -163,13 +165,13 @@ LEXICON PRN1
 
 %<prn%>%<pers%>%<p1%>%<sg%>:и POSS ;
 %<prn%>%<pers%>%<p1%>%<sg%>%+:ь%> TVerbRoot ;
-%<prn%>%<pers%>%<p1%>%<sg%>%+:ь NounRoot ;
+%<prn%>%<pers%>%<p1%>%<sg%>%+:ь%> NounRoot ;
 
 LEXICON PRN2
 
 %<prn%>%<pers%>%<p2%>%<sg%>:и POSS ;
-%<prn%>%<pers%>%<p2%>%<sg%>%+:ʼ TVerbRoot ;
-%<prn%>%<pers%>%<p2%>%<sg%>%+:ʼ NounRoot ;
+%<prn%>%<pers%>%<p2%>%<sg%>%+:ʼ%> TVerbRoot ;
+%<prn%>%<pers%>%<p2%>%<sg%>%+:ʼ%> NounRoot ;
 
 LEXICON PRN3
 
@@ -179,36 +181,36 @@ LEXICON PRN3
 LEXICON PRN4
 
 %<prn%>%<pers%>%<p1%>%<pl%>%<excl%>: POSS ;
-%<prn%>%<pers%>%<p1%>%<pl%>%<excl%>%+: TVerbRoot ;
-%<prn%>%<pers%>%<p1%>%<pl%>%<excl%>%+: NounRoot ;
+%<prn%>%<pers%>%<p1%>%<pl%>%<excl%>%+:%> TVerbRoot ;
+%<prn%>%<pers%>%<p1%>%<pl%>%<excl%>%+:%> NounRoot ;
 
 LEXICON PRN5
 
 %<prn%>%<pers%>%<p1%>%<pl%>%<incl%>: POSS ;
-%<prn%>%<pers%>%<p1%>%<pl%>%<incl%>%+: # ;
+%<prn%>%<pers%>%<p1%>%<pl%>%<incl%>: # ;
 
 LEXICON PRN6
 
 %<prn%>%<pers%>%<p1%>%<du%>%<incl%>: POSS ;
-%<prn%>%<pers%>%<p1%>%<du%>%<incl%>%+: # ;
+%<prn%>%<pers%>%<p1%>%<du%>%<incl%>: # ;
 
 LEXICON PRN7
 
 %<prn%>%<pers%>%<p2%>%<pl%>: POSS ;
-%<prn%>%<pers%>%<p2%>%<pl%>%+: TVerbRoot ;
-%<prn%>%<pers%>%<p2%>%<pl%>%+: NounRoot ;
+%<prn%>%<pers%>%<p2%>%<pl%>%+:%> TVerbRoot ;
+%<prn%>%<pers%>%<p2%>%<pl%>%+:%> NounRoot ;
 
 LEXICON PRN8
 
 %<prn%>%<pers%>%<p3%>%<pl%>: POSS ;
-%<prn%>%<pers%>%<p3%>%<pl%>%+: TVerbRoot ;
-%<prn%>%<pers%>%<p3%>%<pl%>%+: NounRoot ;
+%<prn%>%<pers%>%<p3%>%<pl%>%+:%> TVerbRoot ;
+%<prn%>%<pers%>%<p3%>%<pl%>%+:%> NounRoot ;
 
 LEXICON PRN9
 
 %<prn%>%<ref%>: POSS ;
-%<prn%>%<ref%>%+: TVerbRoot ;
-%<prn%>%<ref%>%+: NounRoot ;
+%<prn%>%<ref%>%+:%> TVerbRoot ;
+%<prn%>%<ref%>%+:%> NounRoot ;
 
 LEXICON SubjAgree
 
@@ -286,15 +288,18 @@ LEXICON NounRoot
 ытык:ытык N1  ; ! father
 ӄан:ӄан N1    ; ! doggo
 ӈа:ӈа N1      ; ! animal
-тыф:тыф N1    ; ! house
-ми:ми N1      ; ! inside
-нивх:нивх N1  ; ! person
-ваӄа:ваӄа N1    ; ! box
-сета:сета N1    ; ! sugar
-ойдам:ойдам N1  ; ! baby
-курӈ:курӈ N1    ; ! universe
-заӄо:%{Z%}аӄо N1    ; ! knife
-Рум:Рум N1      ; ! dude called Rum
+тыф:%{R%}ы{%F%} N1    ; ! house
+ми:ми N1         ; ! inside
+нивх:нивх N1     ; ! person
+ваӄа:ваӄа N1     ; ! box
+сета:сета N1     ; ! sugar
+ойдам:ойдам N1   ; ! baby
+курӈ:курӈ N1     ; ! universe
+тяӄо:%{Z%}аӄо N1 ; ! knife
+оола:оола N1     ; ! child
+
+LEXICON ProperNounRoot
+Рум:Рум PN1      ; ! dude called Rum
 
 
 LEXICON PronounRoot
@@ -316,10 +321,11 @@ LEXICON NumeralRoot
 
 LEXICON TVerbRoot
 
-за:%{Z%}%{A%} TV1 ; ! to beat
+за:%{Z%}а TV1 ; ! to beat
 во:во TV1 ; ! to take
 даю:даю TV1 ; ! to write
 ғе:ғе TV1 ; ! to buy
+ӄала:ӄала ; ! to hate
 
 LEXICON IVerbRoot
 
