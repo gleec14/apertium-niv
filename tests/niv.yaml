@@ -12,8 +12,8 @@ Tests:
     чека<v><iv><pl><nmz_pred>:
     - чекадьғу
   3) "Full" substantivisation:
-    п'и<prn><ref>+чола<v><iv><nmz_pred>:
-    - п'соладь
+    пʼи<prn><ref>+чола<v><iv><nmz_pred>:
+    - пʼсоладь
     чола<v><iv><ind>:
     - чоладь
   Adverbial Morphology:
@@ -28,10 +28,10 @@ Tests:
     ур<adv><p3><sg>:
     - ургур
   Adverbial nominalisation (zero marking):
-    п'ры<v><iv><fut><ind>:
-    - п'рыныдь
-    п'ры<v><iv><fut><nmz_adv><term>:
-    - п'рыныт'ыкы
+    пʼры<v><iv><fut><ind>:
+    - пʼрыныдь
+    пʼры<v><iv><fut><nmz_adv><term>:
+    - пʼрынытʼыкы
   Alternate forms:
     за<v><tv><ind>:
     - задь
@@ -80,14 +80,14 @@ Tests:
     ӈа<n><voc>:
     - ӈаа
   Converbs:
-    п'ры<v><iv><cvb_ant>:
-    - п'рыӈан
-    п'ры<v><iv><cvb_nar><p1><sg>:
-    - п'рыт
-    п'ры<v><iv><cvb_nar><p3><pl>:
-    - п'рыт
-    п'ры<v><iv><cvb_nar><p3><sg>:
-    - п'рыр
+    пʼры<v><iv><cvb_ant>:
+    - пʼрыӈан
+    пʼры<v><iv><cvb_nar><p1><sg>:
+    - пʼрыт
+    пʼры<v><iv><cvb_nar><p3><pl>:
+    - пʼрыт
+    пʼры<v><iv><cvb_nar><p3><sg>:
+    - пʼрыр
   Denominal:
     ваӄа<n>+ми<n><loc>:
     - ваӄамин
@@ -108,22 +108,22 @@ Tests:
   Infinitive:
     му<v><iv><inf>:
     - мудоӽ
-    п'ры<v><iv><fut><inf>:
-    - п'рыныдоӽ
-    п'ры<v><iv><inf>:
-    - п'рыдоӽ
+    пʼры<v><iv><fut><inf>:
+    - пʼрыныдоӽ
+    пʼры<v><iv><inf>:
+    - пʼрыдоӽ
   Interrogative:
-    п'ры<v><iv><itg><frm>:
-    - п'рыло
-    п'ры<v><iv><itg><infrm>:
-    - п'рыл
+    пʼры<v><iv><itg><frm>:
+    - пʼрыло
+    пʼры<v><iv><itg><infrm>:
+    - пʼрыл
   Locative nominalisation (suffix -ф/-в):
     иф<prn><pers><p3><sg>+у<v><tv><ind>:
     - юдь
     иф<prn><pers><p3><sg>+у<v><tv><nmz-loc>:
     - юф
-    п'ры<v><iv><fut><nmz_loc><term>:
-    - п'рыныфт'ыкы
+    пʼры<v><iv><fut><nmz_loc><term>:
+    - пʼрыныфтʼыкы
   Miscellaneous: {}
   Morphology: {}
   Nominal Morphology: {}
@@ -137,17 +137,17 @@ Tests:
     - ньзадь
     ньыӈ<prn><p1><pl><excl>+за<v><tv><ind>:
     - ньыӈдядь
-    п'и<prn><ref>+за<v><tv><ind>:
-    - п'садь
+    пʼи<prn><ref>+за<v><tv><ind>:
+    - пʼсадь
     чи<prn><p2><sg>+за<v><tv><ind>:
-    - ч'садь
+    - чʼсадь
     чыӈ<prn><p2><pl>+за<v><tv><ind>:
     - чыӈдядь
   Plurals:
     нивх<n><pl>:
     - нивғгу
-    п'и<prn><ref>+оола<n><pl><ins>:
-    - п'оолагукир
+    пʼи<prn><ref>+оола<n><pl><ins>:
+    - пʼоолагукир
     пила<v><iv><redup>+эри<n>:
     - пилапилаэри
     умгу<n><pl>:
@@ -158,17 +158,17 @@ Tests:
     Рум<n><np><qst>:
     - Румла
   Possesive Pronouns:
-    ни<prn><pers><p1><sg>+ны<n>:
+    ни<prn><pers><p1><sg><pos>:
     - нины
   Possession:
     иф<prn><pers><p3><sg>+тяӄо<n>:
     - идяӄо
     ни<prn><pers><p1><sg>+тяӄо<n>:
     - ньзаӄо
-    п'и<prn><pers><ref>+тяӄо<n>:
-    - п'саӄо
+    пʼи<prn><ref>+тяӄо<n>:
+    - пʼсаӄо
     чи<prn><pers><p2><sg>+тяӄо<n>:
-    - ч'саӄо
+    - чʼсаӄо
   Predicate-actant nominalisation (suffix -дь/-ть): {}
   Pronouns:
     имӈ<prn><pers><p3><pl>:
@@ -183,8 +183,8 @@ Tests:
     - ни
     ньыӈ<prn><pers><p1><pl><excl>:
     - ньыӈ
-    п'и<prn><ref>:
-    - п'и
+    пʼи<prn><ref>:
+    - пʼи
     чи<prn><pers><p2><sg>:
     - чи
     чыӈ<prn><pers><p2><pl>:

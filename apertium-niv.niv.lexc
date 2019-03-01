@@ -88,23 +88,44 @@ Multichar_Symbols
 ! Other symbols
 ! %<redup%> ! Reduplication
 %>      ! Morpheme boundary
-%{a%}
-%{G%}
-%{R%}
+%{Х%}     ! terminative (Cyrillic)
+%{I%}     ! in some numeral
+%ʼ
+
+%{д%}     ! undergo voicing
+%{ф%}
+
+%{a%}     ! delete sometimes
 %{o%}
 %{u%}
-%{j%}
-%{T%}
-%{X%}
 %{y%}
-%{V%}
+%{j%}
 %{f%}
-%{I%}
-%{Д%}
-%{Z%}
-%{F%}
-%ʼ
 %{ь%}
+
+%{P%}     ! aspirated nouns
+%{T%}     ! (Latin)
+%{C%}     ! (Latin)
+%{K%}     ! (Latin)
+%{Q%}
+
+%{F%}     ! voiceless verbs
+%{Ř%}
+%{S%}
+%{X%}     ! (Latin)
+%{χ%}
+
+%{П%}     ! unaspirated nouns (Latin b)
+%{Т%}     ! (Cyrllic)
+%{Ч%}
+%{К%}     ! (Cyrillic)
+%{Ӄ%}
+
+%{V%}     ! Voiced verbs
+%{R%}
+%{Z%}
+%{G%}
+%{ʁ%}
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
@@ -207,7 +228,7 @@ LEXICON PRN8
 
 LEXICON PRN9
 
-%<prn%>%<ref%>: POSS ;
+%<prn%>%<ref%>:и POSS ;
 %<prn%>%<ref%>%+:%> TVerbRoot ;
 %<prn%>%<ref%>%+:%> NounRoot ;
 
@@ -254,7 +275,7 @@ LEXICON FORMALITY
 LEXICON MOOD
 
 %<itg%>:%>л FORMALITY ;
-%<ind%>:%>%{Д%}ь # ;
+%<ind%>:%>%{д%}ь # ;
 ! %<imp%>:%>idk # ;
 
 LEXICON NonFinite
@@ -319,18 +340,18 @@ LEXICON NumeralRoot
 мен:м NUM2   ; ! two
 
 LEXICON VerbRoot
-:%{i%}%> TVerbRoot ;
+TVerbRoot ;
 IVerbRoot ;
 IVerb-AdvRoot ;
 
 LEXICON TVerbRoot
 
-за:%{Z%}а TV1         ; ! to beat
-во:%{i%}%{P%}о TV1    ; ! to take
-даю:даю TV1           ; ! to write
-ғе:ғе TV1             ; ! to buy
-ӄала:ӄала TV1         ; ! to hate
-ама:ама TV1           ; ! to look
+за:%{Z%}%{ь%}а TV1   ; ! to beat
+во:%{V%}о TV1        ; ! to take
+даю:даю TV1          ; ! to write
+ғе:%{G%}е TV1        ; ! to buy
+ӄала:ӄала TV1        ; ! to hate
+ама:ама TV1          ; ! to look
 
 LEXICON IVerbRoot
 

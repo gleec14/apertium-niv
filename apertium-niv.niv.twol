@@ -12,12 +12,13 @@ Alphabet
  %{V%}:а %{V%}:э %{V%}:и %{V%}:о %{V%}:у %{V%}:ы
  %{f%}:ф %{f%}:0
  %{I%}:е %{I%}:и
- %{Д%}:д %{Д%}:т
+ %{д%}:д %{д%}:т
  %{R%}:р %{R%}:д %{R%}:т
- %{Z%}:з %{Z%}:д %{Z%}:т
+ %{Z%}:з %{Z%}:д %{Z%}:т %{Z%}:с
  %{ь%}:ь %{ь%}:0
  %{A%}:а %{A%}:я
- %{F%}:ф
+ %{ф%}:ф %{ф%}:в
+ %{i%}:и %{i%}:0
  ;
 
 Sets
@@ -73,22 +74,36 @@ Rules
 %{o%}:0 <=> :Vowel %>:0 %{R%}: _ ;
 
 "Remove /f/ before consonant-initial stem"
-%{f%}:0 <=> _ %+:0 :Consonant ;
+%{f%}:0 <=> _ %>:0 :Consonant ;
 
-"Remove soft sign after /z/"
+"Remove /i/ before non-CC verb stems"
+%{i%}:0 <=> _ \[%>:0 :Consonant :Consonant] ;
+
+"Change iotatable vowels to iotated equivalents after /j/"
+Vx:Vy <=> %{i%}: %>:0 _ ;
+  where Vx in IotatingVowels
+    Vy in IotatedVowels
+  matched ;
+
+"Remove soft sign archiphoneme in some places"
 %{ь%}:0 <=> [ :з | :З ] _ ;
             _ :Vowel ;
             except
               [ :н | :т | :д ] _ :ы ;
 
+"Remove real soft sign in those places"
+ь:0 <=> _ (%>:0) :Vowel ;
+          except
+          _ (%>:0) :ы ;
+
 "Iotate vowels after soft sign"
-Vx:Vy <=> \:Sibilant %{ь%}: (%>:0) _ ;
+Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:0) _ ;
   where Vx in IotatingVowels
     Vy in IotatedVowels
   matched ;
 
 "Voice /f/ before sonorant and vowels"
-%{F%}:в <=> _ %>:0 [:Sonorant | :Vowel] ;
+%{ф%}:в <=> _ %>:0 [:Sonorant | :Vowel] ;
 
 "Lengthen preceding vowel"
 %{V%}:Vy <=> :Vx %>:0 _ ;
@@ -100,10 +115,10 @@ Vx:Vy <=> \:Sibilant %{ь%}: (%>:0) _ ;
 %{V%}:а <=> :Consonant %>:0 _ ;
 
 "Set /G/ to <ғ> after vowels"
-%{G%}:ғ <=> :Vowel %>:0 _ ;
+%{G%}:ғ <=> :C %>:0 _ ;
 
 "Set /G/ to <г> after sonorants"
-%{G%}:г <=> :Sonorant %>:0 _ ;
+%{G%}:г <=> [ :Sonorant | :B1 | :Vowel ] %>:0 _ ;
 
 "Set /G/ to <х> after voiceless stops"
 %{G%}:х <=> :B %>:0 _ ;
@@ -112,11 +127,11 @@ Vx:Vy <=> \:Sibilant %{ь%}: (%>:0) _ ;
 %{Z%}:т <=> [ .#. | :A1 ] (%>:0) _ ;
 
 "Change /z/ to set C equivalent"
-%{Z%}:д <=> :Sonorant (%>:0) _ ;
+%{Z%}:д <=> [ :Vowel | :Sonorant ] (:0) (%>:0) _ ;
 ! Sometimes doesn't change in this context
 
 "Change /r/ to set B equivalent"
-%{R%}:р <=> :A1 (%>:0) _ ;
+%{R%}:т <=> [ :A1 | :B1 ] (%>:0) _ ;
 
 "Change /r/ to set C equivalent"
 %{R%}:д <=> :Sonorant (%>:0) _ ;
@@ -127,10 +142,10 @@ Vx:Vy <=> \:Sibilant %{ь%}: (%>:0) _ ;
 ! Sometimes changes after sonorants too.
 
 "Devoice /z/ after certain aspirates"
-%{Z%}:с <=> :п  :ʼ (%+:0) _ ;
+%{Z%}:с <=> [ :ч | :п ]  :ʼ (%>:0) _ ;
 
 "Devoice /d/ after voiceless consonants"
-%{Д%}:т <=> :VoicelessC %>:0 _ ;
+%{д%}:т <=> :VoicelessC %>:0 _ ;
 
 
 
