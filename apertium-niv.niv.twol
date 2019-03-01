@@ -124,7 +124,7 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:0) _ ;
 %{G%}:х <=> :B %>:0 _ ;
 
 "Change /z/ to set B equivalent"
-%{Z%}:т <=> [ .#. | :A1 ] (%>:0) _ ;
+%{Z%}:т <=> :A1 (%>:0) _ ;
 
 "Change /z/ to set C equivalent"
 %{Z%}:д <=> [ :Vowel | :Sonorant ] (:0) (%>:0) _ ;
