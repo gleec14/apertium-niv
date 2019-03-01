@@ -56,7 +56,7 @@ Multichar_Symbols
 ! Mood categories (for now)
 %<ind%> ! Indicative
 ! %<imp%> ! Imperative
-! %<itg%> ! Interrogative
+%<itg%> ! Interrogative
 
 ! Evidentiality / stuff
 ! may matter later
