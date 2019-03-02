@@ -131,17 +131,17 @@ Tests:
   Object-Verb Agreement:
     за<v><tv><ind>:
     - задь
-    имӈ<prn><p3><pl>+за<v><tv><ind>:
+    имӈ<prn><pers><p3><pl>+за<v><tv><ind>:
     - имӈдядь
-    ни<prn><p1><sg>+за<v><tv><ind>:
+    ни<prn><pers><p1><sg>+за<v><tv><ind>:
     - ньзадь
-    ньыӈ<prn><p1><pl><excl>+за<v><tv><ind>:
+    ньыӈ<prn><pers><p1><pl><excl>+за<v><tv><ind>:
     - ньыӈдядь
     пʼи<prn><ref>+за<v><tv><ind>:
     - пʼсадь
-    чи<prn><p2><sg>+за<v><tv><ind>:
+    чи<prn><pers><p2><sg>+за<v><tv><ind>:
     - чʼсадь
-    чыӈ<prn><p2><pl>+за<v><tv><ind>:
+    чыӈ<prn><pers><p2><pl>+за<v><tv><ind>:
     - чыӈдядь
   Plurals:
     нивх<n><pl>:

@@ -19,6 +19,11 @@ Alphabet
  %{A%}:а %{A%}:я
  %{ф%}:ф %{ф%}:в
  %{i%}:и %{i%}:0
+ %{Ч%}:т %{Ч%}:з %{Ч%}:д %{Ч%}:с
+ %{Т%}:т %{Т%}:р %{Т%}:д
+ %{ʼ%}:ʼ %{ʼ%}:0
+ %{v%}:0
+ %{n%}:0
  ;
 
 Sets
@@ -35,7 +40,7 @@ IotatedVowels = Я Ё Ю Е
 Consonant = Б В Г Ӷ Ғ Ӻ Д Ж З Й К Ӄ Л М Н Ӈ П Р Р̌ С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ
             б в г ӷ ғ ӻ д ж з й к ӄ л м н ӈ п р р̌ с т ф х ӽ ӿ ц ч ш щ ;
 
-Sonorant = н нь ӈ м л ;
+Sonorant = н ӈ м л ;
 
 A1 = Ф Р̌ С Х Ӽ
      ф р̌ с х ӽ ;
@@ -46,8 +51,8 @@ B = П Т Ч К Ӄ
 B1 = В Р З Ғ Ӻ
      в р з ғ ӻ ;
 
-C = Б Д Дь Г Ӷ
-    б д дь г ӷ ;
+C = Б Д Д Г Ӷ
+    б д д г ӷ ;
 
 Sibilant = З С
            з с ;
@@ -74,7 +79,7 @@ Rules
 %{o%}:0 <=> :Vowel %>:0 %{R%}: _ ;
 
 "Remove /f/ before consonant-initial stem"
-%{f%}:0 <=> _ %>:0 :Consonant ;
+%{f%}:0 <=> _ %>:0 %{n%}:0 :Consonant ;
 
 "Remove /i/ before non-CC verb stems"
 %{i%}:0 <=> _ \[%>:0 :Consonant :Consonant] ;
@@ -103,7 +108,7 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:0) _ ;
   matched ;
 
 "Voice /f/ before sonorant and vowels"
-%{ф%}:в <=> _ %>:0 [:Sonorant | :Vowel] ;
+%{ф%}:в <=> :Vowel (%>:0) _ (%>:0) [:Sonorant | :Vowel] ;
 
 "Lengthen preceding vowel"
 %{V%}:Vy <=> :Vx %>:0 _ ;
@@ -123,31 +128,82 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:0) _ ;
 "Set /G/ to <х> after voiceless stops"
 %{G%}:х <=> :B %>:0 _ ;
 
-"Change /z/ to set B equivalent"
-%{Z%}:т <=> :A1 (%>:0) _ ;
-
-"Change /z/ to set C equivalent"
-%{Z%}:д <=> [ :Vowel | :Sonorant ] (:0) (%>:0) _ ;
-! Sometimes doesn't change in this context
-
-"Change /r/ to set B equivalent"
+"Set /R/ to <т> after fricatives"
 %{R%}:т <=> [ :A1 | :B1 ] (%>:0) _ ;
 
-"Change /r/ to set C equivalent"
-%{R%}:д <=> :Sonorant (%>:0) _ ;
+"Set /R/ to <д> after sonorants"
+%{R%}:д <=> [ :Sonorant | :Vowel ] (%>:0) _ ;
+        except
+          _ (:0) :A1 ;
+
+"Change B1 to B for verbs"
+Cx:Cy <=> :A1 %>:0 %{v%}:0 _ ;
+          where Cx in B1
+                Cy in B
+          matched ;
+
+"Change B1 to C for verbs"
+Cx:Cy <=> [ :Vowel | :Sonorant ] (:0) %>:0 %{v%}:0 _ ;
+          where Cx in B1
+                Cy in C
+          matched ;
 ! Sometimes doesn't change in this context
+
+"Change B to B1 for nouns"
+Cx:Cy <=> [ :й | :Sonorant ] :B1 %>:0 %{n%}:0 _ ;
+            :н :ь %>:0 _ ;
+            ! :ʼ %>:0 _ ;
+      except
+            _ :ʼ ;
+            :ʼ %>:0 _ ;
+            .#. _ ;
+      where Cx in B
+            Cy in B1
+      matched ;
+
+"<ч> to <т> where appropriate"
+ч:т <=> .#. _ ;
+    except
+        _ [ :ы | :и | :ʼ %>:0 ] ;
+
+
+"Change B to C for nouns"
+Cx:Cy <=> [ :Vowel | :Sonorant ] (:0) %>:0 %{n%}:0 _ ;
+      except
+            _ :ʼ ;
+      where Cx in B
+            Cy in C
+      matched ;
+
+"Change A to A1 for nouns"
+Cx:Cy <=> :Vowel [ :B | :д ] (:0) %>:0 %{n%}:0 _ ;
+      where Cx in B
+            Cy in A1
+      matched ;
+
+"Change A1 to A for verbs"
+Cx:Cy <=> :A1 %>:0 %{v%}:0 _ ;
+          :Sonorant %>:0 _ ;
+      where Cx in A1
+            Cy in B
+      matched ;
+! Sometimes doesn't change after sonorants
+
+"Delete <ʼ> after A1"
+%{ʼ%}:0 <=> :A1 (%>:0) _ ;
 
 "Change /tʰ/ to set A1 equivalent"
 %{T%}:тʼ <=> :A1 (%>:0) _ ;
 ! Sometimes changes after sonorants too.
 
-"Devoice /z/ after certain aspirates"
-%{Z%}:с <=> [ :ч | :п ]  :ʼ (%>:0) _ ;
+"Devoice /z/ after certain aspirates for nouns"
+ч:с <=> [ :ч | :п ]  :ʼ (%>:0) %{n%}:0 _ ;
+
+"Devoice /z/ after certain aspirates for verbs"
+з:с <=> [ :ч | :п ]  :ʼ (%>:0) %{v%}:0 _ ;
 
 "Devoice /d/ after voiceless consonants"
 %{д%}:т <=> :VoicelessC %>:0 _ ;
-
-
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Enter_twol
