@@ -22,7 +22,7 @@ Multichar_Symbols
 ! Pronoun categories
 %<pers%> ! Personal
 %<dem%> ! Demonstrative
-%<ind%> ! Indefinite
+%<indef%> ! Indefinite
 %<itg%> ! Interrogative
 %<ref%> ! Reflexive
 
@@ -117,6 +117,16 @@ Multichar_Symbols
 %{v%}
 %{n%}
 
+! Punctuation tags
+%<sent%>      ! Sentence marker
+%<guio%>      ! Hyphen
+%<cm%>        ! Comma
+%<apos%>      ! Apostrophe
+%<rquot%>     ! Quote marker (right hand side)
+%<lquot%>     ! Quote marker (left hand side)
+%<rpar%>      ! Parenthetical marker (right hand side)
+%<lpar%>      ! Parenthetical marker (left hand side)
+
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
@@ -129,13 +139,16 @@ ProperNounRoot ;
 PronounRoot ;
 NumeralRoot ;
 VerbRoot ;
+Punctuation ;
 
 LEXICON CLITICS
 
 %<qst%>:%>ла # ; ! Y/N questions
 %<emph%>:%>%{R%}и # ; ! intensifying particle 'even'
 %<emph%>:%>ӿагин # ; ! intensifying particle 'even'
+
 0:0 # ;
+TVerbRoot ;
 
 LEXICON CASES
 %<age%>:%>%{a%}ӽ CLITICS ;       ! Agentive
@@ -223,14 +236,19 @@ LEXICON PRN9
 %<prn%>%<ref%>%+:%> TVerbRoot ;
 %<prn%>%<ref%>%+:%> NounRoot ;
 
+LEXICON IndefinitePRN
+
+%<prn%>: # ;
+%<prn%>+:%> TVerbRoot  ; ! Not sure if it can decline to other cases
+
 LEXICON SubjAgree
 
-%<p1%>%<sg%>:%>т # ;
-%<p2%>%<sg%>:%>р # ;
-%<p3%>%<sg%>:%>р # ;
-%<p1%>%<pl%>:%>т # ;
-%<p2%>%<pl%>:%>т # ;
-%<p3%>%<pl%>:%>т # ;
+%<p1%>%<sg%>:%>т CLITICS ;
+%<p2%>%<sg%>:%>р CLITICS ;
+%<p3%>%<sg%>:%>р CLITICS ;
+%<p1%>%<pl%>:%>т CLITICS ;
+%<p2%>%<pl%>:%>т CLITICS ;
+%<p3%>%<pl%>:%>т CLITICS ;
 
 LEXICON ADV1
 
@@ -260,20 +278,20 @@ LEXICON NUM2
 %<num%>%<cl9%>:%>ик # ;
 
 LEXICON FORMALITY
-%<frm%>:%>о # ;
-%<infrm%>:0 # ;
+%<frm%>:%>о CLITICS ;
+%<infrm%>:0 CLITICS ;
 
 LEXICON MOOD
 
 %<itg%>:%>л FORMALITY ;
-%<ind%>:%>%{д%}ь # ;
+%<ind%>:%>%{д%}ь CLITICS ;
 ! %<imp%>:%>idk # ;
 
 LEXICON NonFinite
 
-%<inf%>:%>%{R%}оӽ # ;
+%<inf%>:%>%{R%}оӽ CLITICS ;
 %<cvb_nar%>: SubjAgree ;
-%<cvb_ant%>:%>ӈан # ;
+%<cvb_ant%>:%>ӈан CLITICS ;
 MOOD ;
 
 LEXICON TENSE
@@ -324,6 +342,7 @@ LEXICON PronounRoot
 чыӈ:чыӈ PRN7     ; ! y'all
 имӈ:имӈ PRN8     ; ! they
 пʼи:пʼ PRN9      ; ! oneself
+ӿуӈрыдь:ӿуӈрыдь IndefinitePRN ; ! something like this
 
 LEXICON NumeralRoot
 
@@ -354,6 +373,31 @@ LEXICON IVerbRoot
 LEXICON IVerb-AdvRoot
 ур:ур COMP ; ! well
 еӻ:еӻ COMP ; ! quickly
+
+LEXICON Punctuation
+
+.%<sent%>:. # ;
+..%<sent%>:.. # ;
+...%<sent%>:... # ;
+%;%<sent%>:%; # ;
+%:%<sent%>:%: # ;
+%!%<sent%>:%! # ;
+%-%<guio%>:%- # ;
+%—%<guio%>:%— # ;
+,%<cm%>:, # ;
+%?%<sent%>:%? # ;
+%'%<apos%>:%' # ;
+%"%<sent%>:%" # ;
+%«%<lquot%>:%« # ;
+%»%<rquot%>:%» # ;
+%”%<rquot%>:%” # ;
+%“%<lquot%>:%“ # ;
+%(%<lpar%>:%( # ;
+%]%<rpar%>:%] # ;
+%[%<lpar%>:%[ # ;
+%)%<rpar%>:%) # ;
+\%<sent%>:\ # ;
+/%<sent%>:/ # ;
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon
