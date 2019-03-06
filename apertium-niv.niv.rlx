@@ -2,15 +2,66 @@
 DELIMITERS = "<.>" ;
 
 # We can define sets for common tag clusters
-LIST Case = (n s) (n p) ; # A set that matches either a Noun Singular or a Noun Plural
+LIST Case = (n s) (n p); # A set that matches either a Noun Singular or a Noun Plural
 
 SECTION
 # If there is a singular noun to the right, I cannot be a verb or noun.
 REMOVE (n) OR (v) IF (1 (n s)) ;
 
-# If there is a conjunction followed by a certain cohort of the same CASE as me, choose me.
-SELECT $$Case IF (1 (cnjcoo) LINK 1C $$Case) ;
+# Adverb and Converb agreement
+# If there is a second person pronoun, remove <p3><sg>
+REMOVE (p3 sg) IF (-1 (prn pers p2 sg)) ;
 
+# If there is not a second person pronoun, remove <p2><sg>
+REMOVE (p2 sg) IF (NOT -1 (prn pers p2 sg)) ;
+
+# Removes <p1><sg> when there is a plural before it
+REMOVE (p1 sg) IF (-1 (pl)) ;
+
+# Removes <p1><sg> if there is a <du><incl> before it
+REMOVE (p1 sg) IF (-1 (du incl)) ;
+
+
+
+# Removes <p1><pl> if there is a <p2><pl> before it
+REMOVE (p1 pl) IF (-1 (p2 pl)) ;
+
+# Removes <p1><pl> if there is a <p3><pl> before it
+REMOVE (p1 pl) IF (-1 (p3 pl)) ;
+
+# Removes <p1><pl> if there is a <p1><sg> before it
+REMOVE (p1 pl) IF (-1 (p1 sg)) ;
+
+
+
+# Removes <p2><pl> if there is a <p1><pl> before it
+REMOVE (p2 pl) IF (-1 (p1 pl)) ;
+
+# Removes <p2><pl> if there is a <du><incl> before it
+REMOVE (p2 pl) IF (-1 (du incl)) ;
+
+# Removes <p2><pl> if there is a <p3><pl> before it
+REMOVE (p2 pl) IF (-1 (p3 pl)) ;
+
+# Removes <p2><pl> if there is a <p1><sg> before it
+REMOVE (p2 pl) IF (-1 (p1 sg)) ;
+
+
+
+# Removes <p3><pl> if there is a <p1><pl> before it
+REMOVE (p3 pl) IF (-1 (p1 pl)) ;
+
+# Removes <p3><pl> if there is a <du><incl> before it
+REMOVE (p3 pl) IF (-1 (du incl)) ;
+
+# Removes <p3><pl> if there is a <p2><pl> before it
+REMOVE (p3 pl) IF (-1 (p2 pl)) ;
+
+# Removes <p3><pl> if there is a <p1><sg> before it
+REMOVE (p3 pl) IF (-1 (p1 sg)) ;
+
+# Nivkh Disambiguation Wiki:
+# https://wikis.swarthmore.edu/ling073/Nivkh/Disambiguation
 # Resources:
 # http://visl.sdu.dk/cg3.html
 # http://groups.google.com/group/constraint-grammar
