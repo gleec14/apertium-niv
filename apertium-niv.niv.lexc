@@ -182,7 +182,7 @@ LEXICON PN1
 LEXICON POSS
 
 %<pos%>:%>ны CASES ;
-0:0 # ;
+# ;
 
 LEXICON PRN1
 
@@ -238,7 +238,7 @@ LEXICON PRN9
 LEXICON IndefinitePRN
 
 %<prn%>: # ;
-%<prn%>+:%> TVerbRoot  ; ! Not sure if it can decline to other cases
+%<prn%>%+:%> TVerbRoot  ; ! Not sure if it can decline to other cases
 
 LEXICON SubjAgree
 
@@ -277,8 +277,8 @@ LEXICON NUM2
 %<num%>%<cl9%>:%>ик # ;
 
 LEXICON FORMALITY
-%<frm%>:%>о CLITICS ;
-%<infrm%>:0 CLITICS ;
+%<frm%>:о CLITICS ;
+%<infrm%>: CLITICS ;
 
 LEXICON MOOD
 
@@ -361,7 +361,6 @@ LEXICON TVerbRoot
 ғе:ғе TV1        ; ! to buy
 ӄала:ӄала TV1        ; ! to hate
 ама:ама TV1          ; ! to look
-CLITICS ;
 
 LEXICON IVerbRoot
 
