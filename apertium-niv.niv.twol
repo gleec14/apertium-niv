@@ -183,7 +183,7 @@ Cx:Cy <=> :Vowel [ :B | :д ] (:0) %>:0 %{n%}:0 _ ;
 
 "Change A1 to A for verbs"
 Cx:Cy <=> :A1 %>:0 %{v%}:0 _ ;
-          :Sonorant %>:0 _ ;
+          :Sonorant %>:0 %{v%}:0 _ ;
       where Cx in A1
             Cy in B
       matched ;
