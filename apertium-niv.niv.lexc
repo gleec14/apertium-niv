@@ -147,21 +147,20 @@ LEXICON CLITICS
 %<emph%>:%>%{R%}и # ; ! intensifying particle 'even'
 %<emph%>:%>ӿагин # ; ! intensifying particle 'even'
 
-0:0 # ;
-TVerbRoot ;
+# ;
 
 LEXICON CASES
-%<age%>:%>%{a%}ӽ CLITICS ;       ! Agentive
-%<dat%>:%>%{R%}%{o%}ӽ CLITICS ;  ! Dative
-%<ins%>:%>%{G%}ир CLITICS ;      ! Instrumental
-%<loc%>:%>%{u%}%{j%}н CLITICS ;  ! Locative
-%<abl%>:%>%{u%}х CLITICS ;       ! Ablative
-%<term%>:%>%{T%}%{ʼ%}ыкы CLITICS ;    ! Terminative
-%<term%>:%>%{T%}%{ʼ%}%{X%}а CLITICS ; ! Dir/LR
-%<term%>:%>%{R%}оӻо CLITICS ;    ! Dir/LR
-%<comp%>:%>%{y%}к CLITICS ;      ! Comparative
+%<age%>:%>%{a%}ӽ TVerbRoot ;       ! Agentive
+%<dat%>:%>%{R%}%{o%}ӽ TVerbRoot ;  ! Dative
+%<ins%>:%>%{G%}ир TVerbRoot ;      ! Instrumental
+%<loc%>:%>%{u%}%{j%}н TVerbRoot ;  ! Locative
+%<abl%>:%>%{u%}х TVerbRoot ;       ! Ablative
+%<term%>:%>%{T%}%{ʼ%}ыкы TVerbRoot ;    ! Terminative
+%<term%>:%>%{T%}%{ʼ%}%{X%}а TVerbRoot ; ! Dir/LR
+%<term%>:%>%{R%}оӻо TVerbRoot ;    ! Dir/LR
+%<comp%>:%>%{y%}к TVerbRoot ;      ! Comparative
 %<voc%>:%>%{V%} # ;              ! Vocative
-CLITICS ;                        ! Nominative
+TVerbRoot ;                        ! Nominative
 
 LEXICON N-INFL
 
@@ -362,6 +361,7 @@ LEXICON TVerbRoot
 ғе:ғе TV1        ; ! to buy
 ӄала:ӄала TV1        ; ! to hate
 ама:ама TV1          ; ! to look
+CLITICS ;
 
 LEXICON IVerbRoot
 
