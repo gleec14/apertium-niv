@@ -150,21 +150,21 @@ LEXICON CLITICS
 # ;
 
 LEXICON CASES
-%<age%>:%>%{a%}ӽ TVerbRoot ;       ! Agentive
-%<dat%>:%>%{R%}%{o%}ӽ TVerbRoot ;  ! Dative
-%<ins%>:%>%{G%}ир TVerbRoot ;      ! Instrumental
-%<loc%>:%>%{u%}%{j%}н TVerbRoot ;  ! Locative
-%<abl%>:%>%{u%}х TVerbRoot ;       ! Ablative
-%<term%>:%>%{T%}%{ʼ%}ыкы TVerbRoot ;    ! Terminative
-%<term%>:%>%{T%}%{ʼ%}%{X%}а TVerbRoot ; ! Dir/LR
-%<term%>:%>%{R%}оӻо TVerbRoot ;    ! Dir/LR
-%<comp%>:%>%{y%}к TVerbRoot ;      ! Comparative
+%<age%>:%>%{a%}ӽ INCORPORATE ;       ! Agentive
+%<dat%>:%>%{R%}%{o%}ӽ INCORPORATE ;  ! Dative
+%<ins%>:%>%{G%}ир INCORPORATE ;      ! Instrumental
+%<loc%>:%>%{u%}%{j%}н INCORPORATE ;  ! Locative
+%<abl%>:%>%{u%}х INCORPORATE ;       ! Ablative
+%<term%>:%>%{T%}%{ʼ%}ыкы INCORPORATE ;    ! Terminative
+%<term%>:%>%{T%}%{ʼ%}%{X%}а INCORPORATE ; ! Dir/LR
+%<term%>:%>%{R%}оӻо INCORPORATE ;    ! Dir/LR
+%<comp%>:%>%{y%}к INCORPORATE ;      ! Comparative
 %<voc%>:%>%{V%} # ;              ! Vocative
-TVerbRoot ;                        ! Nominative
+INCORPORATE ;                        ! Nominative
 
 LEXICON N-INFL
 
-CASES;
+CASES ;
 
 LEXICON SUBST
 
@@ -306,6 +306,11 @@ LEXICON IV1
 
 %<v%>%<iv%>: TENSE;
 
+LEXICON INCORPORATE
+
+%+:%> TVerbRoot ;
+CLITICS ;
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -366,10 +371,10 @@ IVerb-AdvRoot ;
 LEXICON TVerbRoot
 
 за:%{v%}з{ь%}а TV1   ; ! to beat
-во:во TV1        ; ! to take
-даю:даю TV1          ; ! to write
-ғе:ғе TV1        ; ! to buy
-ӄала:ӄала TV1        ; ! to hate
+во:%{v%}во TV1        ; ! to take
+даю:%{v%}даю TV1          ; ! to write
+ғе:%{v%}ғе TV1        ; ! to buy
+ӄала:%{v%}ӄала TV1        ; ! to hate
 ама:ама TV1          ; ! to look
 
 LEXICON IVerbRoot
