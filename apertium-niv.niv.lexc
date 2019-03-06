@@ -325,6 +325,16 @@ LEXICON NounRoot
 курӈ:%{n%}курӈ N1          ; ! universe
 тяӄо:%{n%}ч%{ь%}аӄо N1     ; ! knife
 оола:%{n%}оола N1          ; ! child
+чʼатьф:%{n%}чʼ{ь%}атьф N1  ; ! bog, swamp
+ыф:%{n%}ы%{ф%} N1          ; ! beard
+арф:%{n%}ар%{ф%} N1        ; ! side of boat
+ӿуньф:%{n%}ӿуньф N1        ; ! barrel
+пердь:%{n%}пердь N1        ; ! burden
+ыкын:%{n%}ыкын N1          ; ! older brother
+атик:%{n%}атик N1          ; ! younger brother
+ытик:%{n%}ытик N1          ; ! grandmother
+пос:%{n%}пос N1            ; ! fabric, cloth
+
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
@@ -368,6 +378,7 @@ LEXICON IVerbRoot
 му:му IV1     ; ! to die
 чека:чека IV1 ; ! to be strong
 чола:чола IV1 ; ! to be poor
+ӈалы:ӈалы IV1 ; ! to be delirious, to talk nonsense
 
 LEXICON IVerb-AdvRoot
 ур:ур COMP ; ! well
