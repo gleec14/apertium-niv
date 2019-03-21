@@ -237,8 +237,13 @@ LEXICON PRN9
 
 LEXICON IndefinitePRN
 
-%<prn%>: # ;
-%<prn%>%+:%> TVerbRoot  ; ! Not sure if it can decline to other cases
+%<prn%>%<indef%>: # ;
+%<prn%>%<indef%>%+:%> TVerbRoot  ; ! Not sure if it can decline to other cases
+
+LEXICON DemonstrativePRN
+
+%<prn%>%<dem%>: # ;
+%<prn%>%<dem%>%+:%> TVerbRoot  ; ! Not sure if it can decline to other cases
 
 LEXICON SubjAgree
 
@@ -339,7 +344,11 @@ LEXICON NounRoot
 атик:%{n%}атик N1          ; ! younger brother
 ытик:%{n%}ытик N1          ; ! grandmother
 пос:%{n%}пос N1            ; ! fabric, cloth
-
+ӈафӄ:%{n%}ӈафӄ N1          ; ! friend
+леп:%{n%}леп N1            ; ! bread
+ларӄ:%{n%}ларӄ N1          ; ! shirt
+кинс:%{n%}кинс N1          ; ! devil
+по:%{n%}по N1              ; ! village
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
@@ -357,6 +366,7 @@ LEXICON PronounRoot
 имӈ:имӈ PRN8     ; ! they
 пʼи:пʼ PRN9      ; ! oneself
 ӿуӈрыдь:ӿуӈрыдь IndefinitePRN ; ! something like this
+тыдь:тыдь DemonstrativePRN ; ! this
 
 LEXICON NumeralRoot
 
@@ -370,12 +380,14 @@ IVerb-AdvRoot ;
 
 LEXICON TVerbRoot
 
-за:%{v%}з{ь%}а TV1   ; ! to beat
+за:%{v%}з{ь%}а TV1    ; ! to beat
 во:%{v%}во TV1        ; ! to take
-даю:%{v%}даю TV1          ; ! to write
-ғе:%{v%}ғе TV1        ; ! to buy
-ӄала:%{v%}ӄала TV1        ; ! to hate
-ама:ама TV1          ; ! to look
+даю:%{v%}даю TV1      ; ! to write
+ғе:%{v%}ғе TV1        ; ! to buy, take
+ӄала:%{v%}ӄала TV1    ; ! to hate
+ама:%{v%}ама TV1      ; ! to look
+иғ:%{v%}иғ TV1        ; ! to kill
+кʼу:%{v%}кʼу TV1      ; ! to kill
 
 LEXICON IVerbRoot
 
@@ -384,6 +396,7 @@ LEXICON IVerbRoot
 чека:чека IV1 ; ! to be strong
 чола:чола IV1 ; ! to be poor
 ӈалы:ӈалы IV1 ; ! to be delirious, to talk nonsense
+ӄʼо:ӄʼо IV1   ; ! to sleep
 
 LEXICON IVerb-AdvRoot
 ур:ур COMP ; ! well
