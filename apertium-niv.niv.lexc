@@ -139,6 +139,7 @@ ProperNounRoot ;
 PronounRoot ;
 NumeralRoot ;
 VerbRoot ;
+AdverbRoot ;
 Punctuation ;
 
 LEXICON CLITICS
@@ -146,21 +147,22 @@ LEXICON CLITICS
 %<qst%>:%>ла # ; ! Y/N questions
 %<emph%>:%>%{R%}и # ; ! intensifying particle 'even'
 %<emph%>:%>ӿагин # ; ! intensifying particle 'even'
+%<foc%>:%>ра # ; ! focus particle
 
 # ;
 
 LEXICON CASES
-%<age%>:%>%{a%}ӽ INCORPORATE ;       ! Agentive
-%<dat%>:%>%{R%}%{o%}ӽ INCORPORATE ;  ! Dative
-%<ins%>:%>%{G%}ир INCORPORATE ;      ! Instrumental
-%<loc%>:%>%{u%}%{j%}н INCORPORATE ;  ! Locative
-%<abl%>:%>%{u%}х INCORPORATE ;       ! Ablative
-%<term%>:%>%{T%}%{ʼ%}ыкы INCORPORATE ;    ! Terminative
-%<term%>:%>%{T%}%{ʼ%}%{X%}а INCORPORATE ; ! Dir/LR
-%<term%>:%>%{R%}оӻо INCORPORATE ;    ! Dir/LR
-%<comp%>:%>%{y%}к INCORPORATE ;      ! Comparative
-%<voc%>:%>%{V%} # ;              ! Vocative
-INCORPORATE ;                        ! Nominative
+%<age%>:%>%{a%}ӽ CLITIC ;             ! Agentive
+%<dat%>:%>%{R%}%{o%}ӽ CLITICS ;       ! Dative
+%<ins%>:%>%{G%}ир CLITICS ;           ! Instrumental
+%<loc%>:%>%{u%}%{j%}н CLITICS ;       ! Locative
+%<abl%>:%>%{u%}х CLITICS ;            ! Ablative
+%<term%>:%>%{T%}%{ʼ%}ыкы CLITICS ;    ! Terminative
+%<term%>:%>%{T%}%{ʼ%}%{X%}а CLITICS ; ! Dir/LR
+%<term%>:%>%{R%}оӻо CLITICS ;         ! Dir/LR
+%<comp%>:%>%{y%}к CLITICS ;           ! Comparative
+%<voc%>:%>%{V%} # ;                   ! Vocative
+INCORPORATE ;                         ! Nominative
 
 LEXICON N-INFL
 
@@ -316,12 +318,14 @@ LEXICON INCORPORATE
 %+:%> TVerbRoot ;
 CLITICS ;
 
+LEXICON ADV2
+%<adv%>: CLITICS;
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 LEXICON NounRoot
-
 умгу:%{n%}умгу N1          ; ! woman
 ытык:%{n%}ытык N1          ; ! father
 ӄан:%{n%}ӄан N1            ; ! doggo
@@ -349,13 +353,24 @@ LEXICON NounRoot
 ларӄ:%{n%}ларӄ N1          ; ! shirt
 кинс:%{n%}кинс N1          ; ! devil
 по:%{n%}по N1              ; ! village
+кеӄ:%{n%}кеӄ N1            ; ! fox
+чеврӄ:%{n%}ч{ь%}еврӄ N1    ; ! bird
+тупр̌:%{n%}тупр̌ N1          ; ! feather
+тюз:%{n%}тюз N1            ; ! meat
+мулк:%{n%}мулк N1          ; ! basket
+ӈояӄ:%{n%}ӈояӄ N1          ; ! egg
+ӄʼас:%{n%}ӄʼас N1          ; ! tambourine
+выйбукс:%{n%}выйбукс N1    ; ! tie
+мифпʼидь:%{n%}мифпʼидь N1  ; ! toad
+ӄʼос:%{n%}ӄʼос N1          ; ! neck
+олғоӈ:%{n%}олғоӈ N1        ; ! pig
+коӽ:%{n%}коӽ N1            ; ! belly
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
 
 
 LEXICON PronounRoot
-
 ни:н PRN1        ; ! I
 чи:ч PRN2        ; ! you
 иф:и%{f%} PRN3   ; ! he, she, it
@@ -379,7 +394,6 @@ IVerbRoot ;
 IVerb-AdvRoot ;
 
 LEXICON TVerbRoot
-
 за:%{v%}з{ь%}а TV1    ; ! to beat
 во:%{v%}во TV1        ; ! to take
 даю:%{v%}даю TV1      ; ! to write
@@ -388,22 +402,40 @@ LEXICON TVerbRoot
 ама:%{v%}ама TV1      ; ! to look
 иғ:%{v%}иғ TV1        ; ! to kill
 кʼу:%{v%}кʼу TV1      ; ! to kill
+ӽа:%{v%}ӽа TV1        ; ! to shoot
+пʼыврк:%{v%}пʼыврк TV1 ; ! to pluck
+р̌а:%{v%}р̌а TV1        ; ! to fry
+пʼын:%{v%}пʼын TV1    ; ! to throw
+хир:%{v%}хир TV1      ; ! to use
+ыӈг:%{v%}ыӈг TV1      ; ! to rip up
+мот:%{v%}мот TV1      ; ! to kiss
+ар:%{v%}ар TV1        ; ! to feed
 
 LEXICON IVerbRoot
-
-пʼры:пʼры IV1 ; ! to come
-му:му IV1     ; ! to die
-чека:чека IV1 ; ! to be strong
-чола:чола IV1 ; ! to be poor
-ӈалы:ӈалы IV1 ; ! to be delirious, to talk nonsense
-ӄʼо:ӄʼо IV1   ; ! to sleep
+пʼры:пʼры IV1     ; ! to come
+му:му IV1         ; ! to die
+чека:чека IV1     ; ! to be strong
+чола:чола IV1     ; ! to be poor
+ӈалы:ӈалы IV1     ; ! to be delirious, to talk nonsense
+ӄʼо:ӄʼо IV1       ; ! to sleep
+ви:ви IV1         ; ! to go
+пʼу:пʼу IV1       ; ! to go out, exit
+тывғ:тывғ IV1     ; ! to enter a house
+тʼаӽта:тʼаӽта IV1 ; ! to be angry
+ӿеӻа:ӿеӻа IV1     ; ! to be afraid
+пʼолағ:пʼолағ IV1 ; ! to shout
+пʼим:пʼим         ; ! to run away
 
 LEXICON IVerb-AdvRoot
 ур:ур COMP ; ! well
 еӻ:еӻ COMP ; ! quickly
 
-LEXICON Punctuation
+LEXICON AdverbRoot
+ӿоӻорӈан:ӿоӻорӈан ADV2 ; ! then, at that time
+ӿаӈан:ӿаӈан ADV2       ; ! then, in that case
+напа:напа ADV2         ; ! still
 
+LEXICON Punctuation
 .%<sent%>:. # ;
 ..%<sent%>:.. # ;
 ...%<sent%>:... # ;
