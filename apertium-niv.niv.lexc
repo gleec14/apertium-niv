@@ -137,6 +137,7 @@ LEXICON Root
 NounRoot ;
 ProperNounRoot ;
 PronounRoot ;
+DeterminerRoot
 NumeralRoot ;
 VerbRoot ;
 AdverbRoot ;
@@ -247,6 +248,9 @@ LEXICON DemonstrativePRN
 %<prn%>%<dem%>: # ;
 %<prn%>%<dem%>%+:%> TVerbRoot  ; ! Not sure if it can decline to other cases
 
+LEXICON DET
+%<det%>%<dem%>:%> NounRoot ;
+
 LEXICON SubjAgree
 
 %<p1%>%<sg%>:%>т CLITICS ;
@@ -356,7 +360,7 @@ LEXICON NounRoot
 кеӄ:%{n%}кеӄ N1            ; ! fox
 чеврӄ:%{n%}ч{ь%}еврӄ N1    ; ! bird
 тупр̌:%{n%}тупр̌ N1          ; ! feather
-тюз:%{n%}тюз N1            ; ! meat
+тюс:%{n%}тюс N1            ; ! meat
 мулк:%{n%}мулк N1          ; ! basket
 ӈояӄ:%{n%}ӈояӄ N1          ; ! egg
 ӄʼас:%{n%}ӄʼас N1          ; ! tambourine
@@ -365,6 +369,7 @@ LEXICON NounRoot
 ӄʼос:%{n%}ӄʼос N1          ; ! neck
 олғоӈ:%{n%}олғоӈ N1        ; ! pig
 коӽ:%{n%}коӽ N1            ; ! belly
+пыньх:%{n%}пыньх N1        ; ! soup
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
@@ -382,6 +387,9 @@ LEXICON PronounRoot
 пʼи:пʼ PRN9      ; ! oneself
 ӿуӈрыдь:ӿуӈрыдь IndefinitePRN ; ! something like this
 тыдь:тыдь DemonstrativePRN ; ! this
+
+LEXICON DeterminerRoot
+ӿы:ӿы DET ; ! this
 
 LEXICON NumeralRoot
 
@@ -401,15 +409,16 @@ LEXICON TVerbRoot
 ӄала:%{v%}ӄала TV1    ; ! to hate
 ама:%{v%}ама TV1      ; ! to look
 иғ:%{v%}иғ TV1        ; ! to kill
-кʼу:%{v%}кʼу TV1      ; ! to kill
-ӽа:%{v%}ӽа TV1        ; ! to shoot
-пʼыврк:%{v%}пʼыврк TV1 ; ! to pluck
-р̌а:%{v%}р̌а TV1        ; ! to fry
-пʼын:%{v%}пʼын TV1    ; ! to throw
-хир:%{v%}хир TV1      ; ! to use
-ыӈг:%{v%}ыӈг TV1      ; ! to rip up
-мот:%{v%}мот TV1      ; ! to kiss
-ар:%{v%}ар TV1        ; ! to feed
+ху:%{v%}х%{ʼ%}у TV1       ; ! to kill
+ӽа:%{v%}ӽ%{ʼ%}а TV1       ; ! to shoot
+фыврк:%{v%}ф%{ʼ%}ыврк TV1 ; ! to pluck
+р̌а:%{v%}р̌%{ʼ%}а TV1       ; ! to fry
+фын:%{v%}ф%{ʼ%}ын TV1     ; ! to throw
+хир:%{v%}х%{ʼ%}ир TV1     ; ! to use
+ыӈг:%{v%}ыӈг TV1          ; ! to rip up
+мот:%{v%}мот TV1          ; ! to kiss
+ар:%{v%}ар TV1            ; ! to feed
+ӽат:%{v%}ӽ%{ʼ%}ат TV1     ; ! to scold
 
 LEXICON IVerbRoot
 пʼры:пʼры IV1     ; ! to come
@@ -424,7 +433,8 @@ LEXICON IVerbRoot
 тʼаӽта:тʼаӽта IV1 ; ! to be angry
 ӿеӻа:ӿеӻа IV1     ; ! to be afraid
 пʼолағ:пʼолағ IV1 ; ! to shout
-пʼим:пʼим         ; ! to run away
+пʼим:пʼим IV1     ; ! to run away
+ӄотю:ӄотю IV1     ; ! to fall silent
 
 LEXICON IVerb-AdvRoot
 ур:ур COMP ; ! well
