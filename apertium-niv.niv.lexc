@@ -48,6 +48,7 @@ Multichar_Symbols
 %<inf%> ! infinitive
 %<cvb_nar%> ! narrative converb
 %<cvb_ant%> ! anterior/simultaneous converb
+%<cvb_cond%> ! conditional converb ("if")
 %<nmz.pred%> ! Predicate-actant nominalisation
 %<nmz.subj%> ! Subject nominalisation
 %<nmz.loc%> ! Locative nominalisation
@@ -137,7 +138,7 @@ LEXICON Root
 NounRoot ;
 ProperNounRoot ;
 PronounRoot ;
-DeterminerRoot
+DeterminerRoot ;
 NumeralRoot ;
 VerbRoot ;
 AdverbRoot ;
@@ -149,6 +150,7 @@ LEXICON CLITICS
 %<emph%>:%>%{R%}и # ; ! intensifying particle 'even'
 %<emph%>:%>ӿагин # ; ! intensifying particle 'even'
 %<foc%>:%>ра # ; ! focus particle
+%<foc%>:%>ат # ; ! focus particle
 
 # ;
 
@@ -163,7 +165,7 @@ LEXICON CASES
 %<term%>:%>%{R%}оӻо CLITICS ;         ! Dir/LR
 %<comp%>:%>%{y%}к CLITICS ;           ! Comparative
 %<voc%>:%>%{V%} # ;                   ! Vocative
-INCORPORATE ;                         ! Nominative
+INCORPORATE-N ;                        ! Nominative
 
 LEXICON N-INFL
 
@@ -209,28 +211,33 @@ LEXICON PRN4
 %<prn%>%<pers%>%<p1%>%<pl%>%<excl%>: POSS ;
 %<prn%>%<pers%>%<p1%>%<pl%>%<excl%>%+:%> TVerbRoot ;
 %<prn%>%<pers%>%<p1%>%<pl%>%<excl%>%+:%> NounRoot ;
+%<prn%>%<pers%>%<p1%>%<pl%>%<excl%>:%> CASES ;
 
 LEXICON PRN5
 
 %<prn%>%<pers%>%<p1%>%<pl%>%<incl%>: POSS ;
 %<prn%>%<pers%>%<p1%>%<pl%>%<incl%>: # ;
+%<prn%>%<pers%>%<p1%>%<pl%>%<incl%>:%> CASES ;
 
 LEXICON PRN6
 
 %<prn%>%<pers%>%<p1%>%<du%>%<incl%>: POSS ;
 %<prn%>%<pers%>%<p1%>%<du%>%<incl%>: # ;
+%<prn%>%<pers%>%<p1%>%<du%>%<incl%>:%> CASES ;
 
 LEXICON PRN7
 
 %<prn%>%<pers%>%<p2%>%<pl%>: POSS ;
 %<prn%>%<pers%>%<p2%>%<pl%>%+:%> TVerbRoot ;
 %<prn%>%<pers%>%<p2%>%<pl%>%+:%> NounRoot ;
+%<prn%>%<pers%>%<p2%>%<pl%>:%> CASES ;
 
 LEXICON PRN8
 
 %<prn%>%<pers%>%<p3%>%<pl%>: POSS ;
 %<prn%>%<pers%>%<p3%>%<pl%>%+:%> TVerbRoot ;
 %<prn%>%<pers%>%<p3%>%<pl%>%+:%> NounRoot ;
+%<prn%>%<pers%>%<p3%>%<pl%>:%> CASES ;
 
 LEXICON PRN9
 
@@ -241,12 +248,15 @@ LEXICON PRN9
 LEXICON IndefinitePRN
 
 %<prn%>%<indef%>: # ;
-%<prn%>%<indef%>%+:%> TVerbRoot  ; ! Not sure if it can decline to other cases
+%<prn%>%<indef%>%+:%> TVerbRoot ; ! Not sure if it can decline to other cases
 
 LEXICON DemonstrativePRN
 
 %<prn%>%<dem%>: # ;
-%<prn%>%<dem%>%+:%> TVerbRoot  ; ! Not sure if it can decline to other cases
+%<prn%>%<dem%>%+:%> TVerbRoot ;
+
+LEXICON InterrogativePRN
+%<prn%>%<itg%>: # ;
 
 LEXICON DET
 %<det%>%<dem%>:%> NounRoot ;
@@ -297,11 +307,14 @@ LEXICON MOOD
 %<ind%>:%>%{д%}ь CLITICS ;
 ! %<imp%>:%>idk # ;
 
+INCORPORATE-V ;
+
 LEXICON NonFinite
 
 %<inf%>:%>%{R%}оӽ CLITICS ;
 %<cvb_nar%>: SubjAgree ;
 %<cvb_ant%>:%>ӈан CLITICS ;
+%<cvb_cond%>:%>ӻа CLITICS ;
 MOOD ;
 
 LEXICON TENSE
@@ -317,10 +330,14 @@ LEXICON IV1
 
 %<v%>%<iv%>: TENSE;
 
-LEXICON INCORPORATE
+LEXICON INCORPORATE-N
 
 %+:%> TVerbRoot ;
 CLITICS ;
+
+LEXICON INCORPORATE-V
+
+%+:%> NounRoot ;
 
 LEXICON ADV2
 %<adv%>: CLITICS;
@@ -336,7 +353,7 @@ LEXICON NounRoot
 ӈа:%{n%}ӈа N1              ; ! animal
 тыф:%{n%}ты%{ф%} N1        ; ! house
 ми:%{n%}ми N1              ; ! inside
-нивх:%{n%}нивх N1          ; ! person
+нивх:%{n%}нивх N1          ; ! person, man
 ваӄа:%{n%}ваӄа N1          ; ! box
 сета:%{n%}сета N1          ; ! sugar
 ойдам:%{n%}ойдам N1        ; ! baby
@@ -350,6 +367,7 @@ LEXICON NounRoot
 пердь:%{n%}пердь N1        ; ! burden
 ыкын:%{n%}ыкын N1          ; ! older brother
 атик:%{n%}атик N1          ; ! younger brother
+нанак:%{n%}нанак N1        ; ! older sister
 ытик:%{n%}ытик N1          ; ! grandmother
 пос:%{n%}пос N1            ; ! fabric, cloth
 ӈафӄ:%{n%}ӈафӄ N1          ; ! friend
@@ -370,12 +388,18 @@ LEXICON NounRoot
 олғоӈ:%{n%}олғоӈ N1        ; ! pig
 коӽ:%{n%}коӽ N1            ; ! belly
 пыньх:%{n%}пыньх N1        ; ! soup
+нё:%{n%}нё N1              ; ! barn
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
 
-
 LEXICON PronounRoot
+PersPronRoot ;
+IndefPronRoot ;
+DemPronRoot ;
+IntPronRoot ;
+
+LEXICON PersPronRoot
 ни:н PRN1        ; ! I
 чи:ч PRN2        ; ! you
 иф:и%{f%} PRN3   ; ! he, she, it
@@ -385,8 +409,17 @@ LEXICON PronounRoot
 чыӈ:чыӈ PRN7     ; ! y'all
 имӈ:имӈ PRN8     ; ! they
 пʼи:пʼ PRN9      ; ! oneself
+
+LEXICON IndefPronRoot
 ӿуӈрыдь:ӿуӈрыдь IndefinitePRN ; ! something like this
-тыдь:тыдь DemonstrativePRN ; ! this
+
+LEXICON DemPronRoot
+тыдь:тыдь DemonstrativePRN ; ! this (one)
+ӿыдь:ӿыдь DemonstrativePRN ; ! that (one)
+адь:адь DemonstrativePRN   ; ! that (one)
+
+LEXICON IntPronRoot
+аӈ:аӈ InterrogativePRN ; ! who
 
 LEXICON DeterminerRoot
 ӿы:ӿы DET ; ! this
@@ -402,13 +435,13 @@ IVerbRoot ;
 IVerb-AdvRoot ;
 
 LEXICON TVerbRoot
-за:%{v%}з{ь%}а TV1    ; ! to beat
-во:%{v%}во TV1        ; ! to take
-даю:%{v%}даю TV1      ; ! to write
-ғе:%{v%}ғе TV1        ; ! to buy, take
-ӄала:%{v%}ӄала TV1    ; ! to hate
-ама:%{v%}ама TV1      ; ! to look
-иғ:%{v%}иғ TV1        ; ! to kill
+за:%{v%}з{ь%}а TV1        ; ! to beat, strike
+во:%{v%}во TV1            ; ! to take
+даю:%{v%}даю TV1          ; ! to write
+ғе:%{v%}ғе TV1            ; ! to buy, take
+ӄала:%{v%}ӄала TV1        ; ! to hate
+ама:%{v%}ама TV1          ; ! to look
+иғ:%{v%}иғ TV1            ; ! to kill
 ху:%{v%}х%{ʼ%}у TV1       ; ! to kill
 ӽа:%{v%}ӽ%{ʼ%}а TV1       ; ! to shoot
 фыврк:%{v%}ф%{ʼ%}ыврк TV1 ; ! to pluck
@@ -419,11 +452,24 @@ LEXICON TVerbRoot
 мот:%{v%}мот TV1          ; ! to kiss
 ар:%{v%}ар TV1            ; ! to feed
 ӽат:%{v%}ӽ%{ʼ%}ат TV1     ; ! to scold
+амӽта:%{v%}амӽта TV1      ; ! to praise
+ыз:%{v%}ыз TV1            ; ! to call
+ор:%{v%}ор TV1            ; ! to meet
+ӈарма:%{v%}ӈарма          ; ! to wait for, await
+ӽони:%{v%}ӽ%{ʼ%}они TV1   ; ! to save
+ньр̌ы:%{v%}ньр̌ы TV1        ; ! to see
+пʼыврк:%{v%}пʼыврк TV1    ; ! to pluck
+р̌ык:%{v%}р̌ык TV1          ; ! to bring home
+имы:%{v%}имы TV1          ; ! to give
+лызи:%{v%}лызи TV1        ; ! to pass, go past
+рғоп:%{v%}рғоп TV1        ; ! to touch
 
 LEXICON IVerbRoot
 пʼры:пʼры IV1     ; ! to come
 му:му IV1         ; ! to die
 чека:чека IV1     ; ! to be strong
+ӿарӻо:ӿарӻо IV1   ; ! to be strong
+чез:чез IV1       ; ! to be weak
 чола:чола IV1     ; ! to be poor
 ӈалы:ӈалы IV1     ; ! to be delirious, to talk nonsense
 ӄʼо:ӄʼо IV1       ; ! to sleep
@@ -435,15 +481,18 @@ LEXICON IVerbRoot
 пʼолағ:пʼолағ IV1 ; ! to shout
 пʼим:пʼим IV1     ; ! to run away
 ӄотю:ӄотю IV1     ; ! to fall silent
+оз:оз IV1         ; ! to stand up
 
 LEXICON IVerb-AdvRoot
 ур:ур COMP ; ! well
 еӻ:еӻ COMP ; ! quickly
 
 LEXICON AdverbRoot
+ӿоӻор:ӿоӻор ADV2       ; ! then, thereupon
 ӿоӻорӈан:ӿоӻорӈан ADV2 ; ! then, at that time
 ӿаӈан:ӿаӈан ADV2       ; ! then, in that case
 напа:напа ADV2         ; ! still
+нав:нав ADV2           ; ! now
 
 LEXICON Punctuation
 .%<sent%>:. # ;
