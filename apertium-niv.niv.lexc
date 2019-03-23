@@ -4,6 +4,7 @@ Multichar_Symbols
 %<n%>   ! Noun
 %<v%>   ! Verb
 %<adv%> ! Adverb
+%<cnjadv%> ! Conjunctive adverb
 %<prn%> ! Pronoun
 %<num%> ! Numeral
 !%<enc%> ! Enclitic
@@ -323,21 +324,20 @@ LEXICON TENSE
 NonFinite ;
 
 LEXICON TV1
-
 %<v%>%<tv%>: TENSE;
 
 LEXICON IV1
-
 %<v%>%<iv%>: TENSE;
 
 LEXICON INCORPORATE-N
-
 %+:%> TVerbRoot ;
 CLITICS ;
 
 LEXICON INCORPORATE-V
-
 %+:%> NounRoot ;
+
+LEXICON CnjADV
+%<cnjadv%>: CLITICS;
 
 LEXICON ADV2
 %<adv%>: CLITICS;
@@ -488,11 +488,17 @@ LEXICON IVerb-AdvRoot
 еӻ:еӻ COMP ; ! quickly
 
 LEXICON AdverbRoot
-ӿоӻор:ӿоӻор ADV2       ; ! then, thereupon
-ӿоӻорӈан:ӿоӻорӈан ADV2 ; ! then, at that time
-ӿаӈан:ӿаӈан ADV2       ; ! then, in that case
-напа:напа ADV2         ; ! still
-нав:нав ADV2           ; ! now
+CnjAdvRoot ;
+AdvRoot ;
+
+LEXICON CnjAdvRoot
+ӿоӻор:ӿоӻор CnjADV        ; ! then, thereupon
+ӿоӻорӈан:ӿоӻорӈан CnjADV  ; ! then, at that time
+ӿаӈан:ӿаӈан CnjADV        ; ! then, in that case
+
+LEXICON AdvRoot
+напа:напа ADV2     ; ! still
+нав:нав ADV2       ; ! now
 
 LEXICON Punctuation
 .%<sent%>:. # ;
