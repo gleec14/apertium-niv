@@ -313,6 +313,7 @@ LEXICON MOOD
 %<itg%>:%>л FORMALITY ;
 %<ind%>:%>%{д%}ь CLITICS ;
 ! %<imp%>:%>idk # ;
+# ;
 
 INCORPORATE-V ;
 
@@ -336,14 +337,11 @@ LEXICON IV1
 %<v%>%<iv%>: TENSE;
 
 LEXICON INCORPORATE-N
-%+:%> TVerbRoot ;
+%+:%>%{v%} TVerbRoot ;
 CLITICS ;
 
 LEXICON INCORPORATE-V
-%+:%> NounRoot ;
-
-LEXICON NounRootIncorporation
-:%{n%} NounRoot ;
+%+:%>%{n%} NounRoot ;
 
 LEXICON CnjADV
 %<cnjadv%>: CLITICS;
@@ -444,34 +442,34 @@ IVerbRoot ;
 IVerb-AdvRoot ;
 
 LEXICON TVerbRoot
-за:%{v%}з{ь%}а TV1        ; ! to beat, strike
-во:%{v%}во TV1            ; ! to take
-даю:%{v%}даю TV1          ; ! to write
-ғе:%{v%}ғе TV1            ; ! to buy, take
-ӄала:%{v%}ӄала TV1        ; ! to hate
-ама:%{v%}ама TV1          ; ! to look
-иғ:%{v%}иғ TV1            ; ! to kill
-ху:%{v%}х%{ʼ%}у TV1       ; ! to kill
-ӽа:%{v%}ӽ%{ʼ%}а TV1       ; ! to shoot
-фыврк:%{v%}ф%{ʼ%}ыврк TV1 ; ! to pluck
-р̌а:%{v%}р̌%{ʼ%}а TV1       ; ! to fry
-фын:%{v%}ф%{ʼ%}ын TV1     ; ! to throw
-хир:%{v%}х%{ʼ%}ир TV1     ; ! to use
-ыӈг:%{v%}ыӈг TV1          ; ! to rip up
-мот:%{v%}мот TV1          ; ! to kiss
-ар:%{v%}ар TV1            ; ! to feed
-ӽат:%{v%}ӽ%{ʼ%}ат TV1     ; ! to scold
-амӽта:%{v%}амӽта TV1      ; ! to praise
-ыз:%{v%}ыз TV1            ; ! to call
-ор:%{v%}ор TV1            ; ! to meet
-ӈарма:%{v%}ӈарма TV1      ; ! to wait for, await
-ӽони:%{v%}ӽ%{ʼ%}они TV1   ; ! to save
-ньр̌ы:%{v%}ньр̌ы TV1        ; ! to see
-пʼыврк:%{v%}пʼыврк TV1    ; ! to pluck
-р̌ык:%{v%}р̌ык TV1          ; ! to bring home
-имы:%{v%}имы TV1          ; ! to give
-лызи:%{v%}лызи TV1        ; ! to pass, go past
-рғоп:%{v%}рғоп TV1        ; ! to touch
+за:з{ь%}а TV1        ; ! to beat, strike
+во:во TV1            ; ! to take
+даю:даю TV1          ; ! to write
+ғе:ғе TV1            ; ! to buy, take
+ӄала:ӄала TV1        ; ! to hate
+ама:ама TV1          ; ! to look
+иғ:иғ TV1            ; ! to kill
+ху:х%{ʼ%}у TV1       ; ! to kill
+ӽа:ӽ%{ʼ%}а TV1       ; ! to shoot
+фыврк:ф%{ʼ%}ыврк TV1 ; ! to pluck
+р̌а:р̌%{ʼ%}а TV1       ; ! to fry
+фын:ф%{ʼ%}ын TV1     ; ! to throw
+хир:х%{ʼ%}ир TV1     ; ! to use
+ыӈг:ыӈг TV1          ; ! to rip up
+мот:мот TV1          ; ! to kiss
+ар:ар TV1            ; ! to feed
+ӽат:ӽ%{ʼ%}ат TV1     ; ! to scold
+амӽта:амӽта TV1      ; ! to praise
+ыз:ыз TV1            ; ! to call
+ор:ор TV1            ; ! to meet
+ӈарма:ӈарма TV1      ; ! to wait for, await
+ӽони:ӽ%{ʼ%}они TV1   ; ! to save
+ньр̌ы:ньр̌ы TV1        ; ! to see
+пʼыврк:пʼыврк TV1    ; ! to pluck
+р̌ык:р̌ык TV1          ; ! to bring home
+имы:имы TV1          ; ! to give
+лызи:лызи TV1        ; ! to pass, go past
+рғоп:рғоп TV1        ; ! to touch
 
 LEXICON IVerbRoot
 пʼры:пʼры IV1     ; ! to come
