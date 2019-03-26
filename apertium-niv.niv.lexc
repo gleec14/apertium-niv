@@ -50,10 +50,10 @@ Multichar_Symbols
 %<cvb_nar%> ! narrative converb
 %<cvb_ant%> ! anterior/simultaneous converb
 %<cvb_cond%> ! conditional converb ("if")
-%<nmz.pred%> ! Predicate-actant nominalisation
-%<nmz.subj%> ! Subject nominalisation
-%<nmz.loc%> ! Locative nominalisation
-%<nmz.adv%> ! Adverbial nominalisation
+%<nmz_pred%> ! Predicate-actant nominalisation
+%<nmz_subj%> ! Subject nominalisation
+%<nmz_loc%> ! Locative nominalisation
+%<nmz_adv%> ! Adverbial nominalisation
 
 ! Mood categories (for now)
 %<ind%> ! Indicative
@@ -89,10 +89,14 @@ Multichar_Symbols
 
 ! Other symbols
 ! %<redup%> ! Reduplication
+%<qst%>
+%<foc%>
+%<emph%>
+%<poss%>
 %>      ! Morpheme boundary
 %{Х%}     ! terminative (Cyrillic)
 %{I%}     ! in some numeral
-%ʼ
+!%ʼ
 %{ʼ%}
 
 %{д%}     ! undergo voicing
@@ -108,6 +112,7 @@ Multichar_Symbols
 
 %{P%}     ! aspirated nouns
 %{T%}     ! (Latin)
+%{T2%}    ! (Latin)
 %{C%}     ! (Latin)
 %{K%}     ! (Latin)
 %{Q%}
@@ -156,7 +161,7 @@ LEXICON CLITICS
 # ;
 
 LEXICON CASES
-%<age%>:%>%{a%}ӽ CLITIC ;             ! Agentive
+%<age%>:%>%{a%}ӽ CLITICS ;             ! Agentive
 %<dat%>:%>%{R%}%{o%}ӽ CLITICS ;       ! Dative
 %<ins%>:%>%{G%}ир CLITICS ;           ! Instrumental
 %<loc%>:%>%{u%}%{j%}н CLITICS ;       ! Locative
@@ -179,7 +184,7 @@ N-INFL;
 
 LEXICON N1
 
-!%<n%>: # ; ! attributive noun
+%<n%>: # ; ! attributive noun
 %<n%>: SUBST ;
 
 LEXICON PN1
@@ -187,7 +192,7 @@ LEXICON PN1
 
 LEXICON POSS
 
-%<pos%>:%>ны CASES ;
+%<poss%>:%>ны CASES ;
 # ;
 
 LEXICON PRN1
@@ -330,11 +335,12 @@ LEXICON IV1
 %<v%>%<iv%>: TENSE;
 
 LEXICON INCORPORATE-N
-%+:%> TVerbRoot ;
+!%+:%> TVerbRoot ;
 CLITICS ;
 
 LEXICON INCORPORATE-V
-%+:%> NounRoot ;
+!%+:%> NounRoot ;
+# ;
 
 LEXICON CnjADV
 %<cnjadv%>: CLITICS;
@@ -455,7 +461,7 @@ LEXICON TVerbRoot
 амӽта:%{v%}амӽта TV1      ; ! to praise
 ыз:%{v%}ыз TV1            ; ! to call
 ор:%{v%}ор TV1            ; ! to meet
-ӈарма:%{v%}ӈарма          ; ! to wait for, await
+ӈарма:%{v%}ӈарма TV1      ; ! to wait for, await
 ӽони:%{v%}ӽ%{ʼ%}они TV1   ; ! to save
 ньр̌ы:%{v%}ньр̌ы TV1        ; ! to see
 пʼыврк:%{v%}пʼыврк TV1    ; ! to pluck
