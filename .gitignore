@@ -19,3 +19,5 @@
 /.deps
 /config.in
 /config
+/niv.autogen.hfst
+/niv.automorf.hfst
