@@ -8,6 +8,7 @@ Multichar_Symbols
 %<prn%> ! Pronoun
 %<num%> ! Numeral
 !%<enc%> ! Enclitic
+%<det%> ! Determiner
 
 ! Case categories
 %<nom%> ! Nominative
@@ -265,7 +266,7 @@ LEXICON InterrogativePRN
 %<prn%>%<itg%>: # ;
 
 LEXICON DET
-%<det%>%<dem%>:%> NounRoot ;
+%<det%>%<dem%>%+:%> NounRoot ;
 
 LEXICON SubjAgree
 
@@ -335,12 +336,14 @@ LEXICON IV1
 %<v%>%<iv%>: TENSE;
 
 LEXICON INCORPORATE-N
-!%+:%> TVerbRoot ;
+%+:%> TVerbRoot ;
 CLITICS ;
 
 LEXICON INCORPORATE-V
-!%+:%> NounRoot ;
-# ;
+%+:%> NounRoot ;
+
+LEXICON NounRootIncorporation
+:%{n%} NounRoot ;
 
 LEXICON CnjADV
 %<cnjadv%>: CLITICS;
@@ -353,48 +356,48 @@ LEXICON ADV2
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 LEXICON NounRoot
-умгу:%{n%}умгу N1          ; ! woman
-ытык:%{n%}ытык N1          ; ! father
-ӄан:%{n%}ӄан N1            ; ! doggo
-ӈа:%{n%}ӈа N1              ; ! animal
-тыф:%{n%}ты%{ф%} N1        ; ! house
-ми:%{n%}ми N1              ; ! inside
-нивх:%{n%}нивх N1          ; ! person, man
-ваӄа:%{n%}ваӄа N1          ; ! box
-сета:%{n%}сета N1          ; ! sugar
-ойдам:%{n%}ойдам N1        ; ! baby
-курӈ:%{n%}курӈ N1          ; ! universe
-тяӄо:%{n%}ч%{ь%}аӄо N1     ; ! knife
-оола:%{n%}оола N1          ; ! child
-чʼатьф:%{n%}чʼ{ь%}атьф N1  ; ! bog, swamp
-ыф:%{n%}ы%{ф%} N1          ; ! beard
-арф:%{n%}ар%{ф%} N1        ; ! side of boat
-ӿуньф:%{n%}ӿуньф N1        ; ! barrel
-пердь:%{n%}пердь N1        ; ! burden
-ыкын:%{n%}ыкын N1          ; ! older brother
-атик:%{n%}атик N1          ; ! younger brother
-нанак:%{n%}нанак N1        ; ! older sister
-ытик:%{n%}ытик N1          ; ! grandmother
-пос:%{n%}пос N1            ; ! fabric, cloth
-ӈафӄ:%{n%}ӈафӄ N1          ; ! friend
-леп:%{n%}леп N1            ; ! bread
-ларӄ:%{n%}ларӄ N1          ; ! shirt
-кинс:%{n%}кинс N1          ; ! devil
-по:%{n%}по N1              ; ! village
-кеӄ:%{n%}кеӄ N1            ; ! fox
-чеврӄ:%{n%}ч{ь%}еврӄ N1    ; ! bird
-тупр̌:%{n%}тупр̌ N1          ; ! feather
-тюс:%{n%}тюс N1            ; ! meat
-мулк:%{n%}мулк N1          ; ! basket
-ӈояӄ:%{n%}ӈояӄ N1          ; ! egg
-ӄʼас:%{n%}ӄʼас N1          ; ! tambourine
-выйбукс:%{n%}выйбукс N1    ; ! tie
-мифпʼидь:%{n%}мифпʼидь N1  ; ! toad
-ӄʼос:%{n%}ӄʼос N1          ; ! neck
-олғоӈ:%{n%}олғоӈ N1        ; ! pig
-коӽ:%{n%}коӽ N1            ; ! belly
-пыньх:%{n%}пыньх N1        ; ! soup
-нё:%{n%}нё N1              ; ! barn
+умгу:умгу N1          ; ! woman
+ытык:ытык N1          ; ! father
+ӄан:ӄан N1            ; ! doggo
+ӈа:ӈа N1              ; ! animal
+тыф:ты%{ф%} N1        ; ! house
+ми:ми N1              ; ! inside
+нивх:нивх N1          ; ! person, man
+ваӄа:ваӄа N1          ; ! box
+сета:сета N1          ; ! sugar
+ойдам:ойдам N1        ; ! baby
+курӈ:курӈ N1          ; ! universe
+тяӄо:ч%{ь%}аӄо N1     ; ! knife
+оола:оола N1          ; ! child
+чʼатьф:чʼ{ь%}атьф N1  ; ! bog, swamp
+ыф:ы%{ф%} N1          ; ! beard
+арф:ар%{ф%} N1        ; ! side of boat
+ӿуньф:ӿуньф N1        ; ! barrel
+пердь:пердь N1        ; ! burden
+ыкын:ыкын N1          ; ! older brother
+атик:атик N1          ; ! younger brother
+нанак:нанак N1        ; ! older sister
+ытик:ытик N1          ; ! grandmother
+пос:пос N1            ; ! fabric, cloth
+ӈафӄ:ӈафӄ N1          ; ! friend
+леп:леп N1            ; ! bread
+ларӄ:ларӄ N1          ; ! shirt
+кинс:кинс N1          ; ! devil
+по:по N1              ; ! village
+кеӄ:кеӄ N1            ; ! fox
+чеврӄ:ч{ь%}еврӄ N1    ; ! bird
+тупр̌:тупр̌ N1          ; ! feather
+тюс:тюс N1            ; ! meat
+мулк:мулк N1          ; ! basket
+ӈояӄ:ӈояӄ N1          ; ! egg
+ӄʼас:ӄʼас N1          ; ! tambourine
+выйбукс:выйбукс N1    ; ! tie
+мифпʼидь:мифпʼидь N1  ; ! toad
+ӄʼос:ӄʼос N1          ; ! neck
+олғоӈ:олғоӈ N1        ; ! pig
+коӽ:коӽ N1            ; ! belly
+пыньх:пыньх N1        ; ! soup
+нё:нё N1              ; ! barn
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
