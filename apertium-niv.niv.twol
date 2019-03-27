@@ -191,14 +191,14 @@ Cx:Cy <=> :A1 %>:0 %{v%}:0 _ ;
 
 "Delete <ʼ> after A1"
 %{ʼ%}:0 <=> :A1 (%>:0) _ ;
+        except
+            :р _ ;
 
-"Change /tʰ/ to set A1 equivalent"
-%{T%}:т <=> :A1 (%>:0) _ ;
-! Sometimes changes after sonorants too.
+"Set %{ʼ%} to ̌  after <р>"
+%{ʼ%}:̌  <=> :р _ ;
 
-"Change /tʰ/ to set A1 equivalent part 2"
-%{ʼ%}:ʼ <=> %{T%}:т _  ;
-
+"Keep <ʼ> after B to turn it into correspondent A"
+%{ʼ%}:ʼ <=> :B _  ;
 
 "Devoice /z/ after certain aspirates for nouns"
 ч:с <=> [ :ч | :п ]  :ʼ (%>:0) %{n%}:0 _ ;
