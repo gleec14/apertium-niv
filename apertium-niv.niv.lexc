@@ -337,7 +337,7 @@ LEXICON IV1
 %<v%>%<iv%>: TENSE;
 
 LEXICON INCORPORATE-N
-%+:%>%{v%} TVerbRoot ;
+%+:%>%{v%} VerbRoot ;
 CLITICS ;
 
 LEXICON INCORPORATE-V
@@ -367,10 +367,10 @@ LEXICON NounRoot
 курӈ:курӈ N1          ; ! universe
 тяӄо:ч%{ь%}аӄо N1     ; ! knife
 оола:оола N1          ; ! child
-чʼатьф:чʼ{ь%}атьф N1  ; ! bog, swamp
+чʼатьф:чʼ{ь%}ать%{ф%} N1 ; ! bog, swamp
 ыф:ы%{ф%} N1          ; ! beard
 арф:ар%{ф%} N1        ; ! side of boat
-ӿуньф:ӿуньф N1        ; ! barrel
+ӿуньф:ӿунь%{ф%} N1    ; ! barrel
 пердь:пердь N1        ; ! burden
 ыкын:ыкын N1          ; ! older brother
 атик:атик N1          ; ! younger brother
@@ -388,14 +388,24 @@ LEXICON NounRoot
 тюс:тюс N1            ; ! meat
 мулк:мулк N1          ; ! basket
 ӈояӄ:ӈояӄ N1          ; ! egg
-ӄʼас:ӄʼас N1          ; ! tambourine
+ӄʼас:ӄ%{ʼ%}ас N1          ; ! tambourine
 выйбукс:выйбукс N1    ; ! tie
 мифпʼидь:мифпʼидь N1  ; ! toad
-ӄʼос:ӄʼос N1          ; ! neck
+ӄʼос:ӄ%{ʼ%}ос N1          ; ! neck
 олғоӈ:олғоӈ N1        ; ! pig
 коӽ:коӽ N1            ; ! belly
 пыньх:пыньх N1        ; ! soup
 нё:нё N1              ; ! barn
+ӿеӄрӈа:ӿеӄрӈа N1      ; ! place further from shore (than here)
+лумр:лумр N1          ; ! sable
+ӿонтӄ:ӿонтӄ N1        ; ! sack
+ӿемар:ӿемар N1        ; ! old man
+паӽ:паӽ N1            ; ! stone
+толф:тол%{ф%} N1      ; ! summer
+ма:ма N1              ; ! dried fish
+питғы:питғы N1        ; ! paper (written), book
+пон:пон N1            ; ! villager
+кʼеӈ:к%{ʼ%}еӈ N1          ; ! sun
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
@@ -466,10 +476,11 @@ LEXICON TVerbRoot
 ӽони:ӽ%{ʼ%}они TV1   ; ! to save
 ньр̌ы:ньр̌ы TV1        ; ! to see
 пʼыврк:пʼыврк TV1    ; ! to pluck
-р̌ык:р̌ык TV1          ; ! to bring home
+р̌ык:р̌%{ʼ%}ык TV1     ; ! to bring home
 имы:имы TV1          ; ! to give
 лызи:лызи TV1        ; ! to pass, go past
 рғоп:рғоп TV1        ; ! to touch
+р̌ыпр:р̌%{ʼ%}ыпр TV1   ; ! to bring
 
 LEXICON IVerbRoot
 пʼры:пʼры IV1     ; ! to come
@@ -489,6 +500,9 @@ LEXICON IVerbRoot
 пʼим:пʼим IV1     ; ! to run away
 ӄотю:ӄотю IV1     ; ! to fall silent
 оз:оз IV1         ; ! to stand up
+кут:кут IV1       ; ! to fall
+лук:лук IV1       ; ! to be fluffy
+там:там IV1       ; ! to be numerous
 
 LEXICON IVerb-AdvRoot
 ур:ур COMP ; ! well
@@ -506,6 +520,9 @@ LEXICON CnjAdvRoot
 LEXICON AdvRoot
 напа:напа ADV2     ; ! still
 нав:нав ADV2       ; ! now
+лили:лили ADV2     ; ! very
+тʼыфк:тʼыфк ADV2   ; ! long ago, a long time ago
+нымр:нымр ADV2     ; ! yesterday
 
 LEXICON Punctuation
 .%<sent%>:. # ;
