@@ -337,7 +337,9 @@ LEXICON IV1
 %<v%>%<iv%>: TENSE;
 
 LEXICON INCORPORATE-N
-%+:%>%{v%} VerbRoot ;
+%+:%>%{v%} TVerbRoot ;
+%+:%>%{v%} IVerbRoot ;
+%+:%>%{v%} IrregBoundVerbRoot ;
 CLITICS ;
 
 LEXICON INCORPORATE-V
@@ -450,6 +452,7 @@ LEXICON VerbRoot
 TVerbRoot ;
 IVerbRoot ;
 IVerb-AdvRoot ;
+IrregFreeVerbRoot ;
 
 LEXICON TVerbRoot
 за:з{ь%}а TV1        ; ! to beat, strike
@@ -480,7 +483,7 @@ LEXICON TVerbRoot
 лызи:лызи TV1        ; ! to pass, go past
 рғоп:рғоп TV1        ; ! to touch
 р̌ыпр:р̌%{ʼ%}ыпр TV1   ; ! to bring
-ни:ни TV1            ; ! to eat
+
 
 LEXICON IVerbRoot
 пʼры:пʼры IV1     ; ! to come
@@ -503,6 +506,12 @@ LEXICON IVerbRoot
 кут:кут IV1       ; ! to fall
 лук:лук IV1       ; ! to be fluffy
 там:там IV1       ; ! to be numerous
+
+LEXICON IrregBoundVerbRoot
+ни:ни TV1         ; ! to eat
+
+LEXICON IrregFreeVerbRoot
+инь:инь TV1       ; ! to eat
 
 LEXICON IVerb-AdvRoot
 ур:ур COMP ; ! well
