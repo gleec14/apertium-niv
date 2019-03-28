@@ -408,6 +408,28 @@ LEXICON NounRoot
 питғы:питғы N1        ; ! paper (written), book
 пон:пон N1            ; ! villager
 кʼеӈ:к%{ʼ%}еӈ N1      ; ! sun
+!!! New words !!!
+ӈыньк:ӈыньк N1	      ; ! face
+ӈайн:ӈайн N1	      ; ! cheek
+т’ыр:т%{’%}ыр N1      ; ! left (not right)
+ӈир:ӈир N1	      ; ! right (not left)
+ӈамадь:ӈамадь N1      ; ! skin
+няӽ:няӽ N1	      ; ! eye
+них:них N1	      ; ! tear (from the eye)
+т’адм:т’адм N1	      ; ! pate, crown of head
+т’а:т’а N1	      ; ! pate, crown of head
+ӿеғми:ӿеғми N1	      ; ! temple (of head)
+нос:нос N1	      ; ! ear
+мла:мла N1	      ; ! earlobe
+вих:вих N1	      ; ! nose
+ньхыр:ньхыр N1	      ; ! eyebrow
+ыӈг:ыӈг N1	      ; ! mouth
+ӈығс:ӈығс N1	      ; ! tooth
+эмс:эмс N1	      ; ! molar
+ӈыньф:ӈыньф N1	      ; ! bone
+ывлх:ывлх N1	      ; ! lip
+ити:ити N1	      ; ! chin
+оӻри:оӻри N1	      ; ! nape, occiput
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
