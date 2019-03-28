@@ -382,7 +382,7 @@ LEXICON NounRoot
 ларӄ:ларӄ N1          ; ! shirt
 кинс:кинс N1          ; ! devil
 по:по N1              ; ! village
-кеӄ:кеӄ N1            ; ! fox
+кʼеӄ:кʼеӄ N1            ; ! fox
 чеврӄ:ч{ь%}еврӄ N1    ; ! bird
 тупр̌:тупр̌ N1          ; ! feather
 тюс:тюс N1            ; ! meat
@@ -405,7 +405,7 @@ LEXICON NounRoot
 ма:ма N1              ; ! dried fish
 питғы:питғы N1        ; ! paper (written), book
 пон:пон N1            ; ! villager
-кʼеӈ:к%{ʼ%}еӈ N1          ; ! sun
+кʼеӈ:к%{ʼ%}еӈ N1      ; ! sun
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
@@ -457,7 +457,7 @@ LEXICON TVerbRoot
 даю:даю TV1          ; ! to write
 ғе:ғе TV1            ; ! to buy, take
 ӄала:ӄала TV1        ; ! to hate
-ама:ама TV1          ; ! to look
+ама:ама TV1          ; ! to look at
 иғ:иғ TV1            ; ! to kill
 ху:х%{ʼ%}у TV1       ; ! to kill
 ӽа:ӽ%{ʼ%}а TV1       ; ! to shoot
@@ -473,9 +473,8 @@ LEXICON TVerbRoot
 ыз:ыз TV1            ; ! to call
 ор:ор TV1            ; ! to meet
 ӈарма:ӈарма TV1      ; ! to wait for, await
-ӽони:ӽ%{ʼ%}они TV1   ; ! to save
+ӽони:ӽ%{ʼ%}они TV1   ; ! to save, rescue
 ньр̌ы:ньр̌ы TV1        ; ! to see
-пʼыврк:пʼыврк TV1    ; ! to pluck
 р̌ык:р̌%{ʼ%}ык TV1     ; ! to bring home
 имы:имы TV1          ; ! to give
 лызи:лызи TV1        ; ! to pass, go past
