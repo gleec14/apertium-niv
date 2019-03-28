@@ -388,10 +388,10 @@ LEXICON NounRoot
 тюс:тюс N1            ; ! meat
 мулк:мулк N1          ; ! basket
 ӈояӄ:ӈояӄ N1          ; ! egg
-ӄʼас:ӄ%{ʼ%}ас N1          ; ! tambourine
+ӄʼас:ӄ%{ʼ%}ас N1      ; ! tambourine
 выйбукс:выйбукс N1    ; ! tie
 мифпʼидь:мифпʼидь N1  ; ! toad
-ӄʼос:ӄ%{ʼ%}ос N1          ; ! neck
+ӄʼос:ӄ%{ʼ%}ос N1      ; ! neck
 олғоӈ:олғоӈ N1        ; ! pig
 коӽ:коӽ N1            ; ! belly
 пыньх:пыньх N1        ; ! soup
@@ -480,6 +480,7 @@ LEXICON TVerbRoot
 лызи:лызи TV1        ; ! to pass, go past
 рғоп:рғоп TV1        ; ! to touch
 р̌ыпр:р̌%{ʼ%}ыпр TV1   ; ! to bring
+ни:ни TV1            ; ! to eat
 
 LEXICON IVerbRoot
 пʼры:пʼры IV1     ; ! to come
