@@ -505,6 +505,7 @@ LEXICON TVerbRoot
 лызи:лызи TV1        ; ! to pass, go past
 рғоп:рғоп TV1        ; ! to touch
 р̌ыпр:р̌%{ʼ%}ыпр TV1   ; ! to bring
+эзму:эзму TV1        ; ! to love
 
 
 LEXICON IVerbRoot
@@ -528,6 +529,8 @@ LEXICON IVerbRoot
 кут:кут IV1       ; ! to fall
 лук:лук IV1       ; ! to be fluffy
 там:там IV1       ; ! to be numerous
+маӈӻ:маӈӻ IV1     ; ! to be powerful, to be rich
+эзму:эзму IV1     ; ! to rejoice
 
 LEXICON IrregBoundVerbRoot
 ни:ни TV1         ; ! to eat
