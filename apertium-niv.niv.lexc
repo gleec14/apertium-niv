@@ -48,7 +48,8 @@ Multichar_Symbols
 
 ! Verb forms
 %<inf%> ! infinitive
-%<cvb_nar%> ! narrative converb
+%<cvb_nar1%> ! narrative converb (null suffix)
+%<cvb_nar2%> ! narrative converb (-data/-durngu)
 %<cvb_ant%> ! anterior/simultaneous converb
 %<cvb_cond%> ! conditional converb ("if")
 %<nmz_pred%> ! Predicate-actant nominalisation
@@ -320,7 +321,9 @@ INCORPORATE-V ;
 LEXICON NonFinite
 
 %<inf%>:%>%{R%}оӽ CLITICS ;
-%<cvb_nar%>: SubjAgree ;
+%<cvb_nar1%>: SubjAgree ;
+%<cvb_nar2%>:%>%{д%}ата SubjAgree ;   ! Dir/LR
+%<cvb_nar2%>:%>%{д%}урӈу SubjAgree ;
 %<cvb_ant%>:%>ӈан CLITICS ;
 %<cvb_cond%>:%>ӻа CLITICS ;
 MOOD ;

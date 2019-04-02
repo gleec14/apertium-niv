@@ -24,6 +24,7 @@ Alphabet
  %{ʼ%}:ʼ %{ʼ%}:̌
  %{v%}:0
  %{n%}:0
+ %{i%}:и %{i%}:0
  ;
 
 Sets
@@ -69,6 +70,9 @@ Rules
 "Remove /u/ after vowel-ending stem"
 %{u%}:0 <=> :Vowel %>:0 _ ;
 
+"Remove /i/ after vowel-ending stem"
+%{i%}:0 <=> :Vowel %>:0 _ ;
+
 "Remove /j/ after /i/"
 %{j%}:0 <=> и %>:0 %{u%}:0 _ ;
 
@@ -80,9 +84,6 @@ Rules
 
 "Remove /f/ before consonant-initial stem"
 %{f%}:0 <=> _ %>:0 %{n%}:0 :Consonant ;
-
-"Remove /i/ before non-CC verb stems"
-%{i%}:0 <=> _ \[%>:0 :Consonant :Consonant] ;
 
 "Change iotatable vowels to iotated equivalents after /j/"
 Vx:Vy <=> %{i%}: %>:0 _ ;
@@ -143,7 +144,7 @@ Cx:Cy <=> :A1 %>:0 %{v%}:0 _ ;
           matched ;
 
 "Change B1 to C for verbs"
-Cx:Cy <=> [ :Vowel | :Sonorant ] (:0) %>:0 %{v%}:0 _ ;
+Cx:Cy <=> :Sonorant (:0) %>:0 %{v%}:0 _ ;
           where Cx in B1
                 Cy in C
           matched ;
