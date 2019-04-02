@@ -251,7 +251,7 @@ LEXICON PRN9
 
 %<prn%>%<ref%>:и POSS ;
 %<prn%>%<ref%>%+:%> TVerbRoot ;
-%<prn%>%<ref%>%+:%> NounRoot ;
+%<prn%>%<ref%>%<poss%>%+:%> NounRoot ;
 
 LEXICON IndefinitePRN
 
