@@ -100,6 +100,7 @@ Multichar_Symbols
 %{I%}     ! in some numeral
 !%ʼ
 %{ʼ%}
+%{и%}
 
 %{д%}     ! undergo voicing
 %{ф%}
@@ -112,13 +113,7 @@ Multichar_Symbols
 %{f%}
 %{ь%}
 
-%{P%}     ! aspirated nouns
 %{T%}     ! (Latin)
-%{T2%}    ! (Latin)
-%{C%}     ! (Latin)
-%{K%}     ! (Latin)
-%{Q%}
-
 %{X%}     ! (Latin)
 %{V%}
 %{R%}
@@ -212,6 +207,7 @@ LEXICON PRN2
 LEXICON PRN3
 
 %<prn%>%<pers%>%<p3%>%<sg%>: POSS ;
+%<prn%>%<pers%>%<p3%>%<sg%>%+:%> TVerbRoot ;
 %<prn%>%<pers%>%<p3%>%<sg%>%+:%> NounRoot ;
 
 LEXICON PRN4
@@ -446,7 +442,7 @@ IntPronRoot ;
 LEXICON PersPronRoot
 ни:н PRN1        ; ! I
 чи:ч PRN2        ; ! you
-иф:и%{f%} PRN3   ; ! he, she, it
+иф:%{и%}%{f%} PRN3 ; ! he, she, it
 ньыӈ:ньыӈ PRN4   ; ! they and I
 мер:мер PRN5     ; ! y'all and I
 меги:меги PRN6   ; ! you and I

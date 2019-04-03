@@ -21,10 +21,8 @@ Alphabet
  %{i%}:и %{i%}:0
  %{Ч%}:т %{Ч%}:з %{Ч%}:д %{Ч%}:с
  %{Т%}:т %{Т%}:р %{Т%}:д
+ %{и%}:и %{и%}:й %{и%}:я %{и%}:е %{и%}:ё %{и%}:ю
  %{ʼ%}:ʼ %{ʼ%}:̌
- %{v%}:0
- %{n%}:0
- %{i%}:и %{i%}:0
  ;
 
 Sets
@@ -74,7 +72,7 @@ Rules
 %{i%}:0 <=> :Vowel %>:0 _ ;
 
 "Remove /j/ after /i/"
-%{j%}:0 <=> и %>:0 %{u%}:0 _ ;
+%{j%}:0 <=> и (%>:0) (%{u%}:0) _ ;
 
 "Remove /ɤ/ after vowel-ending stem"
 %{y%}:0 <=> :Vowel %>:0 _ ;
@@ -82,11 +80,24 @@ Rules
 "Remove /o/ after vowel-ending stem"
 %{o%}:0 <=> :Vowel %>:0 %{R%}: _ ;
 
-"Remove /f/ before consonant-initial stem"
-%{f%}:0 <=> _ %>:0 %{n%}:0 :Consonant ;
+"Remove /f/ before another stem"
+%{f%}:0 <=> _ %>:0 ;
+
+"Set %{и%} to iotated vowel corresponding to following non-iotated vowel"
+%{и%}:Vx <=> _ %{f%}: %>:0 :Vy ;
+  where Vx in IotatedVowels
+    Vy in IotatingVowels
+  matched;
+
+"Set %{и%} to й before ы and и"
+%{и%}:й <=> _ %{f%}: %>:0 [ :ы | :и ] ;
+
+!"Delete non-iotated vowel after iotated vowel in иф"
+!Vx:0 <=> %{и%}:IotatedVowels %{f%}:0 %>:0 _ ;
+!  where Vx in IotatingVowels ;
 
 "Change iotatable vowels to iotated equivalents after /j/"
-Vx:Vy <=> %{i%}: %>:0 _ ;
+Vx:Vy <=> %{j%}: (%{f%}:) %>:0 _ ;
   where Vx in IotatingVowels
     Vy in IotatedVowels
   matched ;
@@ -101,6 +112,7 @@ Vx:Vy <=> %{i%}: %>:0 _ ;
 ь:0 <=> _ (%>:0) :Vowel ;
           except
           _ (%>:0) :ы ;
+
 
 "Iotate vowels after soft sign"
 Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:0) _ ;
