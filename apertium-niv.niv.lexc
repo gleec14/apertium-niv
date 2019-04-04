@@ -185,7 +185,7 @@ LEXICON N1
 %<n%>: SUBST ;
 
 LEXICON PN1
-%<n%>%<np%>: N-INFL ;
+%<np%>: N-INFL ;
 
 LEXICON POSS
 
