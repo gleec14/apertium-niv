@@ -63,44 +63,67 @@ VoicelessC = К Ӄ П Р̌ С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ
 Rules
 
 "Remove /a/ after vowel-ending stem"
-%{a%}:0 <=> :Vowel %>:0 _ ;
+%{a%}:0 <=> :Vowel %>: _ ;
 
 "Remove /u/ after vowel-ending stem"
-%{u%}:0 <=> :Vowel %>:0 _ ;
+%{u%}:0 <=> :Vowel %>: _ ;
 
 "Remove /i/ after vowel-ending stem"
-%{i%}:0 <=> :Vowel %>:0 _ ;
+%{i%}:0 <=> :Vowel %>: _ ;
 
 "Remove /j/ after /i/"
-%{j%}:0 <=> и (%>:0) (%{u%}:0) _ ;
+%{j%}:0 <=> и (%>:) (%{u%}:0) _ ;
 
 "Remove /ɤ/ after vowel-ending stem"
-%{y%}:0 <=> :Vowel %>:0 _ ;
+%{y%}:0 <=> :Vowel %>: _ ;
 
 "Remove /o/ after vowel-ending stem"
-%{o%}:0 <=> :Vowel %>:0 %{R%}: _ ;
+%{o%}:0 <=> :Vowel %>: %{R%}: _ ;
 
 "Remove /f/ before another stem"
-%{f%}:0 <=> _ %>:0 ;
+%{f%}:0 <=> _ %>: ;
 
-"Set %{и%} to iotated vowel corresponding to following non-iotated vowel"
-%{и%}:Vx <=> _ %{f%}: %>:0 :Vy ;
-  where Vx in IotatedVowels
-    Vy in IotatingVowels
-  matched;
+!"Set %{и%} to iotated vowel corresponding to following non-iotated vowel"
+!%{и%}:Vx <=> _ %{f%}: %>: :Vy ;
+!  where Vx in IotatedVowels
+!    Vy in IotatingVowels
+!  matched;
 
-"Set %{и%} to й before ы and и"
-%{и%}:й <=> _ %{f%}: %>:0 [ :ы | :и ] ;
+"Set %{и%} to ю before у"
+%{и%}:ю <=> _ %{f%}: %>: у: ;
+
+"Set %{и%} to е before э"
+%{и%}:е <=> _ %{f%}: %>: э: ;
+
+"Set %{и%} to ё before о"
+%{и%}:ё <=> _ %{f%}: %>: о: ;
+
+"Set %{и%} to я before а"
+%{и%}:я <=> _ %{f%}: %>: а: ;
+
+"Set %{и%} to й before ы"
+%{и%}:й <=> _ %{f%}: %>: :ы ;
+
+"Set %{и%} to 0 before ы"
+%{и%}:0 <=> _ %{f%}: %>: :и ;
 
 !"Delete non-iotated vowel after iotated vowel in иф"
-!Vx:0 <=> %{и%}:IotatedVowels %{f%}:0 %>:0 _ ;
+!Vx:0 <=> %{и%}:IotatedVowels %{f%}: %>: _ ;
 !  where Vx in IotatingVowels ;
 
-"Change iotatable vowels to iotated equivalents after /j/"
-Vx:Vy <=> %{j%}: (%{f%}:) %>:0 _ ;
-  where Vx in IotatingVowels
-    Vy in IotatedVowels
-  matched ;
+!@ %{и%}:ю %{f%}:0 у:0 м:м г:г у:у
+
+"Delete у after ю"
+у:0 <=> %{и%}:ю %{f%}: %>: _ ;
+
+"Delete я after а"
+а:0 <=> %{и%}:я %{f%}: %>: _ ;
+
+"Delete е after э"
+э:0 <=> %{и%}:е %{f%}: %>: _ ;
+
+"Delete ё aftert о"
+о:0 <=> %{и%}:ё %{f%}: %>: _ ;
 
 "Remove soft sign archiphoneme in some places"
 %{ь%}:0 <=> [ :з | :З ] _ ;
@@ -109,66 +132,66 @@ Vx:Vy <=> %{j%}: (%{f%}:) %>:0 _ ;
               [ :н | :т | :д ] _ :ы ;
 
 "Remove real soft sign in those places"
-ь:0 <=> _ (%>:0) :Vowel ;
+ь:0 <=> _ (%>:) :Vowel ;
           except
-          _ (%>:0) :ы ;
+          _ (%>:) :ы ;
 
 
 "Iotate vowels after soft sign"
-Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:0) _ ;
+Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
   where Vx in IotatingVowels
     Vy in IotatedVowels
   matched ;
 
 "Voice /f/ before sonorant and vowels"
-%{ф%}:в <=> :Vowel (%>:0) _ (%>:0) [:Sonorant | :Vowel] ;
+%{ф%}:в <=> :Vowel (%>:) _ (%>:) [:Sonorant | :Vowel] ;
 
 "Lengthen preceding vowel"
-%{V%}:Vy <=> :Vx %>:0 _ ;
+%{V%}:Vy <=> :Vx %>: _ ;
   where Vx in (а я э е и ы о ё у ю)
     Vy in (а а э э и ы о о у у)
   matched ;
 
 "Add /a/ after consonant at morpheme boundary"
-%{V%}:а <=> :Consonant %>:0 _ ;
+%{V%}:а <=> :Consonant %>: _ ;
 
 "Set /G/ to <ғ> after voiced stops and vowels"
-%{G%}:ғ <=> [ :C | :Vowel ] %>:0 _ ;
+%{G%}:ғ <=> [ :C | :Vowel ] %>: _ ;
 
 "Set /G/ to <г> after sonorants"
-%{G%}:г <=> [ :Sonorant | :B1 ] %>:0 _ ;
+%{G%}:г <=> [ :Sonorant | :B1 ] %>: _ ;
 
 "Set /G/ to <х> after voiceless stops"
-%{G%}:х <=> :B %>:0 _ ;
+%{G%}:х <=> :B %>: _ ;
 
 "Set /R/ to <т> after fricatives"
-%{R%}:т <=> [ :A1 | :B1 ] (%>:0) _ ;
+%{R%}:т <=> [ :A1 | :B1 ] (%>:) _ ;
 
 "Set /R/ to <д> after sonorants"
-%{R%}:д <=> [ :Sonorant | :Vowel ] (%>:0) _ ;
+%{R%}:д <=> [ :Sonorant | :Vowel ] (%>:) _ ;
         except
           _ (:0) :A1 ;
 
 "Change B1 to B for verbs"
-Cx:Cy <=> :A1 %>:0 %{v%}:0 _ ;
+Cx:Cy <=> :A1 %>: %{v%}:0 _ ;
           where Cx in B1
                 Cy in B
           matched ;
 
 "Change B1 to C for verbs"
-Cx:Cy <=> :Sonorant (:0) %>:0 %{v%}:0 _ ;
+Cx:Cy <=> :Sonorant (:0) %>: %{v%}:0 _ ;
           where Cx in B1
                 Cy in C
           matched ;
 ! Sometimes doesn't change in this context
 
 "Change B to B1 for nouns"
-Cx:Cy <=> [ :й | :Sonorant ] :B1 %>:0 %{n%}:0 _ ;
-            :н :ь %>:0 %{n%}:0 _ ;
-            ! :ʼ %>:0 %{n%}:0 _ ;
+Cx:Cy <=> [ :й | :Sonorant ] :B1 %>: %{n%}:0 _ ;
+            :н :ь %>: %{n%}:0 _ ;
+            ! :ʼ %>: %{n%}:0 _ ;
       except
             _ :ʼ ;
-            :ʼ %>:0 %{n%}:0 _ ;
+            :ʼ %>: %{n%}:0 _ ;
             .#. _ ;
       where Cx in B
             Cy in B1
@@ -177,11 +200,11 @@ Cx:Cy <=> [ :й | :Sonorant ] :B1 %>:0 %{n%}:0 _ ;
 "<ч> to <т> where appropriate"
 ч:т <=> .#. _ ;
     except
-        _ [ :ы | :и | :ʼ %>:0 ] ;
+        _ [ :ы | :и | :ʼ %>: ] ;
 
 
 "Change B to C for nouns"
-Cx:Cy <=> [ :Vowel | :Sonorant ] (:0) %>:0 %{n%}:0 _ ;
+Cx:Cy <=> [ :Vowel | :Sonorant ] (:0) %>: %{n%}:0 _ ;
       except
             _ :ʼ ;
       where Cx in B
@@ -189,21 +212,21 @@ Cx:Cy <=> [ :Vowel | :Sonorant ] (:0) %>:0 %{n%}:0 _ ;
       matched ;
 
 "Change A to A1 for nouns"
-Cx:Cy <=> :Vowel [ :B | :д ] (:0) %>:0 %{n%}:0 _ ;
+Cx:Cy <=> :Vowel [ :B | :д ] (:0) %>: %{n%}:0 _ ;
       where Cx in B
             Cy in A1
       matched ;
 
 "Change A1 to A for verbs"
-Cx:Cy <=> :A1 %>:0 %{v%}:0 _ ;
-          :Sonorant %>:0 %{v%}:0 _ ;
+Cx:Cy <=> :A1 %>: %{v%}:0 _ ;
+          :Sonorant %>: %{v%}:0 _ ;
       where Cx in A1
             Cy in B
       matched ;
 ! Sometimes doesn't change after sonorants
 
 "Delete <ʼ> after A1"
-%{ʼ%}:0 <=> :A1 (%>:0) _ ;
+%{ʼ%}:0 <=> :A1 (%>:) _ ;
         except
             :р _ ;
 
@@ -214,13 +237,13 @@ Cx:Cy <=> :A1 %>:0 %{v%}:0 _ ;
 %{ʼ%}:ʼ <=> :B _  ;
 
 "Devoice /z/ after certain aspirates for nouns"
-ч:с <=> [ :ч | :п ]  :ʼ (%>:0) %{n%}:0 _ ;
+ч:с <=> [ :ч | :п ]  :ʼ (%>:) %{n%}:0 _ ;
 
 "Devoice /z/ after certain aspirates for verbs"
-з:с <=> [ :ч | :п ]  :ʼ (%>:0) %{v%}:0 _ ;
+з:с <=> [ :ч | :п ]  :ʼ (%>:) %{v%}:0 _ ;
 
 "Devoice /d/ after voiceless consonants"
-%{д%}:т <=> :VoicelessC %>:0 _ ;
+%{д%}:т <=> :VoicelessC %>: _ ;
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Enter_twol
