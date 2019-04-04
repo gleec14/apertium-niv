@@ -131,6 +131,9 @@ Multichar_Symbols
 %<rpar%>      ! Parenthetical marker (right hand side)
 %<lpar%>      ! Parenthetical marker (left hand side)
 
+%[Verb%]      ! verb for twoc
+%[Noun%]      ! noun for twoc
+
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
@@ -181,8 +184,8 @@ N-INFL;
 
 LEXICON N1
 
-%<n%>: # ; ! attributive noun
-%<n%>: SUBST ;
+%<n%>%[Noun%]: # ; ! attributive noun
+%<n%>%[Noun%]: SUBST ;
 
 LEXICON PN1
 %<n%>%<np%>: N-INFL ;
@@ -330,10 +333,10 @@ LEXICON TENSE
 NonFinite ;
 
 LEXICON TV1
-%<v%>%<tv%>: TENSE;
+%<v%>%<tv%>%[Verb%]: TENSE;
 
 LEXICON IV1
-%<v%>%<iv%>: TENSE;
+%<v%>%<iv%>%[Verb%]: TENSE;
 
 LEXICON INCORPORATE-N
 %+:%>%{v%} TVerbRoot ;
