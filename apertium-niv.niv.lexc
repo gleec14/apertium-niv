@@ -490,8 +490,8 @@ LEXICON DeterminerRoot
 
 LEXICON NumeralRoot
 
-нин:н NUM1 ; ! one
-мен:м NUM2   ; ! two
+нин:н NUM1  ; ! one
+мен:м NUM2  ; ! two
 
 LEXICON VerbRoot
 TVerbRoot ;
