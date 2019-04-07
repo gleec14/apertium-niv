@@ -63,10 +63,10 @@ VoicelessC = К Ӄ П Р̌ С Т Ф Х Ӽ Ӿ Ц Ч Ш Щ
 Rules
 
 "Remove /a/ after vowel-ending stem"
-%{a%}:0 <=> :Vowel %>: _ ;
+%{a%}:0 <=> :Vowel (%{f%}:) %>: _ ;
 
 "Remove /u/ after vowel-ending stem"
-%{u%}:0 <=> :Vowel %>: _ ;
+%{u%}:0 <=> :Vowel (%{f%}:) %>: _ ;
 
 "Remove /i/ after vowel-ending stem"
 %{i%}:0 <=> :Vowel %>: _ ;
@@ -83,14 +83,8 @@ Rules
 "Remove /f/ before another stem"
 %{f%}:0 <=> _ %>: ;
 
-!"Set %{и%} to iotated vowel corresponding to following non-iotated vowel"
-!%{и%}:Vx <=> _ %{f%}: %>: :Vy ;
-!  where Vx in IotatedVowels
-!    Vy in IotatingVowels
-!  matched;
-
 "Set %{и%} to ю before у"
-%{и%}:ю <=> _ %{f%}: %>: у: ;
+%{и%}:ю <=> _ %{f%}: %>: [ у: | %{u%}: ] ;
 
 "Set %{и%} to е before э"
 %{и%}:е <=> _ %{f%}: %>: э: ;
@@ -99,17 +93,13 @@ Rules
 %{и%}:ё <=> _ %{f%}: %>: о: ;
 
 "Set %{и%} to я before а"
-%{и%}:я <=> _ %{f%}: %>: а: ;
+%{и%}:я <=> _ %{f%}: %>: [ а: | %{a%}: ] ;
 
 "Set %{и%} to й before ы"
 %{и%}:й <=> _ %{f%}: %>: :ы ;
 
 "Set %{и%} to 0 before ы"
 %{и%}:0 <=> _ %{f%}: %>: :и ;
-
-!"Delete non-iotated vowel after iotated vowel in иф"
-!Vx:0 <=> %{и%}:IotatedVowels %{f%}: %>: _ ;
-!  where Vx in IotatingVowels ;
 
 !@ %{и%}:ю %{f%}:0 у:0 м:м г:г у:у
 
@@ -122,7 +112,7 @@ Rules
 "Delete е after э"
 э:0 <=> %{и%}:е %{f%}: %>: _ ;
 
-"Delete ё aftert о"
+"Delete ё after о"
 о:0 <=> %{и%}:ё %{f%}: %>: _ ;
 
 "Remove soft sign archiphoneme in some places"

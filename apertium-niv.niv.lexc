@@ -161,7 +161,7 @@ LEXICON CLITICS
 # ;
 
 LEXICON CASES
-%<age%>:%>%{a%}ӽ CLITICS ;             ! Agentive
+%<age%>:%>%{a%}ӽ CLITICS ;            ! Agentive
 %<dat%>:%>%{R%}%{o%}ӽ CLITICS ;       ! Dative
 %<ins%>:%>%{G%}ир CLITICS ;           ! Instrumental
 %<loc%>:%>%{u%}%{j%}н CLITICS ;       ! Locative
@@ -171,7 +171,7 @@ LEXICON CASES
 %<term%>:%>%{R%}оӻо CLITICS ;         ! Dir/LR
 %<comp%>:%>%{y%}к CLITICS ;           ! Comparative
 %<voc%>:%>%{V%} # ;                   ! Vocative
-INCORPORATE-N ;                        ! Nominative
+INCORPORATE-N ;                       ! Nominative
 
 LEXICON N-INFL
 
@@ -212,6 +212,7 @@ LEXICON PRN3
 %<prn%>%<pers%>%<p3%>%<sg%>: POSS ;
 %<prn%>%<pers%>%<p3%>%<sg%>%+:%> TVerbRoot ;
 %<prn%>%<pers%>%<p3%>%<sg%>%+:%> NounRoot ;
+%<prn%>%<pers%>%<p3%>%<sg%>: CASES ;
 
 LEXICON PRN4
 
@@ -288,24 +289,26 @@ ADV1 ;
 
 LEXICON NUM1
 
-%<num%>%<cl1%>:%>%{I%}н # ;
-%<num%>%<cl2%>:%>ынь # ;
-%<num%>%<cl3%>:%>аӄр # ;
+%<num%>%<cl1%>:%>%{I%}н CASES ;
+%<num%>%<cl2%>:%>ынь CASES ;
+%<num%>%<cl3%>:%>аӄр CASES ;
+%<num%>%<cl9%>:%>ик CASES ;
 
 LEXICON NUM2
 
-%<num%>%<cl1%>:%>ен # ;
-%<num%>%<cl2%>:%>ор # ;
-%<num%>%<cl3%>:%>еӄр # ;
-%<num%>%<cl4%>:%>евсӄ # ;
-%<num%>%<cl5%>:%>им # ;
-%<num%>%<cl6%>:%>ер # ;
-%<num%>%<cl7%>:%>евор # ;
-%<num%>%<cl8%>:%>ерах # ;
-%<num%>%<cl9%>:%>ик # ;
+%<num%>%<cl1%>:%>ен CASES ;
+%<num%>%<cl2%>:%>ор CASES ;
+%<num%>%<cl3%>:%>еӄр CASES ;
+%<num%>%<cl4%>:%>евсӄ CASES ;
+%<num%>%<cl5%>:%>им CASES ;
+%<num%>%<cl6%>:%>ер CASES ;
+%<num%>%<cl7%>:%>евор CASES ;
+%<num%>%<cl8%>:%>ерах CASES ;
+%<num%>%<cl9%>:%>ик CASES ;
 
 LEXICON PluralVerb
 %<pl%>:%>%{G%}у CLITICS ;
+CLITICS ;
 
 LEXICON FORMALITY
 %<frm%>:о CLITICS ;
@@ -344,6 +347,7 @@ LEXICON INCORPORATE-N
 %+:%>%{v%} TVerbRoot ;
 %+:%>%{v%} IVerbRoot ;
 %+:%>%{v%} IrregBoundVerbRoot ;
+%+:%> NumeralRoot ;
 CLITICS ;
 
 LEXICON INCORPORATE-V
@@ -420,8 +424,8 @@ LEXICON NounRoot
 ӈамадь:ӈамадь N1      ; ! skin
 няӽ:няӽ N1	          ; ! eye
 них:них N1	          ; ! tear (from the eye)
-т’адм:т’адм N1	      ; ! pate, crown of head
-т’а:т’а N1	          ; ! pate, crown of head
+т’адм:т%{ʼ%}адм N1	  ; ! pate, crown of head
+т’а:т%{ʼ%}а N1	      ; ! pate, crown of head
 ӿеғми:ӿеғми N1	      ; ! temple (of head)
 нос:нос N1	          ; ! ear
 мла:мла N1	          ; ! earlobe
@@ -434,7 +438,20 @@ LEXICON NounRoot
 ывлх:ывлх N1	        ; ! lip
 ити:ити N1	          ; ! chin
 оӻри:оӻри N1	        ; ! nape, occiput
-тʼуур:тʼуур N1        ; ! fire
+тʼуур:т%{ʼ%}уур N1    ; ! fire
+кʼуты:к%{ʼ%}уты N1    ; ! hole
+керӄ:керӄ N1          ; ! sea
+пʼирӈыр:п%{ʼ%}ирӈыр N1 ; ! sazan (kind of carp)
+теӈи:теӈи N1          ; ! salmon
+ыс:ыс N1              ; ! owner
+лаӈр:лаӈр N1          ; ! seal
+ӿыйк:ӿыйк N1          ; ! hare
+пых:пых N1            ; ! cuckoo
+топин:топин N1        ; ! jay
+тʼом:т%{ʼ%}ом N1      ; ! fat
+мур:мур N1            ; ! horse
+чо:чо N1              ; ! fish
+чӽа:чӽа N1            ; ! money
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
@@ -468,11 +485,12 @@ LEXICON IntPronRoot
 аӈ:аӈ InterrogativePRN ; ! who
 
 LEXICON DeterminerRoot
-ӿы:ӿы DET ; ! this
+ӿы:ӿы DET ; ! that
+ты:ты DET ; ! this
 
 LEXICON NumeralRoot
 
-ньин:нь NUM1 ; ! one
+нин:н NUM1 ; ! one
 мен:м NUM2   ; ! two
 
 LEXICON VerbRoot
@@ -492,7 +510,7 @@ LEXICON TVerbRoot
 ху:х%{ʼ%}у TV1       ; ! to kill
 ӽа:ӽ%{ʼ%}а TV1       ; ! to shoot
 фыврк:ф%{ʼ%}ыврк TV1 ; ! to pluck
-р̌а:р̌%{ʼ%}а TV1       ; ! to fry
+р̌а:р%{ʼ%}а TV1       ; ! to fry
 фын:ф%{ʼ%}ын TV1     ; ! to throw
 хир:х%{ʼ%}ир TV1     ; ! to use
 ыӈг:ыӈг TV1          ; ! to rip up
@@ -511,7 +529,8 @@ LEXICON TVerbRoot
 рғоп:рғоп TV1        ; ! to touch
 р̌ыпр:р̌%{ʼ%}ыпр TV1   ; ! to bring
 эзму:эзму TV1        ; ! to love
-
+уски:уски TV1        ; ! to pay for
+ески:ески TV1        ; ! to sell
 
 LEXICON IVerbRoot
 пʼры:пʼры IV1     ; ! to come
@@ -536,6 +555,9 @@ LEXICON IVerbRoot
 там:там IV1       ; ! to be numerous
 маӈӻ:маӈӻ IV1     ; ! to be powerful, to be rich
 эзму:эзму IV1     ; ! to rejoice
+ӄʼав:ӄʼав IV1     ; ! to be warm
+ӈар:ӈар IV1       ; ! to be fat
+паӻ:паӻ IV1       ; ! to be red
 
 LEXICON IrregBoundVerbRoot
 ни:ни TV1         ; ! to eat
