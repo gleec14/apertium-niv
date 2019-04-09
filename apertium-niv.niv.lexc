@@ -452,6 +452,9 @@ LEXICON NounRoot
 мур:мур N1            ; ! horse
 чо:чо N1              ; ! fish
 чӽа:чӽа N1            ; ! money
+кʼнык:кʼнык N1        ; ! promontory
+ымык:ымык N1          ; ! mother
+ма:ма N1              ; ! dried fish
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
@@ -558,6 +561,7 @@ LEXICON IVerbRoot
 ӄʼав:ӄʼав IV1     ; ! to be warm
 ӈар:ӈар IV1       ; ! to be fat
 паӻ:паӻ IV1       ; ! to be red
+эна:эна IV1       ; ! to be another
 
 LEXICON IrregBoundVerbRoot
 ни:ни TV1         ; ! to eat
