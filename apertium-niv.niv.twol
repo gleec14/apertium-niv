@@ -25,8 +25,6 @@ Alphabet
  %{ʼ%}:ʼ %{ʼ%}:̌
  ;
 
-! I'm sorry, Greg.
-
 Sets
 
 Vowel = А Е Ё И О У Ы Э Ю Я
@@ -189,10 +187,10 @@ Cx:Cy <=> [ :й | :Sonorant ] :B1 %>: %{n%}:0 _ ;
             Cy in B1
       matched ;
 
-"<ч> to <т> where appropriate"
-ч:т <=> .#. _ ;
-    except
-        _ [ :ы | :и | :ʼ %>: ] ;
+!"<ч> to <т> where appropriate"
+!ч:т <=> .#. _ ;
+!    except
+!        _ [ :ы | :и | :ʼ %>: ] ;
 
 
 "Change B to C for nouns"
