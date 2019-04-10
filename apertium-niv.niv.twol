@@ -187,12 +187,6 @@ Cx:Cy <=> [ :й | :Sonorant ] :B1 %>: %{n%}:0 _ ;
             Cy in B1
       matched ;
 
-!"<ч> to <т> where appropriate"
-!ч:т <=> .#. _ ;
-!    except
-!        _ [ :ы | :и | :ʼ %>: ] ;
-
-
 "Change B to C for nouns"
 Cx:Cy <=> [ :Vowel | :Sonorant ] (:0) %>: %{n%}:0 _ ;
       except
@@ -210,6 +204,7 @@ Cx:Cy <=> :Vowel [ :B | :д ] (:0) %>: %{n%}:0 _ ;
 "Change A1 to A for verbs"
 Cx:Cy <=> :A1 %>: %{v%}:0 _ ;
           :Sonorant %>: %{v%}:0 _ ;
+          :B1 %>: %{v%}:0 _ ;
       where Cx in A1
             Cy in B
       matched ;
