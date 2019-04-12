@@ -199,26 +199,26 @@ LEXICON PRN1
 
 %<prn%>%<pers%>%<p1%>%<sg%>:и POSS ;
 %<prn%>%<pers%>%<p1%>%<sg%>%+:ь%> TVerbRoot ;
-%<prn%>%<pers%>%<p1%>%<sg%>%+:ь%> NounRoot ;
+%<det%>%<pers%>%<p1%>%<sg%>%<poss%>%+:ь%> NounRoot ;
 
 LEXICON PRN2
 
 %<prn%>%<pers%>%<p2%>%<sg%>:и POSS ;
 %<prn%>%<pers%>%<p2%>%<sg%>%+:ʼ%> TVerbRoot ;
-%<prn%>%<pers%>%<p2%>%<sg%>%+:ʼ%> NounRoot ;
+%<det%>%<pers%>%<p2%>%<sg%>%<poss%>%+:ʼ%> NounRoot ;
 
 LEXICON PRN3
 
 %<prn%>%<pers%>%<p3%>%<sg%>: POSS ;
 %<prn%>%<pers%>%<p3%>%<sg%>%+:%> TVerbRoot ;
-%<prn%>%<pers%>%<p3%>%<sg%>%+:%> NounRoot ;
+%<det%>%<pers%>%<p3%>%<sg%>%<poss%>%+:%> NounRoot ;
 %<prn%>%<pers%>%<p3%>%<sg%>: CASES ;
 
 LEXICON PRN4
 
 %<prn%>%<pers%>%<p1%>%<pl%>%<excl%>: POSS ;
 %<prn%>%<pers%>%<p1%>%<pl%>%<excl%>%+:%> TVerbRoot ;
-%<prn%>%<pers%>%<p1%>%<pl%>%<excl%>%+:%> NounRoot ;
+%<det%>%<pers%>%<p1%>%<pl%>%<excl%>%<poss%>%+:%> NounRoot ;
 %<prn%>%<pers%>%<p1%>%<pl%>%<excl%>:%> CASES ;
 
 LEXICON PRN5
@@ -237,21 +237,21 @@ LEXICON PRN7
 
 %<prn%>%<pers%>%<p2%>%<pl%>: POSS ;
 %<prn%>%<pers%>%<p2%>%<pl%>%+:%> TVerbRoot ;
-%<prn%>%<pers%>%<p2%>%<pl%>%+:%> NounRoot ;
+%<det%>%<pers%>%<p2%>%<pl%>%<poss%>%+:%> NounRoot ;
 %<prn%>%<pers%>%<p2%>%<pl%>:%> CASES ;
 
 LEXICON PRN8
 
 %<prn%>%<pers%>%<p3%>%<pl%>: POSS ;
 %<prn%>%<pers%>%<p3%>%<pl%>%+:%> TVerbRoot ;
-%<prn%>%<pers%>%<p3%>%<pl%>%+:%> NounRoot ;
+%<det%>%<pers%>%<p3%>%<pl%>%<poss%>%+:%> NounRoot ;
 %<prn%>%<pers%>%<p3%>%<pl%>:%> CASES ;
 
 LEXICON PRN9
 
 %<prn%>%<ref%>:и POSS ;
 %<prn%>%<ref%>%+:%> TVerbRoot ;
-%<prn%>%<ref%>%<poss%>%+:%> NounRoot ;
+%<det%>%<ref%>%<poss%>%+:%> NounRoot ;
 
 LEXICON IndefinitePRN
 
