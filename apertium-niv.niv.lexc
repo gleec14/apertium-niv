@@ -9,6 +9,7 @@ Multichar_Symbols
 %<num%> ! Numeral
 !%<enc%> ! Enclitic
 %<det%> ! Determiner
+%<part%> ! Particle
 
 ! Case categories
 %<nom%> ! Nominative
@@ -117,6 +118,7 @@ Multichar_Symbols
 %{X%}     ! (Latin)
 %{V%}
 %{R%}
+%{B%}
 %{G%}
 %{v%}
 %{n%}
@@ -148,6 +150,7 @@ DeterminerRoot ;
 NumeralRoot ;
 VerbRoot ;
 AdverbRoot ;
+ParticleRoot ;
 Punctuation ;
 
 LEXICON CLITICS
@@ -271,12 +274,12 @@ LEXICON DET
 
 LEXICON SubjAgree
 
-%<p1%>%<sg%>:%>т CLITICS ;
-%<p2%>%<sg%>:%>р CLITICS ;
-%<p3%>%<sg%>:%>р CLITICS ;
-%<p1%>%<pl%>:%>т CLITICS ;
-%<p2%>%<pl%>:%>т CLITICS ;
-%<p3%>%<pl%>:%>т CLITICS ;
+%<p1%>%<sg%>:%>т # ;
+%<p2%>%<sg%>:%>р # ;
+%<p3%>%<sg%>:%>р # ;
+%<p1%>%<pl%>:%>т # ;
+%<p2%>%<pl%>:%>т # ;
+%<p3%>%<pl%>:%>т # ;
 
 LEXICON ADV1
 
@@ -289,30 +292,30 @@ ADV1 ;
 
 LEXICON NUM1
 
-%<num%>%<cl1%>:%>%{I%}н CASES ;
-%<num%>%<cl2%>:%>ынь CASES ;
-%<num%>%<cl3%>:%>аӄр CASES ;
-%<num%>%<cl9%>:%>ик CASES ;
+%<num%>%<cl1%>:%>%{I%}н ParticleRoot ;
+%<num%>%<cl2%>:%>ынь ParticleRoot ;
+%<num%>%<cl3%>:%>аӄр ParticleRoot ;
+%<num%>%<cl9%>:%>ик ParticleRoot ;
 
 LEXICON NUM2
 
-%<num%>%<cl1%>:%>ен CASES ;
-%<num%>%<cl2%>:%>ор CASES ;
-%<num%>%<cl3%>:%>еӄр CASES ;
-%<num%>%<cl4%>:%>евсӄ CASES ;
-%<num%>%<cl5%>:%>им CASES ;
-%<num%>%<cl6%>:%>ер CASES ;
-%<num%>%<cl7%>:%>евор CASES ;
-%<num%>%<cl8%>:%>ерах CASES ;
-%<num%>%<cl9%>:%>ик CASES ;
+%<num%>%<cl1%>:%>ен ParticleRoot ;
+%<num%>%<cl2%>:%>ор ParticleRoot ;
+%<num%>%<cl3%>:%>еӄр ParticleRoot ;
+%<num%>%<cl4%>:%>евсӄ ParticleRoot ;
+%<num%>%<cl5%>:%>им ParticleRoot ;
+%<num%>%<cl6%>:%>ер ParticleRoot ;
+%<num%>%<cl7%>:%>евор ParticleRoot ;
+%<num%>%<cl8%>:%>ерах ParticleRoot ;
+%<num%>%<cl9%>:%>ик ParticleRoot ;
 
 LEXICON PluralVerb
-%<pl%>:%>%{G%}у CLITICS ;
-CLITICS ;
+%<pl%>:%>%{G%}у # ;
+# ;
 
 LEXICON FORMALITY
-%<frm%>:о CLITICS ;
-%<infrm%>: CLITICS ;
+%<frm%>:о # ;
+%<infrm%>: # ;
 
 LEXICON MOOD
 %<itg%>:%>л FORMALITY ;
@@ -324,12 +327,12 @@ INCORPORATE-V ;
 
 LEXICON NonFinite
 
-%<inf%>:%>%{R%}оӽ CLITICS ;
+%<inf%>:%>%{R%}оӽ # ;
 %<cvb_nar1%>: SubjAgree ;
 %<cvb_nar2%>:%>%{д%}ата SubjAgree ;   ! Dir/LR
 %<cvb_nar2%>:%>%{д%}урӈу SubjAgree ;
-%<cvb_ant%>:%>ӈан CLITICS ;
-%<cvb_cond%>:%>ӻа CLITICS ;
+%<cvb_ant%>:%>ӈан # ;
+%<cvb_cond%>:%>ӻа # ;
 MOOD ;
 
 LEXICON TENSE
@@ -344,20 +347,21 @@ LEXICON IV1
 %<v%>%<iv%>%[Verb%]: TENSE;
 
 LEXICON INCORPORATE-N
+%+:%> NumeralRoot ;
+%+: ParticleRoot ;
 %+:%>%{v%} TVerbRoot ;
 %+:%>%{v%} IVerbRoot ;
 %+:%>%{v%} IrregBoundVerbRoot ;
-%+:%> NumeralRoot ;
 CLITICS ;
 
 LEXICON INCORPORATE-V
 %+:%>%{n%} NounRoot ;
 
 LEXICON CnjADV
-%<cnjadv%>: CLITICS;
+%<cnjadv%>: #;
 
 LEXICON ADV2
-%<adv%>: CLITICS;
+%<adv%>: #;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
@@ -457,6 +461,11 @@ LEXICON NounRoot
 ма:ма N1              ; ! dried fish
 ӄʼах:ӄ%{ʼ%}ах N1      ; ! spear
 ӄʼотр:ӄ%{ʼ%}отр N1    ; ! bear
+        !!!!!!!!!!!!!!!!!
+        !!! New words !!!
+        !!!!!!!!!!!!!!!!!
+тавӻай:тавӻай N1      ; ! crab
+вынь:вынь N1          ; ! kettle
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
@@ -536,6 +545,10 @@ LEXICON TVerbRoot
 эзму:эзму TV1        ; ! to love
 уски:уски TV1        ; ! to pay for
 ески:ески TV1        ; ! to sell
+        !!!!!!!!!!!!!!!!!
+        !!! New words !!!
+        !!!!!!!!!!!!!!!!!
+ӿеть:ӿеть TV1        ; ! to take out (of)
 
 LEXICON IVerbRoot
 пʼры:пʼры IV1     ; ! to come
@@ -590,6 +603,9 @@ LEXICON AdvRoot
 лили:лили ADV2     ; ! very
 тʼыфк:тʼыфк ADV2   ; ! long ago, a long time ago
 нымр:нымр ADV2     ; ! yesterday
+
+LEXICON ParticleRoot
+варк%<part%>:%>%{B%}арк CASES  ; ! only
 
 LEXICON Punctuation
 .%<sent%>:. # ;

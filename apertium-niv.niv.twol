@@ -14,6 +14,7 @@ Alphabet
  %{I%}:е %{I%}:и
  %{д%}:д %{д%}:т
  %{R%}:р %{R%}:д %{R%}:т
+ %{B%}:в %{B%}:б %{B%}:п
  %{Z%}:з %{Z%}:д %{Z%}:т %{Z%}:с
  %{ь%}:ь %{ь%}:0
  %{A%}:а %{A%}:я
@@ -159,6 +160,14 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 
 "Set /R/ to <д> after sonorants"
 %{R%}:д <=> [ :Sonorant | :Vowel ] (%>:) _ ;
+        except
+          _ (:0) :A1 ;
+
+"Set /V/ to <п> after fricatives"
+%{B%}:п <=> [ :A1 | :B1 ] (%>:) _ ;
+
+"Set /V/ to <б> after sonorants"
+%{B%}:б <=> [ :Sonorant | :Vowel ] (%>:) _ ;
         except
           _ (:0) :A1 ;
 
