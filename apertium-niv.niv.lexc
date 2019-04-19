@@ -406,7 +406,7 @@ LEXICON NounRoot
 выйбукс:выйбукс N1    ; ! tie
 мифпʼидь:мифпʼидь N1  ; ! toad
 ӄʼос:ӄ%{ʼ%}ос N1      ; ! neck
-олғоӈ:олғоӈ N1        ; ! pig
+олғоӈ:олғоӈ N1        ; ! pig, hog, swine
 коӽ:коӽ N1            ; ! belly
 пыньх:пыньх N1        ; ! soup
 нё:нё N1              ; ! barn
@@ -420,7 +420,6 @@ LEXICON NounRoot
 питғы:питғы N1        ; ! paper (written), book
 пон:пон N1            ; ! villager
 кʼеӈ:к%{ʼ%}еӈ N1      ; ! sun
-!!! New words !!!
 ӈыньк:ӈыньк N1	      ; ! face
 ӈайн:ӈайн N1	        ; ! cheek
 т’ыр:т%{’%}ыр N1      ; ! left (not right)
@@ -438,7 +437,7 @@ LEXICON NounRoot
 ыӈг:ыӈг N1	          ; ! mouth
 ӈығс:ӈығс N1	        ; ! tooth
 эмс:эмс N1	          ; ! molar
-ӈыньф:ӈыньф N1	      ; ! bone
+ӈыньф:ӈынь%{ф%} N1	  ; ! bone
 ывлх:ывлх N1	        ; ! lip
 ити:ити N1	          ; ! chin
 оӻри:оӻри N1	        ; ! nape, occiput
@@ -466,6 +465,64 @@ LEXICON NounRoot
         !!!!!!!!!!!!!!!!!
 тавӻай:тавӻай N1      ; ! crab
 вынь:вынь N1          ; ! kettle
+туӈ:туӈ N1            ; ! sea lion
+тойғур:тойғур N1      ; ! seal
+чуғнык:чуғнык N1      ; ! walrus
+ыс:ыс N1              ; ! swallow (bird)
+ат:ат N1              ; ! tiger
+кетул:кетул N1        ; ! giraffe
+кʼузр:к%{ʼ%}узр N1    ; ! wolverine
+лаӄр:лаӄр N1          ; ! squirrel
+воӈи:воӈи N1          ; ! musk deer
+меӄ:меӄ N1            ; ! musk deer
+лиғс:лиғс N1          ; ! wolf
+лиғзнонӄ:лиғзнонӄ N1  ; ! wolf cub
+мем:мем N1            ; ! monkey
+обезьяна:обезьяна N1  ; ! monkey
+мок:мок N1            ; ! bear
+чхыф:чхы%{ф%} N1      ; ! bear
+тотр:тотр N1          ; ! marten
+тʼоӽ:т%{ʼ%}оӽ N1      ; ! moose
+торӄ:торӄ N1          ; ! badger
+члығи:члығи N1        ; ! lynx
+ӈы:ӈы N1              ; ! otter
+чоӽ:чоӽ N1            ; ! fang, tusk
+нитьф:нить%{ф%} N1    ; ! target
+ӈаӻр:ӈаӻр N1          ; ! skin, coat, pelt
+тиф:ти%{ф%} N1        ; ! track, print, footprint
+авсӄ:авсӄ N1          ; ! ruff, ruffe (fish)
+ва:ва N1         ; ! predatory carp; redfin culter; Chanodichthys erythropterus
+вағс:вағс N1          ; ! whitefish
+тёмр:тёмр N1          ; ! grass; leaf
+визлых:визлых N1      ; ! root
+титӈыр:титӈыр N1      ; ! thorn
+р̌авӈыкс:р̌%{ʼ%}авӈыкс N1 ; ! rhododendron
+кʼмый:к%{ʼ%}мый N1    ; ! oak
+ӿим:ӿим N1            ; ! Siberian dwarf pine
+ӈарӈи:ӈарӈи N1        ; ! fir
+тэуӈи:тэуӈи N1        ; ! maple (tree)
+тэвӻай:тэвӻай N1      ; ! maple (tree)
+ӿивс:ӿивс N1          ; ! birch
+мускыр:мускыр N1      ; ! poplar
+каӻӈ:каӻӈ N1          ; ! pine
+олӽ:олӽ N1            ; ! cane, rush, reed
+музӈи:музӈи N1        ; ! sedge
+воӻдёӈр:воӻдёӈр N1    ; ! hummock, hillock, mound
+мер:мер N1            ; ! pussy willow
+оӻм:оӻм N1            ; ! bark
+вах:вах N1            ; ! moss
+аньӽ:аньӽ N1          ; ! female
+ар:ар N1              ; ! male
+ӈайк:ӈайк N1          ; ! puppy
+найӄнонӄ:найӄнонӄ N1  ; ! puppy
+кʼыск:к%{ʼ%}ыск N1    ; ! cat (female)
+архыск:архыск N1      ; ! cat (male)
+олоӈ:олоӈ N1          ; ! pig, hog, swine
+арэӻа:арэӻа N1        ; ! bull, ox
+мур:мур N1            ; ! horse
+армур:армур N1        ; ! stallion
+чӈыр:чӈыр N1          ; ! hay
+мус:мус N1            ; ! oats
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
@@ -549,6 +606,7 @@ LEXICON TVerbRoot
         !!! New words !!!
         !!!!!!!!!!!!!!!!!
 ӿеть:ӿеть TV1        ; ! to take out (of)
+нот:нот TV1          ; ! to feed
 
 LEXICON IVerbRoot
 пʼры:пʼры IV1     ; ! to come
@@ -577,6 +635,12 @@ LEXICON IVerbRoot
 ӈар:ӈар IV1       ; ! to be fat
 паӻ:паӻ IV1       ; ! to be red
 эна:эна IV1       ; ! to be another
+        !!!!!!!!!!!!!!!!!
+        !!! New words !!!
+        !!!!!!!!!!!!!!!!!
+нить:нить IV1     ; ! to aim
+энӈаӻз:энӈаӻз IV1 ; ! to be impudent, insolent
+иньғ:иньғ IV1     ; ! to be impudent, insolent
 
 LEXICON IrregBoundVerbRoot
 ни:ни TV1         ; ! to eat
