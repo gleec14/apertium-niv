@@ -554,6 +554,7 @@ LEXICON NounRoot
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
+Иисус:Иисус PN1  ; ! JESUS CHRIST
 
 LEXICON PronounRoot
 PersPronRoot ;
