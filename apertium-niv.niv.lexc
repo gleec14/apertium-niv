@@ -638,21 +638,21 @@ LEXICON TVerbRoot
 ӈарӈар:ӈарӈар TV1    ; ! to threaten
 
 LEXICON IVerbRoot
-пʼры:пʼры IV1     ; ! to come
+пʼры:п%{ʼ%}ры IV1     ; ! to come
 му:му IV1         ; ! to die
 чека:чека IV1     ; ! to be strong
 ӿарӻо:ӿарӻо IV1   ; ! to be strong
 чез:чез IV1       ; ! to be weak
 чола:чола IV1     ; ! to be poor
 ӈалы:ӈалы IV1     ; ! to be delirious, to talk nonsense
-ӄʼо:ӄʼо IV1       ; ! to sleep
+ӄʼо:ӄ%{ʼ%}о IV1       ; ! to sleep
 ви:ви IV1         ; ! to go
-пʼу:пʼу IV1       ; ! to go out, exit
+пʼу:п%{ʼ%}у IV1       ; ! to go out, exit
 тывғ:тывғ IV1     ; ! to enter a house
-тʼаӽта:тʼаӽта IV1 ; ! to be angry
+тʼаӽта:т%{ʼ%}аӽта IV1 ; ! to be angry
 ӿеӻа:ӿеӻа IV1     ; ! to be afraid
-пʼолағ:пʼолағ IV1 ; ! to shout
-пʼим:пʼим IV1     ; ! to run away
+пʼолағ:п%{ʼ%}олағ IV1 ; ! to shout
+пʼим:п%{ʼ%}им IV1     ; ! to run away
 ӄотю:ӄотю IV1     ; ! to fall silent
 оз:оз IV1         ; ! to stand up
 кут:кут IV1       ; ! to fall
@@ -660,7 +660,7 @@ LEXICON IVerbRoot
 там:там IV1       ; ! to be numerous
 маӈӻ:маӈӻ IV1     ; ! to be powerful, to be rich
 эзму:эзму IV1     ; ! to rejoice
-ӄʼав:ӄʼав IV1     ; ! to be warm
+ӄʼав:ӄ%{ʼ%}ав IV1     ; ! to be warm
 ӈар:ӈар IV1       ; ! to be fat
 паӻ:паӻ IV1       ; ! to be red
 эна:эна IV1       ; ! to be another
@@ -671,8 +671,8 @@ LEXICON IVerbRoot
 энӈаӻз:энӈаӻз IV1 ; ! to be impudent, insolent
 иньғ:иньғ IV1     ; ! to be impudent, insolent
 кулу:кулу IV1     ; ! to open one's eyes
-кʼрыу:кʼрыу IV1   ; ! to rest
-ӄʼотихоти:ӄʼотихоти IV1 ; ! to engage in hooliganism; to fool around, mess around
+кʼрыу:к%{ʼ%}рыу IV1   ; ! to rest
+ӄʼотихоти:ӄ%{ʼ%}отихоти IV1 ; ! to engage in hooliganism; to fool around, mess around
 лаулау:лаулау IV1 ; ! to argue
 лвы:лвы IV1       ; ! to be fastidious, squeamish
 невур:невур IV1   ; ! to be affable, communicable, forthcoming, charming
@@ -703,6 +703,7 @@ LEXICON AdvRoot
 лили:лили ADV2     ; ! very
 тʼыфк:тʼыфк ADV2   ; ! long ago, a long time ago
 нымр:нымр ADV2     ; ! yesterday
+ник:ник ADV2       ; ! recently
 
 LEXICON ParticleRoot
 варк%<part%>:%>%{B%}арк CASES  ; ! only
