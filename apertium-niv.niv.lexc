@@ -414,7 +414,7 @@ LEXICON NounRoot
 лумр:лумр N1          ; ! sable
 ӿонтӄ:ӿонтӄ N1        ; ! sack
 ӿемар:ӿемар N1        ; ! old man
-паӽ:паӽ N1            ; ! stone
+паӽ:паӽ N1            ; ! stone, rock
 толф:тол%{ф%} N1      ; ! summer
 ма:ма N1              ; ! dried fish
 питғы:питғы N1        ; ! paper (written), book
@@ -523,6 +523,31 @@ LEXICON NounRoot
 армур:армур N1        ; ! stallion
 чӈыр:чӈыр N1          ; ! hay
 мус:мус N1            ; ! oats
+ӄʼорӽ:ӄ%{ʼ%}орӽ N1    ; ! blockhead, dimwit, dunce
+чылғи:чылғи N1        ; ! foot
+ынғи:ынғи N1          ; ! heel
+пих:пих N1            ; ! knee
+ӈаф:ӈа%{ф%} N1        ; ! thigh
+ӈиф:ӈи%{ф%} N1        ; ! heart
+хых:хых N1            ; ! calf (of leg)
+кезӈи:кезӈи N1        ; ! gland
+микрвыкрук:микрвыкрук N1 ; ! kidneys
+ӈызрк:ӈызрк N1        ; ! vein
+ӈыньф:ӈынь%{ф%} N1    ; ! bone
+сусыр:сусыр N1        ; ! spleen
+тʼвирк:т%{ʼ%}вирк N1  ; ! bile
+чылу:чылу N1          ; ! fog
+лах:лах N1            ; ! cloud
+члы:члы N1            ; ! sky
+миф:ми%{ф%} N1        ; ! earth
+орми:орми N1          ; ! clay
+маӽ:маӽ N1            ; ! sand
+эри:эри N1            ; ! river
+пал:пал N1            ; ! mountain
+пал:пал N1            ; ! taiga
+пот:пот N1            ; ! knoll, hill, mound
+ӈыю:ӈыю N1            ; ! ravine
+ӈалу:ӈалу N1          ; ! bay
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
@@ -607,6 +632,10 @@ LEXICON TVerbRoot
         !!!!!!!!!!!!!!!!!
 ӿеть:ӿеть TV1        ; ! to take out (of)
 нот:нот TV1          ; ! to feed
+кʼрығры:к%{ʼ%}рығры TV1 ; ! to serve, attend to, wait on
+леулеу:леулеу TV1    ; ! to avoid
+ле:ле TV1            ; ! to get used to, become accustomed to
+ӈарӈар:ӈарӈар TV1    ; ! to threaten
 
 LEXICON IVerbRoot
 пʼры:пʼры IV1     ; ! to come
@@ -641,6 +670,13 @@ LEXICON IVerbRoot
 нить:нить IV1     ; ! to aim
 энӈаӻз:энӈаӻз IV1 ; ! to be impudent, insolent
 иньғ:иньғ IV1     ; ! to be impudent, insolent
+кулу:кулу IV1     ; ! to open one's eyes
+кʼрыу:кʼрыу IV1   ; ! to rest
+ӄʼотихоти:ӄʼотихоти IV1 ; ! to engage in hooliganism; to fool around, mess around
+лаулау:лаулау IV1 ; ! to argue
+лвы:лвы IV1       ; ! to be fastidious, squeamish
+невур:невур IV1   ; ! to be affable, communicable, forthcoming, charming
+ньма:ньма IV1     ; ! to be timid, fearful
 
 LEXICON IrregBoundVerbRoot
 ни:ни TV1         ; ! to eat
