@@ -60,6 +60,7 @@ Multichar_Symbols
 
 ! Mood categories (for now)
 %<ind%> ! Indicative
+%<pot%> ! Potential
 ! %<imp%> ! Imperative
 %<itg%> ! Interrogative
 
@@ -117,6 +118,7 @@ Multichar_Symbols
 %{T%}     ! (Latin)
 %{X%}     ! (Latin)
 %{V%}
+%{Q%}
 %{R%}
 %{B%}
 %{G%}
@@ -320,6 +322,7 @@ LEXICON FORMALITY
 LEXICON MOOD
 %<itg%>:%>л FORMALITY ;
 %<ind%>:%>%{д%}ь PluralVerb ;
+%<pot%>:%>%{Q%}ана PluralVerb ;
 ! %<imp%>:%>idk # ;
 # ;
 

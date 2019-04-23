@@ -21,8 +21,8 @@ Alphabet
  %{ф%}:ф %{ф%}:в
  %{i%}:и %{i%}:0
  %{Ч%}:т %{Ч%}:з %{Ч%}:д %{Ч%}:с
- %{Т%}:т %{Т%}:р %{Т%}:д
  %{и%}:и %{и%}:й %{и%}:я %{и%}:е %{и%}:ё %{и%}:ю
+ %{Q%}:ӄ %{Q%}:ӽ %{Q%}:ӻ
  %{ʼ%}:ʼ %{ʼ%}:̌
  ;
 
@@ -155,6 +155,12 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 "Set /G/ to <х> after voiceless stops"
 %{G%}:х <=> :B (ь:) %>: _ ;
 
+"Set /Q/ to <ӻ> after voiced stops"
+%{Q%}:ӻ <=> :C (ь:) %>: _ ;
+
+"Set /Q/ to <ӽ> after voiceless stops"
+%{Q%}:ӽ <=> :B (ь:) %>: _ ;
+
 "Set /R/ to <т> after fricatives"
 %{R%}:т <=> [ :A1 | :B1 ] (%>:) _ ;
 
@@ -163,10 +169,10 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
         except
           _ (:0) :A1 ;
 
-"Set /V/ to <п> after fricatives"
+"Set /B/ to <п> after fricatives"
 %{B%}:п <=> [ :A1 | :B1 ] (%>:) _ ;
 
-"Set /V/ to <б> after sonorants"
+"Set /B/ to <б> after sonorants"
 %{B%}:б <=> [ :Sonorant | :Vowel ] (%>:) _ ;
         except
           _ (:0) :A1 ;
