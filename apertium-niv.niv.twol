@@ -150,7 +150,7 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 %{G%}:ғ <=> [ :C | :Vowel ] (ь:) %>: _ ;
 
 "Set /G/ to <г> after sonorants"
-%{G%}:г <=> [ :Sonorant | :B1 ] %>: _ ;
+%{G%}:г <=> :Sonorant %>: _ ;
 
 "Set /G/ to <х> after voiceless stops"
 %{G%}:х <=> :B (ь:) %>: _ ;

@@ -57,6 +57,7 @@ Multichar_Symbols
 %<nmz_subj%> ! Subject nominalisation
 %<nmz_loc%> ! Locative nominalisation
 %<nmz_adv%> ! Adverbial nominalisation
+%<perm%> ! permanent property (for certain attributive verbs)
 
 ! Mood categories (for now)
 %<ind%> ! Indicative
@@ -160,7 +161,7 @@ LEXICON CLITICS
 %<qst%>:%>ла # ; ! Y/N questions
 %<emph%>:%>%{R%}и # ; ! intensifying particle 'even'
 %<emph%>:%>ӿагин # ; ! intensifying particle 'even'
-%<foc%>:%>ра # ; ! focus particle
+%<foc%>:%>%{R%}а # ; ! focus particle
 %<foc%>:%>ат # ; ! focus particle
 
 # ;
@@ -294,25 +295,28 @@ ADV1 ;
 
 LEXICON NUM1
 
-%<num%>%<cl1%>:%>%{I%}н ParticleRoot ;
-%<num%>%<cl2%>:%>ынь ParticleRoot ;
-%<num%>%<cl3%>:%>аӄр ParticleRoot ;
-%<num%>%<cl9%>:%>ик ParticleRoot ;
+%<num%>%<cl1%>:%>%{I%}н INCORPORATE-N ;
+%<num%>%<cl2%>:%>ьын INCORPORATE-N ;
+%<num%>%<cl3%>:%>аӄр INCORPORATE-N ;
+%<num%>%<cl9%>:%>ик INCORPORATE-N ;
+INCORPORATE-N ;
 
 LEXICON NUM2
 
-%<num%>%<cl1%>:%>ен ParticleRoot ;
-%<num%>%<cl2%>:%>ор ParticleRoot ;
-%<num%>%<cl3%>:%>еӄр ParticleRoot ;
-%<num%>%<cl4%>:%>евсӄ ParticleRoot ;
-%<num%>%<cl5%>:%>им ParticleRoot ;
-%<num%>%<cl6%>:%>ер ParticleRoot ;
-%<num%>%<cl7%>:%>евор ParticleRoot ;
-%<num%>%<cl8%>:%>ерах ParticleRoot ;
-%<num%>%<cl9%>:%>ик ParticleRoot ;
+%<num%>%<cl1%>:%>ен INCORPORATE-N ;
+%<num%>%<cl2%>:%>ор INCORPORATE-N ;
+%<num%>%<cl3%>:%>еӄр INCORPORATE-N ;
+%<num%>%<cl4%>:%>евсӄ INCORPORATE-N ;
+%<num%>%<cl5%>:%>им INCORPORATE-N ;
+%<num%>%<cl6%>:%>ер INCORPORATE-N ;
+%<num%>%<cl7%>:%>евор INCORPORATE-N ;
+%<num%>%<cl8%>:%>ерах INCORPORATE-N ;
+%<num%>%<cl9%>:%>ик INCORPORATE-N ;
+INCORPORATE-N ;
 
 LEXICON PluralVerb
 %<pl%>:%>%{G%}у # ;
+CLITICS ;
 # ;
 
 LEXICON FORMALITY
@@ -348,6 +352,7 @@ LEXICON TV1
 
 LEXICON IV1
 %<v%>%<iv%>%[Verb%]: TENSE;
+%<v%>%<iv%>%<perm%>%[Verb%]:%>ла INCORPORATE-V;
 
 LEXICON INCORPORATE-N
 %+:%> NumeralRoot ;
@@ -355,10 +360,14 @@ LEXICON INCORPORATE-N
 %+:%>%{v%} TVerbRoot ;
 %+:%>%{v%} IVerbRoot ;
 %+:%>%{v%} IrregBoundVerbRoot ;
+%+:%>%{n%} NounRoot ;
 CLITICS ;
 
 LEXICON INCORPORATE-V
 %+:%>%{n%} NounRoot ;
+%+:%>%{v%} TVerbRoot ;
+%+:%>%{v%} IVerbRoot ;
+%+:%>%{v%} IrregBoundVerbRoot ;
 
 LEXICON CnjADV
 %<cnjadv%>: #;
@@ -551,6 +560,7 @@ LEXICON NounRoot
 пот:пот N1            ; ! knoll, hill, mound
 ӈыю:ӈыю N1            ; ! ravine
 ӈалу:ӈалу N1          ; ! bay
+ки:ки N1              ; ! footwear
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
@@ -630,7 +640,7 @@ LEXICON TVerbRoot
 р̌ыпр:р̌%{ʼ%}ыпр TV1   ; ! to bring
 эзму:эзму TV1        ; ! to love
 уски:уски TV1        ; ! to pay for
-ески:ески TV1        ; ! to sell
+эски:эски TV1        ; ! to sell
         !!!!!!!!!!!!!!!!!
         !!! New words !!!
         !!!!!!!!!!!!!!!!!
@@ -640,6 +650,9 @@ LEXICON TVerbRoot
 леулеу:леулеу TV1    ; ! to avoid
 ле:ле TV1            ; ! to get used to, become accustomed to
 ӈарӈар:ӈарӈар TV1    ; ! to threaten
+ағағ:ағағ TV1        ; ! to disturb
+хна:х%{ʼ%}на TV1     ; ! to grease
+куз:куз TV1          ; ! to take out
 
 LEXICON IVerbRoot
 пʼры:п%{ʼ%}ры IV1     ; ! to come
@@ -681,6 +694,8 @@ LEXICON IVerbRoot
 лвы:лвы IV1       ; ! to be fastidious, squeamish
 невур:невур IV1   ; ! to be affable, communicable, forthcoming, charming
 ньма:ньма IV1     ; ! to be timid, fearful
+ур:ур IV1         ; ! to be good
+к’лу:к%{’%}лу IV1 ; ! to be afraid
 
 LEXICON IrregBoundVerbRoot
 ни:ни TV1         ; ! to eat
@@ -702,12 +717,13 @@ LEXICON CnjAdvRoot
 ӿаӈан:ӿаӈан CnjADV        ; ! then, in that case
 
 LEXICON AdvRoot
-напа:напа ADV2     ; ! still
-нав:нав ADV2       ; ! now
-лили:лили ADV2     ; ! very
-тʼыфк:тʼыфк ADV2   ; ! long ago, a long time ago
-нымр:нымр ADV2     ; ! yesterday
-ник:ник ADV2       ; ! recently
+напа:напа ADV2      ; ! still
+нав:нав ADV2        ; ! now
+лили:лили ADV2      ; ! very
+тʼыфк:тʼыфк ADV2    ; ! long ago, a long time ago
+нымр:нымр ADV2      ; ! yesterday
+ник:ник ADV2        ; ! recently
+аньтьый:аньтьый ADV ; ! again
 
 LEXICON ParticleRoot
 варк%<part%>:%>%{B%}арк CASES  ; ! only
