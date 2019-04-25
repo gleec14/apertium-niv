@@ -64,6 +64,7 @@ Multichar_Symbols
 %<pot%> ! Potential
 ! %<imp%> ! Imperative
 %<itg%> ! Interrogative
+%<itg_pej%> ! pejorative interrogative
 
 ! Evidentiality / stuff
 ! may matter later
@@ -99,7 +100,7 @@ Multichar_Symbols
 %<emph%>
 %<poss%>
 %>      ! Morpheme boundary
-%{Х%}     ! terminative (Cyrillic)
+%{х%}     ! Cyrillic
 %{I%}     ! in some numeral
 !%ʼ
 %{ʼ%}
@@ -163,6 +164,8 @@ LEXICON CLITICS
 %<emph%>:%>ӿагин # ; ! intensifying particle 'even'
 %<foc%>:%>%{R%}а # ; ! focus particle
 %<foc%>:%>ат # ; ! focus particle
+%<part%>:%>ӿайра # ; ! 'probably'
+%<itg_pej%>:%>ӿата # ; ! used with an interrogative word, expresses displeasure/disapproval
 
 # ;
 
@@ -297,7 +300,7 @@ LEXICON NUM1
 
 %<num%>%<cl1%>:%>%{I%}н INCORPORATE-N ;
 %<num%>%<cl2%>:%>ьын INCORPORATE-N ;
-%<num%>%<cl3%>:%>аӄр INCORPORATE-N ;
+%<num%>%<cl3%>:%>яӄр INCORPORATE-N ;
 %<num%>%<cl9%>:%>ик INCORPORATE-N ;
 INCORPORATE-N ;
 
@@ -372,6 +375,9 @@ LEXICON INCORPORATE-V
 LEXICON CnjADV
 %<cnjadv%>: #;
 
+LEXICON ItgADV
+%<adv%>%<itg%>: #;
+
 LEXICON ADV2
 %<adv%>: #;
 
@@ -386,7 +392,7 @@ LEXICON NounRoot
 ӈа:ӈа N1              ; ! animal
 тыф:ты%{ф%} N1        ; ! house
 ми:ми N1              ; ! inside
-нивх:нивх N1          ; ! person, man
+нивх:нив%{х%} N1      ; ! person, man
 ваӄа:ваӄа N1          ; ! box
 сета:сета N1          ; ! sugar
 ойдам:ойдам N1        ; ! baby
@@ -561,6 +567,7 @@ LEXICON NounRoot
 ӈыю:ӈыю N1            ; ! ravine
 ӈалу:ӈалу N1          ; ! bay
 ки:ки N1              ; ! footwear
+ӄʼоӻа:ӄ%{ʼ%}оӻа N1    ; ! nature
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
@@ -653,6 +660,7 @@ LEXICON TVerbRoot
 ағағ:ағағ TV1        ; ! to disturb
 хна:х%{ʼ%}на TV1     ; ! to grease
 куз:куз TV1          ; ! to take out
+зу:з{ь%}у TV1        ; ! to wash
 
 LEXICON IVerbRoot
 пʼры:п%{ʼ%}ры IV1     ; ! to come
@@ -696,6 +704,7 @@ LEXICON IVerbRoot
 ньма:ньма IV1     ; ! to be timid, fearful
 ур:ур IV1         ; ! to be good
 к’лу:к%{’%}лу IV1 ; ! to be afraid
+вуквук:вуквук IV1 ; ! to be dark
 
 LEXICON IrregBoundVerbRoot
 ни:ни TV1         ; ! to eat
@@ -705,16 +714,20 @@ LEXICON IrregFreeVerbRoot
 
 LEXICON IVerb-AdvRoot
 ур:ур COMP ; ! well
-еӻ:еӻ COMP ; ! quickly
+эӻ:эӻ COMP ; ! quickly
 
 LEXICON AdverbRoot
 CnjAdvRoot ;
+ItgAdvRoot ;
 AdvRoot ;
 
 LEXICON CnjAdvRoot
 ӿоӻор:ӿоӻор CnjADV        ; ! then, thereupon
 ӿоӻорӈан:ӿоӻорӈан CnjADV  ; ! then, at that time
 ӿаӈан:ӿаӈан CnjADV        ; ! then, in that case
+
+LEXICON ItgAdvRoot
+ыыр:ыыр ItgADV      ; ! when
 
 LEXICON AdvRoot
 напа:напа ADV2      ; ! still
@@ -723,7 +736,9 @@ LEXICON AdvRoot
 тʼыфк:тʼыфк ADV2    ; ! long ago, a long time ago
 нымр:нымр ADV2      ; ! yesterday
 ник:ник ADV2        ; ! recently
-аньтьый:аньтьый ADV ; ! again
+аньтьый:аньтьый ADV2 ; ! again
+эрғали:эрғали ADV2  ; ! much, many
+эрғале:эрғале ADV2  ; ! much, many
 
 LEXICON ParticleRoot
 варк%<part%>:%>%{B%}арк CASES  ; ! only
