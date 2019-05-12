@@ -124,6 +124,7 @@ Multichar_Symbols
 %{R%}
 %{B%}
 %{G%}
+%{Г%}
 %{v%}
 %{n%}
 
@@ -289,7 +290,7 @@ LEXICON SubjAgree
 
 LEXICON ADV1
 
-%<adv%>:%>%{G%}у SubjAgree ;
+%<adv%>:%>%{Г%}у SubjAgree ;
 
 LEXICON COMP
 
@@ -413,7 +414,7 @@ LEXICON NounRoot
 леп:леп N1            ; ! bread
 ларӄ:ларӄ N1          ; ! shirt
 кинс:кинс N1          ; ! devil
-по:по N1              ; ! village
+во:во N1              ; ! village
 кʼеӄ:к%{ʼ%}еӄ N1      ; ! fox
 чеврӄ:ч{ь%}еврӄ N1    ; ! bird
 тупр̌:тупр̌ N1          ; ! feather
@@ -705,6 +706,7 @@ LEXICON IVerbRoot
 ур:ур IV1         ; ! to be good
 к’лу:к%{’%}лу IV1 ; ! to be afraid
 вуквук:вуквук IV1 ; ! to be dark
+малғо:малғо  IV1 ; ! to be much; a lot
 
 LEXICON IrregBoundVerbRoot
 ни:ни TV1         ; ! to eat
@@ -715,6 +717,7 @@ LEXICON IrregFreeVerbRoot
 LEXICON IVerb-AdvRoot
 ур:ур COMP ; ! well
 эӻ:эӻ COMP ; ! quickly
+малғо:малғо COMP ; ! much; a lot
 
 LEXICON AdverbRoot
 CnjAdvRoot ;

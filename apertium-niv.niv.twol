@@ -3,6 +3,7 @@ Alphabet
  а б в г ӷ ғ ӻ д е ё ж з и й к ӄ л м н ӈ о п р с т у ф х ӽ ӿ ц ч ш щ ъ ы ь э ю я ʼ
  %{a%}:а %{a%}:0 %>:0
  %{G%}:г %{G%}:к %{G%}:х %{G%}:ғ
+ %{Г%}:г %{Г%}:к %{Г%}:х %{Г%}:ғ
  %{o%}:о %{o%}:0
  %{u%}:у %{u%}:0
  %{j%}:й %{j%}:0
@@ -45,6 +46,9 @@ Sonorant = н ӈ м л ;
 
 A1 = Ф Р̌ С Х Ӽ
      ф р̌ с х ӽ ;
+
+A1a = Ф Р̌ С Ӽ
+      ф р̌ с ӽ ;
 
 B = П Т Ч К Ӄ
     п т ч к ӄ ;
@@ -157,9 +161,16 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 %{G%}:г <=> [ :Sonorant | %{х%}: ] %>: _ ;
 
 "Set /G/ to <к> after voiceless fricatives"
-%{G%}:к <=> :A1 %>: _ ;
-        except
-          %{х%}:ғ (%>:) _ ;
+%{G%}:к <=> :A1a %>: _ ;
+
+"Set /Г/ to <ғ> after voiced stops"
+%{Г%}:ғ <=> :C (ь:) %>: _ ;
+
+"Set /Г/ to <г> after sonorants and vowels"
+%{Г%}:г <=> [ :Sonorant | %{х%}: | :Vowel ] %>: _ ;
+
+"Set /Г/ to <к> after voiceless fricatives"
+%{Г%}:к <=> :A1a %>: _ ;
 
 "Set /Q/ to <ӻ> after voiced stops"
 %{Q%}:ӻ <=> :C (ь:) %>: _ ;
@@ -168,14 +179,12 @@ Vx:Vy <=> \:Sibilant [ %{ь%}: | ь: ] (%>:) _ ;
 %{Q%}:ӽ <=> :B (ь:) %>: _ ;
 
 "Set /R/ to <т> after fricatives"
-%{R%}:т <=> [ :A1 | :B1 ] (%>:) _ ;
-        except
-          %{х%}:ғ (%>:) _ ;
+%{R%}:т <=> [ :A1a | :B1 ] (%>:) _ ;
 
 "Set /R/ to <д> after sonorants"
-%{R%}:д <=> [ :Sonorant | :Vowel | %{х%}: ] (%>:) _ ;
+%{R%}:д <=> [ :Sonorant | :Vowel | %{х%}:ғ ] (%>:) _ ;
         except
-          _ (:0) :A1 ;
+          _ %{o%}:0 ;
 
 "Set /B/ to <п> after fricatives"
 %{B%}:п <=> [ :A1 | :B1 ] (%>:) _ ;
