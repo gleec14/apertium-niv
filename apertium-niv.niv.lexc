@@ -10,6 +10,7 @@ Multichar_Symbols
 !%<enc%> ! Enclitic
 %<det%> ! Determiner
 %<part%> ! Particle
+%<ij%> ! Interjection
 
 ! Case categories
 %<nom%> ! Nominative
@@ -156,6 +157,7 @@ NumeralRoot ;
 VerbRoot ;
 AdverbRoot ;
 ParticleRoot ;
+InterjRoot ;
 Punctuation ;
 
 LEXICON CLITICS
@@ -382,6 +384,9 @@ LEXICON ItgADV
 LEXICON ADV2
 %<adv%>: #;
 
+LEXICON INTERJ
+%<ij%>: #;
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -569,6 +574,7 @@ LEXICON NounRoot
 ӈалу:ӈалу N1          ; ! bay
 ки:ки N1              ; ! footwear
 ӄʼоӻа:ӄ%{ʼ%}оӻа N1    ; ! nature
+утку:утку N1          ; ! hubby
 
 LEXICON ProperNounRoot
 Рум:Рум PN1      ; ! dude called Rum
@@ -745,6 +751,9 @@ LEXICON AdvRoot
 
 LEXICON ParticleRoot
 варк%<part%>:%>%{B%}арк CASES  ; ! only
+
+LEXICON InterjRoot
+ӿы:ӿы INTERJ   ; ! yes
 
 LEXICON Punctuation
 .%<sent%>:. # ;
