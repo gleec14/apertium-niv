@@ -1,4 +1,4 @@
-{languageName}}: `apertium-niv`
+{{Nivkh}}: `apertium-niv`
 ===============================================================================
 
 This is an Apertium monolingual language package for niv. What
@@ -54,11 +54,8 @@ If you are in the source directory after running make, the following
 commands should work:
 
 ```console
-$ echo "TODO: test sentence" | apertium -d . niv-morph
+$ echo "TODO: test sentence" | hfst-proc niv.automorf.hfst
 TODO: test analysis result
-
-$ echo "TODO: test sentence" | apertium -d . niv-tagger
-TODO: test tagger result
 ```
 
 Files and data
