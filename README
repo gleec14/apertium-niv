@@ -1,12 +1,12 @@
 {{Nivkh}}: `apertium-niv`
 ===============================================================================
 
-This is an Apertium monolingual language package for niv. What
+This is an Apertium monolingual language package for Nivkh. What
 you can use this language package for:
 
-* Morphological analysis of niv
-* Morphological generation of niv
-* Part-of-speech tagging of niv
+* Morphological analysis of Nivkh
+* Morphological generation of Nivkh
+* Part-of-speech tagging of Nivkh
 
 Requirements
 -------------------------------------------------------------------------------
