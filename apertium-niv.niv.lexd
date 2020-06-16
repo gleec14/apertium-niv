@@ -1,0 +1,590 @@
+# Multichar_Symbols
+
+# ! Part of speech categories
+# <n>   ! Noun
+# <v>   ! Verb
+# <adv> ! Adverb
+# <cnjadv> ! Conjunctive adverb
+# <prn> ! Pronoun
+# <num> ! Numeral
+# !<enc> ! Enclitic
+# <det> ! Determiner
+# <part> ! Particle
+# <ij> ! Interjection
+
+# ! Case categories
+# <nom> ! Nominative
+# <age> ! Agentive
+# <dat> ! Dative
+# <ins> ! Instrumental
+# <loc> ! Locative
+# <abl> ! Ablative
+# <term> ! Terminative
+# <comp> ! Comparative
+# <voc> ! Vocative
+
+# ! Pronoun categories
+# <pers> ! Personal
+# <dem> ! Demonstrative
+# <indef> ! Indefinite
+# <itg> ! Interrogative
+# <ref> ! Reflexive
+
+# ! Person categories
+# <p1> ! First person
+# <p2> ! Second person
+# <p3> ! Third person
+
+# ! Number categories
+# <sg> ! Singular
+# <du> ! Dual
+# <pl> ! Plural
+
+# ! Clusivity categories
+# <incl> ! Inclusive
+# <excl> ! Exclusive
+
+# ! Verb categories
+# <tv> ! Transitive verb
+# <iv> ! Intransitive verb
+
+# ! Verb forms
+# <inf> ! infinitive
+# <cvb_nar1> ! narrative converb (null suffix)
+# <cvb_nar2> ! narrative converb (-data/-durngu)
+# <cvb_ant> ! anterior/simultaneous converb
+# <cvb_cond> ! conditional converb ("if")
+# <nmz_pred> ! Predicate-actant nominalisation
+# <nmz_subj> ! Subject nominalisation
+# <nmz_loc> ! Locative nominalisation
+# <nmz_adv> ! Adverbial nominalisation
+# <perm> ! permanent property (for certain attributive verbs)
+
+# ! Mood categories (for now)
+# <ind> ! Indicative
+# <pot> ! Potential
+# ! <imp> ! Imperative
+# <itg> ! Interrogative
+# <itg_pej> ! pejorative interrogative
+
+# ! Evidentiality / stuff
+# ! may matter later
+
+# ! Tense categories
+# <fut> ! Future
+
+# ! Noun categories
+# <np> Proper noun
+
+# ! Numeral classes
+# <cl1>
+# <cl2>
+# <cl3>
+# <cl4>
+# <cl5>
+# <cl6>
+# <cl7>
+# <cl8>
+# <cl9>
+
+# ! Formality categories
+# <frm> ! Formal
+# <infrm> ! Informal
+
+# ! Noun Attribute
+# <attr> ! Noun attribute
+
+# ! Other symbols
+# ! <redup> ! Reduplication
+# <qst>
+# <foc>
+# <emph>
+# <poss>
+# >      ! Morpheme boundary
+# {х}     ! Cyrillic
+# {I}     ! in some numeral
+# !%ʼ
+# {ʼ}
+# {и}
+
+# {д}     ! undergo voicing
+# {ф}
+
+# {a}     ! delete sometimes
+# {o}
+# {u}
+# {y}
+# {j}
+# {f}
+# {ь}
+
+# {T}     ! (Latin)
+# {X}     ! (Latin)
+# {V}
+# {Q}
+# {R}
+# {B}
+# {G}
+# {Г}
+# {v}
+# {n}
+
+# ! Punctuation tags
+# <sent>      ! Sentence marker
+# <guio>      ! Hyphen
+# <cm>        ! Comma
+# <apos>      ! Apostrophe
+# <rquot>     ! Quote marker (right hand side)
+# <lquot>     ! Quote marker (left hand side)
+# <rpar>      ! Parenthetical marker (right hand side)
+# <lpar>      ! Parenthetical marker (left hand side)
+
+# %[Verb%]      ! verb for twoc
+# %[Noun%]      ! noun for twoc
+
+
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#!!!                          L E X I C O N                                  !!!
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+LEXICON NounRoot
+умгу:умгу           # woman
+ытык:ытык           # father
+ӄан:ӄан             # doggo
+ӈа:ӈа               # animal
+тыф:ты{ф}           # house
+ми:ми               # inside
+нивх:нив{х}         # person, man
+ваӄа:ваӄа           # box
+сета:сета           # sugar
+ойдам:ойдам         # baby
+курӈ:курӈ           # universe
+тяӄо:ч{ь}аӄо        # knife
+оола:оола           # child
+чʼатьф:чʼ{ь}ать{ф}  # bog, swamp
+ыф:ы{ф}             # beard
+арф:ар{ф}           # side of boat
+ӿуньф:ӿунь{ф}       # barrel
+пердь:пердь         # burden
+ыкын:ыкын           # older brother
+атик:атик           # younger brother
+нанак:нанак         # older sister
+ытик:ытик           # grandmother
+пос:пос             # fabric, cloth
+ӈафӄ:ӈафӄ           # friend
+леп:леп             # bread
+ларӄ:ларӄ           # shirt
+кинс:кинс           # devil
+во:во               # village
+кʼеӄ:к{ʼ}еӄ         # fox
+чеврӄ:ч{ь}еврӄ      # bird
+тупр̌:тупр̌           # feather
+тюс:тюс             # meat
+мулк:мулк           # basket
+ӈояӄ:ӈояӄ           # egg
+ӄʼас:ӄ{ʼ}ас         # tambourine
+выйбукс:выйбукс     # tie
+мифпʼидь:мифпʼидь   # toad
+ӄʼос:ӄ{ʼ}ос         # neck
+олғоӈ:олғоӈ         # pig, hog, swine
+коӽ:коӽ             # belly
+пыньх:пыньх         # soup
+нё:нё               # barn
+ӿеӄрӈа:ӿеӄрӈа       # place further from shore (than here)
+лумр:лумр           # sable
+ӿонтӄ:ӿонтӄ         # sack
+ӿемар:ӿемар         # old man
+паӽ:паӽ             # stone, rock
+толф:тол{ф}         # summer
+ма:ма               # dried fish
+питғы:питғы         # paper (written), book
+пон:пон             # villager
+кʼеӈ:к{ʼ}еӈ         # sun
+ӈыньк:ӈыньк 	      # face
+ӈайн:ӈайн 	        # cheek
+т’ыр:т{’}ыр         # left (not right)
+ӈир:ӈир 	          # right (not left)
+ӈамадь:ӈамадь       # skin
+няӽ:няӽ 	          # eye
+них:них 	          # tear (from the eye)
+т’адм:т{ʼ}адм 	    # pate, crown of head
+т’а:т{ʼ}а 	        # pate, crown of head
+ӿеғми:ӿеғми 	      # temple (of head)
+нос:нос 	          # ear
+мла:мла 	          # earlobe
+вих:вих 	          # nose
+ньхыр:ньхыр 	      # eyebrow
+ыӈг:ыӈг 	          # mouth
+ӈығс:ӈығс 	        # tooth
+эмс:эмс 	          # molar
+ӈыньф:ӈынь{ф} 	    # bone
+ывлх:ывлх 	        # lip
+ити:ити 	          # chin
+оӻри:оӻри 	        # nape, occiput
+тʼуур:т{ʼ}уур       # fire
+кʼуты:к{ʼ}уты       # hole
+керӄ:керӄ           # sea
+пʼирӈыр:п{ʼ}ирӈыр   # sazan (kind of carp)
+теӈи:теӈи           # salmon
+ыс:ыс               # owner
+лаӈр:лаӈр           # seal
+ӿыйк:ӿыйк           # hare
+пых:пых             # cuckoo
+топин:топин         # jay
+тʼом:т{ʼ}ом         # fat
+мур:мур             # horse
+чо:чо               # fish
+чӽа:чӽа             # money
+кʼнык:кʼнык         # promontory
+ымык:ымык           # mother
+ӄʼах:ӄ{ʼ}ах         # spear
+ӄʼотр:ӄ{ʼ}отр       # bear
+        #!!!!!!!!!!!!!!!!!
+        #!!! New words !!!
+        #!!!!!!!!!!!!!!!!!
+тавӻай:тавӻай       # crab
+вынь:вынь           # kettle
+туӈ:туӈ             # sea lion
+тойғур:тойғур       # seal
+чуғнык:чуғнык       # walrus
+ыс:ыс               # swallow (bird)
+ат:ат               # tiger
+кетул:кетул         # giraffe
+кʼузр:к{ʼ}узр       # wolverine
+лаӄр:лаӄр           # squirrel
+воӈи:воӈи           # musk deer
+меӄ:меӄ             # musk deer
+лиғс:лиғс           # wolf
+лиғзнонӄ:лиғзнонӄ   # wolf cub
+мем:мем             # monkey
+обезьяна:обезьяна   # monkey
+мок:мок             # bear
+чхыф:чхы{ф}         # bear
+тотр:тотр           # marten
+тʼоӽ:т{ʼ}оӽ         # moose
+торӄ:торӄ           # badger
+члығи:члығи         # lynx
+ӈы:ӈы               # otter
+чоӽ:чоӽ             # fang, tusk
+нитьф:нить{ф}       # target
+ӈаӻр:ӈаӻр           # skin, coat, pelt
+тиф:ти{ф}           # track, print, footprint
+авсӄ:авсӄ           # ruff, ruffe (fish)
+ва:ва               # predatory carp; redfin culter; Chanodichthys erythropterus
+вағс:вағс           # whitefish
+тёмр:тёмр           # grass; leaf
+визлых:визлых       # root
+титӈыр:титӈыр       # thorn
+р̌авӈыкс:р̌{ʼ}авӈыкс  # rhododendron
+кʼмый:к{ʼ}мый       # oak
+ӿим:ӿим             # Siberian dwarf pine
+ӈарӈи:ӈарӈи         # fir
+тэуӈи:тэуӈи         # maple (tree)
+тэвӻай:тэвӻай       # maple (tree)
+ӿивс:ӿивс           # birch
+мускыр:мускыр       # poplar
+каӻӈ:каӻӈ           # pine
+олӽ:олӽ             # cane, rush, reed
+музӈи:музӈи         # sedge
+воӻдёӈр:воӻдёӈр     # hummock, hillock, mound
+мер:мер             # pussy willow
+оӻм:оӻм             # bark
+вах:вах             # moss
+аньӽ:аньӽ           # female
+ар:ар               # male
+ӈайк:ӈайк           # puppy
+найӄнонӄ:найӄнонӄ   # puppy
+кʼыск:к{ʼ}ыск       # cat (female)
+архыск:архыск       # cat (male)
+олоӈ:олоӈ           # pig, hog, swine
+арэӻа:арэӻа         # bull, ox
+мур:мур             # horse
+армур:армур         # stallion
+чӈыр:чӈыр           # hay
+мус:мус             # oats
+ӄʼорӽ:ӄ{ʼ}орӽ       # blockhead, dimwit, dunce
+чылғи:чылғи         # foot
+ынғи:ынғи           # heel
+пих:пих             # knee
+ӈаф:ӈа{ф}           # thigh
+ӈиф:ӈи{ф}           # heart
+хых:хых             # calf (of leg)
+кезӈи:кезӈи         # gland
+микрвыкрук:микрвыкрук  # kidneys
+ӈызрк:ӈызрк         # vein
+ӈыньф:ӈынь{ф}       # bone
+сусыр:сусыр         # spleen
+тʼвирк:т{ʼ}вирк     # bile
+чылу:чылу           # fog
+лах:лах             # cloud
+члы:члы             # sky
+миф:ми{ф}           # earth
+орми:орми           # clay
+маӽ:маӽ             # sand
+эри:эри             # river
+пал:пал             # mountain
+пал:пал             # taiga
+пот:пот             # knoll, hill, mound
+ӈыю:ӈыю             # ravine
+ӈалу:ӈалу           # bay
+ки:ки               # footwear
+ӄʼоӻа:ӄ{ʼ}оӻа       # nature
+утку:утку           # husband
+
+LEXICON CASES
+<nom>:>              # Nominative
+<age>:>{a}ӽ          # Agentive
+<dat>:>{R}{o}ӽ       # Dative
+<ins>:>{G}ир         # Instrumental
+<loc>:>{u}{j}н       # Locative
+<abl>:>{u}х          # Ablative
+<term>:>{T}{ʼ}ыкы    # Terminative
+<term>:>{T}{ʼ}{X}а   # Dir/LR
+<term>:>{R}оӻо       # Dir/LR
+<comp>:>{y}к         # Comparative
+<voc>:>{V}           # Vocative
+# INCORPORATE-N ;    # Nominative
+
+LEXICON CLITICS
+<qst>:>ла            # Y/N questions
+<emph>:>{R}и         # intensifying particle 'even'
+<emph>:>ӿагин        # intensifying particle 'even'
+<foc>:>{R}а          # focus particle
+<foc>:>ат            # focus particle
+<part>:>ӿайра        # 'probably'
+<itg_pej>:>ӿата      # used with an interrogative word, expresses displeasure/disapproval
+
+LEXICON POSSESSION
+<poss_1sg>:нь>     # 1sg
+
+PATTERNS
+NounRoot
+NounRoot CASES
+NounRoot TVerbRoot    # Incorporation
+POSSESSION NounRoot
+
+LEXICON ProperNounRoot
+Рум:Рум             # dude called Rum
+Иисус:Иисус         # Jesus
+
+LEXICON PronounRoot
+PersPronRoot
+IndefPronRoot
+DemPronRoot
+IntPronRoot
+
+LEXICON PersPronRoot
+ни:н             # I
+чи:ч             # you
+иф:{и}{f}        # he, she, it
+ньыӈ:ньыӈ        # they and I
+мер:мер          # y'all and I
+меги:меги        # you and I
+чыӈ:чыӈ          # y'all
+имӈ:имӈ          # they
+пʼи:пʼ           # oneself
+
+LEXICON IndefPronRoot
+ӿуӈрыдь:ӿуӈрыдь  # something like this
+
+LEXICON DemPronRoot
+тыдь:тыдь        # this (one)
+ӿыдь:ӿыдь        # that (one)
+адь:адь          # that (one)
+
+LEXICON IntPronRoot
+аӈ:аӈ            # who
+
+LEXICON DeterminerRoot
+ӿы:ӿы            # that
+ты:ты            # this
+
+LEXICON NumeralRoot
+
+нин:н            # one
+мен:м            # two
+
+LEXICON VerbRoot
+TVerbRoot
+IVerbRoot
+IVerb-AdvRoot
+IrregFreeVerbRoot
+
+LEXICON TVerbRoot
+за:з{ь}а         # to beat, strike
+во:во            # to take
+даю:даю          # to write
+ғе:ғе            # to buy, take
+ӄала:ӄала        # to hate
+ама:ама          # to look at
+иғ:иғ            # to kill
+ху:х{ʼ}у         # to kill
+ӽа:ӽ{ʼ}а         # to shoot
+фыврк:ф{ʼ}ыврк   # to pluck
+р̌а:р{ʼ}а         # to fry
+фын:ф{ʼ}ын       # to throw
+хир:х{ʼ}ир       # to use
+ыӈг:ыӈг          # to rip up
+мот:мот          # to kiss
+ар:ар            # to feed
+ӽат:ӽ{ʼ}ат       # to scold
+амӽта:амӽта      # to praise
+ыз:ыз            # to call
+ор:ор            # to meet
+ӈарма:ӈарма      # to wait for, await
+ӽони:ӽ{ʼ}они     # to save, rescue
+ньр̌ы:ньр̌ы        # to see
+р̌ык:р̌{ʼ}ык       # to bring home
+имы:имы          # to give
+лызи:лызи        # to pass, go past
+рғоп:рғоп        # to touch
+р̌ыпр:р̌{ʼ}ыпр     # to bring
+эзму:эзму        # to love
+уски:уски        # to pay for
+эски:эски        # to sell
+        #!!!!!!!!!!!!!!!!!
+        #!!! New words !!!
+        #!!!!!!!!!!!!!!!!!
+ӿеть:ӿеть         # to take out (of)
+нот:нот           # to feed
+кʼрығры:к{ʼ}рығры # to serve, attend to, wait on
+леулеу:леулеу     # to avoid
+ле:ле             # to get used to, become accustomed to
+ӈарӈар:ӈарӈар     # to threaten
+ағағ:ағағ         # to disturb
+хна:х{ʼ}на        # to grease
+куз:куз           # to take out
+зу:з{ь}у          # to wash
+
+LEXICON IVerbRoot
+пʼры:п{ʼ}ры       # to come
+му:му             # to die
+чека:чека         # to be strong
+ӿарӻо:ӿарӻо        # to be strong
+чез:чез           # to be weak
+чола:чола         # to be poor
+ӈалы:ӈалы         # to be delirious, to talk nonsense
+ӄʼо:ӄ{ʼ}о         # to sleep
+ви:ви             # to go
+пʼу:п{ʼ}у         # to go out, exit
+тывғ:тывғ         # to enter a house
+тʼаӽта:т{ʼ}аӽта   # to be angry
+ӿеӻа:ӿеӻа          # to be afraid
+пʼолағ:п{ʼ}олағ   # to shout
+пʼим:п{ʼ}им       # to run away
+ӄотю:ӄотю         # to fall silent
+оз:оз             # to stand up
+кут:кут           # to fall
+лук:лук           # to be fluffy
+там:там           # to be numerous
+маӈӻ:маӈӻ         # to be powerful, to be rich
+эзму:эзму         # to rejoice
+ӄʼав:ӄ{ʼ}ав       # to be warm
+ӈар:ӈар           # to be fat
+паӻ:паӻ           # to be red
+эна:эна           # to be another
+        #!!!!!!!!!!!!!!!!!
+        #!!! New words !!!
+        #!!!!!!!!!!!!!!!!!
+нить:нить       # to aim
+энӈаӻз:энӈаӻз   # to be impudent, insolent
+иньғ:иньғ       # to be impudent, insolent
+кулу:кулу       # to open one's eyes
+кʼрыу:к{ʼ}рыу   # to rest
+ӄʼотихоти:ӄ{ʼ}отихоти # to engage in hooliganism; to fool around, mess around
+лаулау:лаулау   # to argue
+лвы:лвы         # to be fastidious, squeamish
+невур:невур     # to be affable, communicable, forthcoming, charming
+ньма:ньма       # to be timid, fearful
+ур:ур           # to be good
+к’лу:к{’}лу     # to be afraid
+вуквук:вуквук   # to be dark
+малғо:малғо     # to be much; a lot
+
+LEXICON IrregBoundVerbRoot
+ни:ни           # to eat
+
+LEXICON IrregFreeVerbRoot
+инь:инь         # to eat
+
+LEXICON TENSE
+<fut>:>ны
+<nonfut>:>
+
+LEXICON MOOD
+<itg>:>л
+<ind>:>{д}ь
+<pot>:>{Q}ана
+# %<imp%>:%>idk
+
+PATTERNS
+TVerbRoot TENSE MOOD
+
+# LEXICON IVerb-AdvRoot
+# ур:ур        # well
+# эӻ:эӻ         # quickly
+# малғо:малғо  # much; a lot
+
+LEXICON AdverbRoot
+CnjAdvRoot
+ItgAdvRoot
+AdvRoot
+
+LEXICON CnjAdvRoot
+ӿоӻор:ӿоӻор         # then, thereupon
+ӿоӻорӈан:ӿоӻорӈан   # then, at that time
+ӿаӈан:ӿаӈан        # then, in that case
+
+LEXICON ItgAdvRoot
+ыыр:ыыр            # when
+
+LEXICON AdvRoot
+напа:напа        # still
+нав:нав          # now
+лили:лили        # very
+тʼыфк:тʼыфк      # long ago, a long time ago
+нымр:нымр        # yesterday
+ник:ник          # recently
+аньтьый:аньтьый  # again
+эрғали:эрғали    # much, many
+эрғале:эрғале    # much, many
+
+LEXICON ParticleRoot
+варк<part>:>{B}арк  # only
+
+LEXICON InterjRoot
+ӿы:ӿы    # yes
+
+LEXICON Punctuation
+.<sent>:. #
+..<sent>:.. #
+...<sent>:... #
+#%;<sent>:%; #
+#%:<sent>:%: #
+!<sent>:! #
+#%-<guio>:%- #
+#%—<guio>:%— #
+,<cm>:, #
+?<sent>:? #
+'<apos>:' #
+"<sent>:" #
+«<lquot>:« #
+»<rquot>:» #
+”<rquot>:” #
+“<lquot>:“ #
+(<lpar>:( #
+#]<rpar>:] #
+#[<lpar>:[ #
+)<rpar>:) #
+\<sent>:\ #
+/<sent>:/ #
+
+# Resources:
+# http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon
+# http://wiki.apertium.org/wiki/Lttoolbox_and_lexc
+# http://wiki.apertium.org/wiki/Apertium-specific_conventions_for_lexc
+# https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstHome
+# https://github.com/hfst/
+# http://www.cis.upenn.edu/~cis639/docs/lexc.html
+# http://wiki.apertium.org/wiki/Hfst
