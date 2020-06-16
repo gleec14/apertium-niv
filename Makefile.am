@@ -26,8 +26,25 @@ TARGETS_COMMON =			\
 ## niv transducer
 ###############################################################################
 
+SHELL = /bin/bash -o pipefail
+
+.deps/$(LANG1).RL.lexd: $(BASENAME).$(LANG1).lexd .deps/.d
+	cat $< | grep -v 'Dir/LR' > $@
+
+.deps/$(LANG1).LR.lexd: $(BASENAME).$(LANG1).lexd .deps/.d
+	cat $< | grep -v 'Dir/RL' > $@
+
+.deps/$(LANG1).RL.lexd.hfst: .deps/$(LANG1).RL.lexd
+	lexd $< | hfst-txt2fst > $@
+
+.deps/$(LANG1).LR.lexd.hfst: .deps/$(LANG1).LR.lexd
+	lexd $< | hfst-txt2fst > $@
+
 .deps/$(LANG1).twoc.hfst: $(BASENAME).$(LANG1).twoc .deps/.d
 	hfst-twolc $< -o $@
+
+.deps/$(LANG1).spellrelax.hfst: $(BASENAME).$(LANG1).spellrelax
+	hfst-regexp2fst -S -o $@ < $<
 
 .deps/spellrelax.hfst: spellrelax.twol .deps/.d
 	hfst-twolc $< -o $@
@@ -41,17 +58,17 @@ TARGETS_COMMON =			\
 .deps/$(LANG1).LR.lexc: $(BASENAME).$(LANG1).lexc .deps/.d
 	cat $< | grep -v 'Dir/RL' > $@
 
-.deps/$(LANG1).RL.lexc-twoc.hfst: .deps/$(LANG1).RL.lexc.hfst .deps/$(LANG1).twoc.hfst
-	hfst-invert .deps/$(LANG1).RL.lexc.hfst | hfst-compose-intersect -1 - -2 .deps/$(LANG1).twoc.hfst | hfst-invert -o $@
+#.deps/$(LANG1).RL.lexc-twoc.hfst: .deps/$(LANG1).RL.lexc.hfst .deps/$(LANG1).twoc.hfst
+#	hfst-invert .deps/$(LANG1).RL.lexc.hfst | hfst-compose-intersect -1 - -2 .deps/$(LANG1).twoc.hfst | hfst-invert -o $@
 
-.deps/$(LANG1).LR.lexc-twoc.hfst: .deps/$(LANG1).LR.lexc.hfst .deps/$(LANG1).twoc.hfst
-	hfst-invert .deps/$(LANG1).LR.lexc.hfst | hfst-compose-intersect -1 - -2 .deps/$(LANG1).twoc.hfst | hfst-invert -o $@
+#.deps/$(LANG1).LR.lexc-twoc.hfst: .deps/$(LANG1).LR.lexc.hfst .deps/$(LANG1).twoc.hfst
+#	hfst-invert .deps/$(LANG1).LR.lexc.hfst | hfst-compose-intersect -1 - -2 .deps/$(LANG1).twoc.hfst | hfst-invert -o $@
 
-.deps/$(LANG1).RL.hfst: .deps/$(LANG1).RL.lexc-twoc.hfst .deps/$(LANG1).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG1).RL.lexc-twoc.hfst -2 .deps/$(LANG1).twol.hfst -o $@
+.deps/$(LANG1).RL.hfst: .deps/$(LANG1).RL.lexd.hfst .deps/$(LANG1).twol.hfst
+	hfst-compose-intersect -1 .deps/$(LANG1).RL.lexd.hfst -2 .deps/$(LANG1).twol.hfst -o $@
 
-.deps/$(LANG1).LR.hfst: .deps/$(LANG1).LR.lexc-twoc.hfst .deps/$(LANG1).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG1).LR.lexc-twoc.hfst -2 .deps/$(LANG1).twol.hfst | hfst-minimise -o $@
+.deps/$(LANG1).LR.hfst: .deps/$(LANG1).LR.lexd.hfst .deps/$(LANG1).twol.hfst
+	hfst-compose-intersect -1 .deps/$(LANG1).LR.lexd.hfst -2 .deps/$(LANG1).twol.hfst | hfst-minimise -o $@
 
 
 .deps/$(LANG1).RL.lexc.hfst: .deps/$(LANG1).RL.lexc
@@ -63,8 +80,8 @@ TARGETS_COMMON =			\
 $(LANG1).autogen.hfst: .deps/$(LANG1).RL.hfst
 	hfst-minimise $< | hfst-fst2fst -O -o $@
 
-$(LANG1).automorf.hfst: .deps/$(LANG1).LR.hfst .deps/spellrelax.hfst
-	hfst-compose-intersect -1 $< -2 .deps/spellrelax.hfst | hfst-invert | hfst-minimise | hfst-fst2fst -O -o $@
+$(LANG1).automorf.hfst: .deps/$(LANG1).LR.hfst .deps/$(LANG1).spellrelax.hfst
+	hfst-compose-intersect -1 $< -2 .deps/$(LANG1).spellrelax.hfst | hfst-invert | hfst-minimise | hfst-fst2fst -O -o $@
 
 $(LANG1).autogen.att.gz: $(LANG1).autogen.hfst
 	hfst-fst2txt $< | gzip -9 -c -n > $@
